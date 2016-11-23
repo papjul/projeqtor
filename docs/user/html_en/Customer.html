@@ -1,0 +1,306 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Customers &amp; Contacts &mdash; ProjeQtOr User guide 5.4 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/projeqtor.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '5.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="ProjeQtOr User guide 5.4 documentation" href="index.html" />
+    <link rel="next" title="Providers" href="Provider.html" />
+    <link rel="prev" title="Resources" href="Resource.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Provider.html" title="Providers"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Resource.html" title="Resources"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="contents topic" id="contents">
+<p class="topic-title first">Contents</p>
+<ul class="simple">
+<li><a class="reference internal" href="#customers" id="id1">Customers</a></li>
+<li><a class="reference internal" href="#contacts" id="id2">Contacts</a></li>
+</ul>
+</div>
+<span class="target" id="index-0"></span><div class="section" id="customers">
+<span id="customer"></span><span id="index-1"></span><h1><a class="toc-backref" href="#contents">Customers</a><a class="headerlink" href="#customers" title="Permalink to this headline">¶</a></h1>
+<p>The customer is the entity for which the project is set.</p>
+<p>It is generally the owner of the project, and in many cases it is the payer.</p>
+<p>It can be an internal entity, into the same enterprise, or a different enterprise, or the entity of an enterprise.</p>
+<p>The customer defined here is not a person. Real persons into a customer entity are called “Contacts”.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="CommonSections.html#attachment-section"><span class="std std-ref">Attachments</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#note-section"><span class="std std-ref">Notes</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the customer.</td>
+</tr>
+<tr class="row-odd"><td><strong>Customer name</strong></td>
+<td>Short name of the customer.</td>
+</tr>
+<tr class="row-even"><td><strong>Type of customer</strong></td>
+<td>Type of customer.</td>
+</tr>
+<tr class="row-odd"><td>Customer code</td>
+<td>Code of the customer.</td>
+</tr>
+<tr class="row-even"><td>Payment deadline</td>
+<td>The payment deadline is stated on the bill for this customer.</td>
+</tr>
+<tr class="row-odd"><td>Tax</td>
+<td>Tax rates that are applied to bill amounts for this customer.</td>
+</tr>
+<tr class="row-even"><td>Tax number</td>
+<td>Tax reference number, to be displayed on the bill.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate that the customer is archived.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-description"><span class="xref std std-term">Description</span></a></td>
+<td>Complete description of the customer.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<p class="rubric">Section: Address</p>
+<ul class="simple">
+<li>Full address of the customer.</li>
+</ul>
+<p class="rubric">Section: Projects</p>
+<ul class="simple">
+<li>List of the projects of the customer.</li>
+</ul>
+<p class="rubric">Section: Contacts</p>
+<ul class="simple">
+<li>List of the contacts known in the entity of the customer.</li>
+</ul>
+<span class="target" id="index-2"></span></div>
+<div class="section" id="contacts">
+<span id="contact"></span><span id="index-3"></span><h1><a class="toc-backref" href="#contents">Contacts</a><a class="headerlink" href="#contacts" title="Permalink to this headline">¶</a></h1>
+<div class="sidebar">
+<p class="first sidebar-title">Concepts</p>
+<ul class="last simple">
+<li><a class="reference internal" href="Concept.html#projeqtor-roles"><span class="std std-ref">ProjeQtOr roles</span></a></li>
+<li><a class="reference internal" href="Concept.html#profiles-definition"><span class="std std-ref">Profiles definition</span></a></li>
+<li><a class="reference internal" href="Concept.html#user-ress-contact-demystify"><span class="std std-ref">Stakeholder definition</span></a></li>
+<li><a class="reference internal" href="Concept.html#photo"><span class="std std-ref">Photo</span></a></li>
+</ul>
+</div>
+<p>A contact is a person in a business relationship with the company.</p>
+<p>The company keeps all information data to be able to contact him when needed.</p>
+<p>A contact can be a person in the customer organization.</p>
+<p>A contact can be the contact person for contracts, sales and billing.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="CommonSections.html#affectations-section"><span class="std std-ref">Affectations</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the contact.</td>
+</tr>
+<tr class="row-odd"><td>Photo</td>
+<td>Photo of the contact.</td>
+</tr>
+<tr class="row-even"><td><strong>Real name</strong></td>
+<td>Name of the contact.</td>
+</tr>
+<tr class="row-odd"><td>User name</td>
+<td>Name of user.</td>
+</tr>
+<tr class="row-even"><td>Initials</td>
+<td>Initials of the contact.</td>
+</tr>
+<tr class="row-odd"><td>Email address</td>
+<td>Email address of the contact.</td>
+</tr>
+<tr class="row-even"><td>Profile</td>
+<td>Profile of the user.</td>
+</tr>
+<tr class="row-odd"><td>Customer</td>
+<td>The customer the contact belongs to.</td>
+</tr>
+<tr class="row-even"><td>Function</td>
+<td>Function of contact.</td>
+</tr>
+<tr class="row-odd"><td>Phone</td>
+<td>Phone number of the contact.</td>
+</tr>
+<tr class="row-even"><td>Mobile</td>
+<td>Mobile phone number of the contact.</td>
+</tr>
+<tr class="row-odd"><td>Fax</td>
+<td>Fax number of the contact.</td>
+</tr>
+<tr class="row-even"><td>Is a resource</td>
+<td>Is this contact also a resource ?</td>
+</tr>
+<tr class="row-odd"><td>Is a user</td>
+<td>Is this contact also a user ?</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate that contact is archived.</td>
+</tr>
+<tr class="row-odd"><td>Description</td>
+<td>Complete description of the contact.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<div class="topic">
+<p class="topic-title first">Field: Is a resource</p>
+<ul class="simple">
+<li>Check this if the contact must also be a resource.</li>
+<li>The contact will then also appear in the “Resources” list.</li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">Field: Is a user</p>
+<ul class="simple">
+<li>Check this if the contact must connect to the application.</li>
+<li>You must then define the <strong>User name</strong> and <strong>Profile</strong> fields.</li>
+<li>The contact will then also appear in the “Users” list.</li>
+</ul>
+</div>
+<p class="rubric">Section: Address</p>
+<p>Full address of the contact.</p>
+<p class="rubric">Section: Miscellanous</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Don&#8217;t receive team mails</td>
+<td>Box checked indicating that the resource doesn&#8217;t want to receive mails sent to the team.</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Projeqtor_Logo_White.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Customers</a></li>
+<li><a class="reference internal" href="#contacts">Contacts</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="Resource.html"
+                        title="previous chapter">Resources</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="Provider.html"
+                        title="next chapter">Providers</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Provider.html" title="Providers"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Resource.html" title="Resources"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, ProjeQtOr.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.4.
+    </div>
+  </body>
+</html>

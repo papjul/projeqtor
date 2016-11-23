@@ -1,0 +1,197 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Glossary &mdash; ProjeQtOr User guide 5.4 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/projeqtor.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '5.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="ProjeQtOr User guide 5.4 documentation" href="index.html" />
+    <link rel="prev" title="Administration console" href="Administration.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Administration.html" title="Administration console"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="glossary">
+<h1>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h1>
+<dl class="glossary docutils">
+<dt id="term-closed">Closed</dt>
+<dd><ul class="first last simple">
+<li>Flag to indicate that item is archived.</li>
+<li>Item will not appear in lists any more, unless “show closed” is checked.</li>
+</ul>
+</dd>
+<dt id="term-description">Description</dt>
+<dd><ul class="first simple">
+<li>This field allows to define a description on an item.</li>
+<li>Depending on the element type, name of field can be different.</li>
+</ul>
+<div class="last admonition seealso">
+<p class="first admonition-title">See also</p>
+<p>GUI behavior</p>
+<ul class="last simple">
+<li>It is possible to define that description field is mandatory.</li>
+<li>The element type screens allow to set this parameter to several elements.</li>
+<li>More detail, see: <a class="reference internal" href="ListsOfTypes.html#behavior-section"><span class="std std-ref">Behavior section</span></a>.</li>
+</ul>
+</div>
+</dd>
+<dt id="term-done">Done</dt>
+<dd><ul class="first last simple">
+<li>Flag to indicate that item has been done.</li>
+<li>Date of done is saved.</li>
+</ul>
+</dd>
+<dt id="term-external-reference">External reference</dt>
+<dd><ul class="first last simple">
+<li>This field allows fill free input.</li>
+<li>It uses to refer information from an external source.</li>
+<li>External reference value can be put in email message with <strong>externalReference</strong> special field.</li>
+<li>More detail, see: <strong>Administration guide</strong>.</li>
+</ul>
+</dd>
+<dt id="term-handled">Handled</dt>
+<dd><ul class="first last simple">
+<li>Flag to indicate that item has been taken into account.</li>
+<li>Date of handling is saved.</li>
+<li>This generally means that responsible has been named.</li>
+</ul>
+</dd>
+<dt id="term-id">Id</dt>
+<dd><ul class="first last simple">
+<li>Every item has a unique Id, automatically generated on creation.</li>
+<li>Id is chronologically affected, for all kind of items (Activity, Ticket).</li>
+<li>Id is shared for all projects and all types (i.e. incident) of the same kind items (i.e. Ticket).</li>
+<li><strong>Reference</strong> is displayed after id, automatically generated on creation.</li>
+<li>Reference depends on defined format, see under &#8220;Format for reference numbering&#8221; section in <a class="reference internal" href="Administration.html#global-parameters"><span class="std std-ref">Global parameters</span></a> screen.</li>
+<li>Default format defines an numbering specific for each project and each type of items.</li>
+</ul>
+</dd>
+<dt id="term-origin">Origin</dt>
+<dd><ul class="first last simple">
+<li>Determines the element of origin.</li>
+<li>The origin is used to keep track of events (ex.: order from quote, action from meeting).</li>
+<li>More detail, see : <a class="reference internal" href="Gui.html#origin-field"><span class="std std-ref">Origin field</span></a>.</li>
+</ul>
+</dd>
+<dt id="term-status">Status</dt>
+<dd><ul class="first simple">
+<li>The status determines the life cycle of items.</li>
+<li>It defines the progress of the treatment of the item.</li>
+<li>Item is linked to a element type, element type is linked to a workflow.</li>
+<li>A workflow defines the possibility to go from one status to another one, more detail, see: <a class="reference internal" href="ControlAutomation.html#workflow"><span class="std std-ref">Workflows</span></a>.</li>
+</ul>
+<div class="last admonition seealso">
+<p class="first admonition-title">See also</p>
+<p>Accelerator button</p>
+<ul class="last simple">
+<li>This button allows to skip to the next status.</li>
+<li>More detail, see: <a class="reference internal" href="Gui.html#movetonextstatus-button"><span class="std std-ref">Move to next status button</span></a>.</li>
+</ul>
+</div>
+</dd>
+<dt id="term-result">Result</dt>
+<dd><ul class="first simple">
+<li>A result is a description of the treatment of an item.</li>
+<li>Usually, the result is set when the status of the item is <a class="reference internal" href="ListsOfValues.html#term-done-status"><span class="xref std std-term">done</span></a>.</li>
+</ul>
+<div class="last admonition seealso">
+<p class="first admonition-title">See also</p>
+<p>GUI behavior</p>
+<ul class="last simple">
+<li>It is possible to define that result field is mandatory on done status.</li>
+<li>The element type screens allow to set this parameter to several elements.</li>
+<li>More detail, see: <a class="reference internal" href="ListsOfTypes.html#behavior-section"><span class="std std-ref">Behavior section</span></a>.</li>
+</ul>
+</div>
+</dd>
+<dt id="term-wbs">WBS</dt>
+<dd><ul class="first last simple">
+<li>Work Breakdown Structure.</li>
+<li>Hierarchical position of the element in the global planning.</li>
+</ul>
+</dd>
+</dl>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Projeqtor_Logo_White.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="Administration.html"
+                        title="previous chapter">Administration console</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Administration.html" title="Administration console"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, ProjeQtOr.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.4.
+    </div>
+  </body>
+</html>

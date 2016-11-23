@@ -1,0 +1,278 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Users &mdash; ProjeQtOr User guide 5.4 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/projeqtor.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '5.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="ProjeQtOr User guide 5.4 documentation" href="index.html" />
+    <link rel="next" title="Resources" href="Resource.html" />
+    <link rel="prev" title="Affectations" href="Affectation.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Resource.html" title="Resources"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Affectation.html" title="Affectations"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="users">
+<span id="user"></span><span id="index-0"></span><h1>Users<a class="headerlink" href="#users" title="Permalink to this headline">¶</a></h1>
+<div class="sidebar">
+<p class="first sidebar-title">Concepts</p>
+<ul class="last simple">
+<li><a class="reference internal" href="Concept.html#projeqtor-roles"><span class="std std-ref">ProjeQtOr roles</span></a></li>
+<li><a class="reference internal" href="Concept.html#profiles-definition"><span class="std std-ref">Profiles definition</span></a></li>
+<li><a class="reference internal" href="Concept.html#user-ress-contact-demystify"><span class="std std-ref">Stakeholder definition</span></a></li>
+<li><a class="reference internal" href="Concept.html#photo"><span class="std std-ref">Photo</span></a></li>
+</ul>
+</div>
+<p>The user is a person that will be able to connect to the application.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>To be able to connect, the user must have a password and a user profile defined.</li>
+</ul>
+</div>
+<p class="rubric">ProjeQtOr and LDAP users</p>
+<ul class="simple">
+<li>ProjeQtOr offers two modes of authentication.</li>
+</ul>
+<blockquote>
+<div><div class="compound">
+<p class="compound-first"><strong>ProjeQtOr users</strong></p>
+<ul class="compound-middle simple">
+<li>Users&#8217; information is kept in the application database.</li>
+<li>Password policy and login behavior are managed by the application.</li>
+</ul>
+<div class="compound-last admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>The users &#8220;admin&#8221; and &#8220;guest&#8221; are created during installation.</li>
+</ul>
+</div>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>LDAP users</strong></p>
+<ul class="compound-last simple">
+<li>Allows users defined in an external directory to login at ProjeQtOr by the LDAP protocol.</li>
+<li>Users&#8217; information and password policy are managed in the external directory.</li>
+</ul>
+</div>
+</div></blockquote>
+<p class="rubric">Default user profile</p>
+<ul class="simple">
+<li>A default user profile is set during creation of the user.</li>
+<li>A different default profile can be set according to mode of authentication.</li>
+</ul>
+<p class="rubric">Web Service</p>
+<ul class="simple">
+<li>ProjeQtOr provides an API to interact with its elements. It is provided as REST Web Service.</li>
+<li>An API key is defined for the user.</li>
+<li>This API key is used to encrypt the data for methods: PUT, PUSH and DELETE.</li>
+</ul>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="CommonSections.html#affectations-section"><span class="std std-ref">Affectations</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils" id="id1">
+<caption><span class="caption-text">Users description section fields</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the user.</td>
+</tr>
+<tr class="row-odd"><td>Photo</td>
+<td>Photo of the user.</td>
+</tr>
+<tr class="row-even"><td><strong>User name</strong></td>
+<td>login id of the user.</td>
+</tr>
+<tr class="row-odd"><td>Real name</td>
+<td>Name of the user.</td>
+</tr>
+<tr class="row-even"><td>Initials</td>
+<td>Initials of the user.</td>
+</tr>
+<tr class="row-odd"><td>Email address</td>
+<td>Email address of the user.</td>
+</tr>
+<tr class="row-even"><td><strong>Profile</strong></td>
+<td>Profile of the user.</td>
+</tr>
+<tr class="row-odd"><td>Locked</td>
+<td>Flag used to lock the user, to prohibit connections.</td>
+</tr>
+<tr class="row-even"><td>Is a contact</td>
+<td>Is this user also a contact?</td>
+</tr>
+<tr class="row-odd"><td>Is a resource</td>
+<td>Is this user also a resource?</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate that user is archived.</td>
+</tr>
+<tr class="row-odd"><td>Description</td>
+<td>Complete description of the user.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<div class="topic">
+<p class="topic-title first">Field: User name</p>
+<ul class="simple">
+<li>The user name must be unique.</li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">Field: Is a contact</p>
+<ul class="simple">
+<li>Check this if you want created a contact to this user.</li>
+<li>This user will then appear in the “Contact” list</li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">Field: Is a resource</p>
+<ul class="simple">
+<li>Check this if you want created a resource to this user.</li>
+<li>The user will then also appear in the “Resources” list.</li>
+</ul>
+</div>
+<p class="rubric">Section: Miscellanous</p>
+<div class="topic">
+<p class="topic-title first">Button: Reset password</p>
+<ul class="simple">
+<li>This button allows to reset password to default password.</li>
+<li>Default password value is defined in <a class="reference internal" href="Administration.html#user-password-section"><span class="std std-ref">Global parameters</span></a> screen.</li>
+<li>Reset password button is available only for ProjeQtOr users.</li>
+</ul>
+</div>
+<table border="1" class="docutils" id="id2">
+<caption><span class="caption-text">Users miscellaneous section fields</span><a class="headerlink" href="#id2" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Don&#8217;t receive team mails</td>
+<td>Box checked indicating that the resource doesn&#8217;t want to receive mails sent to the team.</td>
+</tr>
+<tr class="row-odd"><td>Comes from LDAP</td>
+<td>Box checked indicating that the user information come from LDAP.</td>
+</tr>
+<tr class="row-even"><td>API key</td>
+<td>Key string used by web service consumer.</td>
+</tr>
+</tbody>
+</table>
+<div class="topic">
+<p class="topic-title first">Button: Send information to the user</p>
+<ul class="simple">
+<li>This button allows to send by email to the user the login information.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Projeqtor_Logo_White.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="Affectation.html"
+                        title="previous chapter">Affectations</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="Resource.html"
+                        title="next chapter">Resources</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Resource.html" title="Resources"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Affectation.html" title="Affectations"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, ProjeQtOr.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.4.
+    </div>
+  </body>
+</html>

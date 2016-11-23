@@ -1,0 +1,519 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Product &amp; Component &mdash; ProjeQtOr User guide 5.4 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/projeqtor.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '5.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="ProjeQtOr User guide 5.4 documentation" href="index.html" />
+    <link rel="next" title="Affectations" href="Affectation.html" />
+    <link rel="prev" title="Meetings" href="ReviewLogs.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Affectation.html" title="Affectations"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ReviewLogs.html" title="Meetings"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="product-component">
+<span id="product-component-management"></span><h1>Product &amp; Component<a class="headerlink" href="#product-component" title="Permalink to this headline">¶</a></h1>
+<div class="sidebar">
+<p class="first sidebar-title">Concepts</p>
+<ul class="last simple">
+<li><a class="reference internal" href="Concept.html#product-concept"><span class="std std-ref">Product</span></a></li>
+</ul>
+</div>
+<p>The product and component management is done on screens:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#product"><span class="std std-ref">Products</span></a></li>
+<li><a class="reference internal" href="#component"><span class="std std-ref">Components</span></a></li>
+<li><a class="reference internal" href="#product-version"><span class="std std-ref">Product Versions</span></a></li>
+<li><a class="reference internal" href="#component-version"><span class="std std-ref">Component Versions</span></a></li>
+</ul>
+<div class="section" id="products">
+<span id="product"></span><span id="index-0"></span><h2>Products<a class="headerlink" href="#products" title="Permalink to this headline">¶</a></h2>
+<p>Allows to define product and sub-product.</p>
+<p>Allows to link components to product.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="CommonSections.html#attachment-section"><span class="std std-ref">Attachments</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#note-section"><span class="std std-ref">Notes</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the product.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the product.</td>
+</tr>
+<tr class="row-even"><td>Product type</td>
+<td>Type of product.</td>
+</tr>
+<tr class="row-odd"><td>Designation</td>
+<td>Trade name of the product known outside the company.</td>
+</tr>
+<tr class="row-even"><td>Customer</td>
+<td>The customer the product should be delivered to.</td>
+</tr>
+<tr class="row-odd"><td>Prime contractor</td>
+<td>The contact, into customer organization, who will be responsible for the product delivery.</td>
+</tr>
+<tr class="row-even"><td>Responsible</td>
+<td>Person responsible for the product.</td>
+</tr>
+<tr class="row-odd"><td>Is sub-product of</td>
+<td>Name of the top product if this product is a sub-product.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the product is archived.</td>
+</tr>
+<tr class="row-odd"><td>Description</td>
+<td>Complete description of the product.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<p class="rubric">Section: Product versions</p>
+<ul class="simple">
+<li>List of versions defined for the product.</li>
+<li>Product versions are defined in <a class="reference internal" href="#product-version"><span class="std std-ref">Product Versions</span></a> screen.</li>
+</ul>
+<p class="rubric">Section: Composition - List of sub-products used by this product</p>
+<ul class="simple">
+<li>List of sub-products for the product.</li>
+</ul>
+<p class="rubric">Section: Composition - List of components used by this product</p>
+<ul class="simple">
+<li>See: <a class="reference internal" href="#relationship-product-component"><span class="std std-ref">Relationships between product and component elements</span></a>.</li>
+</ul>
+<div class="topic">
+<p class="topic-title first">Button: Display structure</p>
+<ul class="simple">
+<li>Displays the structure of the product.</li>
+<li>Box checked &#8220;Show versions for all structure&#8221; allows to display versions of sub-products and components.</li>
+<li>Box checked &#8220;Show projects linked to versions&#8221; allows to display projects linked.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="product-versions">
+<span id="product-version"></span><span id="index-1"></span><h2>Product Versions<a class="headerlink" href="#product-versions" title="Permalink to this headline">¶</a></h2>
+<p>Allows to define versions of a product.</p>
+<p>Allows to link a component version to product version.</p>
+<p>Allows to link the product version to a project.</p>
+<p class="rubric">Automatic formatting of version name</p>
+<ul class="simple">
+<li>Possibility to define if the version name is automatically produced from the product name and version number.</li>
+<li>Set global parameters to activate this feature.</li>
+<li>Else, the version name will entered manually.</li>
+</ul>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#link-version-project-section"><span class="std std-ref">Projects linked to this version</span></a></li>
+<li><a class="reference internal" href="#version-product-component"><span class="std std-ref">Composition - List of component versions used this version</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#attachment-section"><span class="std std-ref">Attachments</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#note-section"><span class="std std-ref">Notes</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the version.</td>
+</tr>
+<tr class="row-odd"><td><strong>Product</strong></td>
+<td>The product on which the version applies.</td>
+</tr>
+<tr class="row-even"><td><strong>Version number</strong></td>
+<td>Version number of the product.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the version.</td>
+</tr>
+<tr class="row-even"><td>Prime contractor</td>
+<td>The contact, into customer organization, who will be responsible for the version delivery.</td>
+</tr>
+<tr class="row-odd"><td>Responsible</td>
+<td>Resource responsible of the version.</td>
+</tr>
+<tr class="row-even"><td>Entry into service</td>
+<td>Initial, planned and real entry into service date of the version.</td>
+</tr>
+<tr class="row-odd"><td>End date</td>
+<td>Initial, planned and real end dates of the version.</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Complete description of the version.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<div class="topic">
+<p class="topic-title first">Fields: Version number &amp; Name</p>
+<ul class="simple">
+<li>The field &#8220;Version number&#8221; appears only if the global parameter &#8220;Automatic format of version name&#8221; is set to Yes.</li>
+<li>The field &#8220;Name&#8221; will be read only.</li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">Field: Prime contractor</p>
+<ul class="simple">
+<li>Can be different from product prime contractor.</li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">Field: Entry into service (Real)</p>
+<ul class="simple">
+<li>Specify the date of entry into service.</li>
+<li>The box &#8220;Done&#8221; is checked when the real date field is set.</li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">Field: End date (Real)</p>
+<ul class="simple">
+<li>Specify the date end-of-service.</li>
+<li>The box &#8220;Done&#8221; is checked when the real date field is set.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="components">
+<span id="component"></span><span id="index-2"></span><h2>Components<a class="headerlink" href="#components" title="Permalink to this headline">¶</a></h2>
+<p>Allows to define product components.</p>
+<p>Allows to define products using the component.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#relationship-product-component"><span class="std std-ref">Structure - List of products or components using this component</span></a></li>
+<li><a class="reference internal" href="#relationship-product-component"><span class="std std-ref">Composition - List of components used by this component</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#attachment-section"><span class="std std-ref">Attachments</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#note-section"><span class="std std-ref">Notes</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the component.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the component.</td>
+</tr>
+<tr class="row-even"><td>Component type</td>
+<td>Type of component</td>
+</tr>
+<tr class="row-odd"><td>Identifier</td>
+<td>Another name to identify the component.</td>
+</tr>
+<tr class="row-even"><td>Responsible</td>
+<td>Person responsible for the component.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the component is archived.</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Complete description of the component.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<p class="rubric">Section: Component versions</p>
+<ul class="simple">
+<li>List of versions defined for the component.</li>
+<li>Component versions are defined in <a class="reference internal" href="#component-version"><span class="std std-ref">Component Versions</span></a> screen.</li>
+</ul>
+</div>
+<div class="section" id="component-versions">
+<span id="component-version"></span><span id="index-3"></span><h2>Component Versions<a class="headerlink" href="#component-versions" title="Permalink to this headline">¶</a></h2>
+<p>Allows to define versions of a component.</p>
+<p>Allows to link a product version to component version.</p>
+<p class="rubric">Automatic formatting of version name</p>
+<ul class="simple">
+<li>Possibility to define if the version name is automatically produced from the component name and version number.</li>
+<li>Set global parameters to activate this feature.</li>
+<li>Else, the version name will entered manually.</li>
+</ul>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#version-product-component"><span class="std std-ref">Structure - List of product or component versions using this component version</span></a></li>
+<li><a class="reference internal" href="#version-product-component"><span class="std std-ref">Composition - List of component versions used by this version</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#attachment-section"><span class="std std-ref">Attachments</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#note-section"><span class="std std-ref">Notes</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the version.</td>
+</tr>
+<tr class="row-odd"><td><strong>Component</strong></td>
+<td>The component on which the version applies.</td>
+</tr>
+<tr class="row-even"><td><strong>Version number</strong></td>
+<td>Version number of the component.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the version.</td>
+</tr>
+<tr class="row-even"><td>Entry into service</td>
+<td>Initial, planned and real entry into service date of the version.</td>
+</tr>
+<tr class="row-odd"><td>End date</td>
+<td>Initial, planned and real end dates of the version.</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Complete description of the version.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<div class="topic">
+<p class="topic-title first">Fields: Version number &amp; Name</p>
+<ul class="simple">
+<li>The field &#8220;Version number&#8221; appears only if the global parameter &#8220;Automatic format of version name&#8221; is set to Yes.</li>
+<li>The field &#8220;Name&#8221; will be read only.</li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">Field: Entry into service (Real)</p>
+<ul class="simple">
+<li>Specify the date of entry into service.</li>
+<li>The box &#8220;Done&#8221; is checked when the real date field is set.</li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">Field: End date (Real)</p>
+<ul class="simple">
+<li>Specify the date end-of-service.</li>
+<li>The box &#8220;Done&#8221; is checked when the real date field is set.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="relationships-between-product-and-component-elements">
+<span id="relationship-product-component"></span><h2>Relationships between product and component elements<a class="headerlink" href="#relationships-between-product-and-component-elements" title="Permalink to this headline">¶</a></h2>
+<p>Allows to manage relationships between products and components to define product structure.</p>
+<p>See possible relationships:  <a class="reference internal" href="Concept.html#product-structure"><span class="std std-ref">Product structure</span></a></p>
+<p class="rubric">Relationships management</p>
+<ul class="simple">
+<li>Click on <img alt="Button add" src="_images/smallButtonAdd.png" /> to create a new relationship. The dialog box &#8220;Structure&#8221; appear.</li>
+<li>Click on <img alt="Button icon delete" src="_images/buttonIconDelete.png" /> to delete the corresponding relationship.</li>
+</ul>
+<div class="figure align-center">
+<img alt="Dialog box - Structure" src="_images/BOX_ProductStructure.png" />
+</div>
+</div>
+<div class="section" id="link-between-versions-of-products-and-components">
+<span id="version-product-component"></span><h2>Link between versions of products and components<a class="headerlink" href="#link-between-versions-of-products-and-components" title="Permalink to this headline">¶</a></h2>
+<p>Allows to define links between versions of products and components.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>Only with the elements defined in the product structure.</li>
+</ul>
+</div>
+<p class="rubric">Link management</p>
+<ul class="simple">
+<li>Click on <img alt="Button add" src="_images/smallButtonAdd.png" /> to create a new link. The dialog box &#8220;Version Structure&#8221; appear.</li>
+<li>Click on <img alt="Button icon delete" src="_images/buttonIconDelete.png" /> to delete the corresponding link.</li>
+</ul>
+<div class="figure align-center">
+<img alt="Dialog box - Version structure" src="_images/BOX_VersionStructure.png" />
+</div>
+</div>
+<div class="section" id="link-version-to-projects">
+<span id="link-version-project-section"></span><h2>Link version to projects<a class="headerlink" href="#link-version-to-projects" title="Permalink to this headline">¶</a></h2>
+<p>This section allows to manage links between projects and versions of products.</p>
+<p class="rubric">Link version to projects management</p>
+<ul class="simple">
+<li>Click on <img alt="Button add" src="_images/smallButtonAdd.png" /> to create a new link.</li>
+<li>Click on <img alt="Button edit" src="_images/smallButtonEdit.png" /> to update an existing link.</li>
+<li>Click on <img alt="Button icon delete" src="_images/buttonIconDelete.png" /> to delete the corresponding link.</li>
+</ul>
+<div class="figure align-center">
+<img alt="Dialog box - Project-Version link" src="_images/BOX_ProjectVersionLink.png" />
+</div>
+<table border="1" class="docutils" id="id1">
+<caption><span class="caption-text">Fields - Project-Version link dialog box</span><a class="headerlink" href="#id1" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Project</td>
+<td>The project linked to product version or the project list.</td>
+</tr>
+<tr class="row-odd"><td>Product</td>
+<td>Product linked to the project or the list of products.</td>
+</tr>
+<tr class="row-even"><td>Version</td>
+<td>Product version linked to the project or list of product versions.</td>
+</tr>
+<tr class="row-odd"><td>Start date</td>
+<td>Start date for validity of the link.</td>
+</tr>
+<tr class="row-even"><td>End date</td>
+<td>End date for validity of the link.</td>
+</tr>
+<tr class="row-odd"><td>Closed</td>
+<td>Box checked indicates the link is not active anymore, without deleting it.</td>
+</tr>
+</tbody>
+</table>
+<div class="topic">
+<p class="topic-title first">Fields: Project, Product and Version</p>
+<ul class="simple">
+<li>From the screen «Projects», the fields «product and version» will be selectable.</li>
+<li>From the screen «Product versions», the field «project» will be selectable.</li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Projeqtor_Logo_White.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Product &amp; Component</a><ul>
+<li><a class="reference internal" href="#products">Products</a></li>
+<li><a class="reference internal" href="#product-versions">Product Versions</a></li>
+<li><a class="reference internal" href="#components">Components</a></li>
+<li><a class="reference internal" href="#component-versions">Component Versions</a></li>
+<li><a class="reference internal" href="#relationships-between-product-and-component-elements">Relationships between product and component elements</a></li>
+<li><a class="reference internal" href="#link-between-versions-of-products-and-components">Link between versions of products and components</a></li>
+<li><a class="reference internal" href="#link-version-to-projects">Link version to projects</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="ReviewLogs.html"
+                        title="previous chapter">Meetings</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="Affectation.html"
+                        title="next chapter">Affectations</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Affectation.html" title="Affectations"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ReviewLogs.html" title="Meetings"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, ProjeQtOr.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.4.
+    </div>
+  </body>
+</html>

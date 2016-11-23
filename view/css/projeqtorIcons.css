@@ -1,0 +1,792 @@
+/*** COPYRIGHT NOTICE *********************************************************
+ *
+ * Copyright 2009-2016 ProjeQtOr - Pascal BERNARD - support@projeqtor.org
+ * Contributors : -
+ *
+ * This file is part of ProjeQtOr.
+ * 
+ * ProjeQtOr is free software: you can redistribute it and/or modify it under 
+ * the terms of the GNU Affero General Public License as published by the Free 
+ * Software Foundation, either version 3 of the License, or (at your option) 
+ * any later version.
+ * 
+ * ProjeQtOr is distributed in the hope that it will be useful, but WITHOUT ANY
+ * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS 
+ * FOR A PARTICULAR PURPOSE.  See the GNU Affero General Public License for 
+ * more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License along with
+ * ProjeQtOr. If not, see <http://www.gnu.org/licenses/>.
+ *
+ * You can get complete code of ProjeQtOr, other resource, help and information
+ * about contributors at http://www.projeqtor.org 
+ *     
+ *** DO NOT REMOVE THIS NOTICE ************************************************/
+
+/* =============================================================================== */
+/* BUTTONS                                                                         */
+/* =============================================================================== */
+.iconView { background-image: url(images/iconView.png); background-repeat: no-repeat; width: 20px; height: 20px; background-position:center center; }
+.iconGoto { background-image: url(images/iconGoto.png); background-repeat: no-repeat; width: 20px; height: 20px; background-position:center center; }
+.iconAdd { background-image: url(images/buttonAdd16.png); background-repeat: no-repeat; width: 20px; height: 20px; background-position:center center; }
+
+.iconPdf { background-image: url(images/pdf.png); background-repeat: no-repeat; width: 24px; height: 24px;}
+.dijitDisabled .iconPdf { background-image: url(images/pdfDisabled.png); background-repeat: no-repeat; width: 24px; height: 24px;}
+
+.iconCsv { background-image: url(images/csv.png); background-repeat: no-repeat; width: 16px; height: 16px;}
+.dijitDisabled .iconCsv { background-image: url(images/csvDisabled.png); background-repeat: no-repeat; width: 16px; height: 16px;}
+
+.iconMpp { background-image: url(images/mpp.png); background-repeat: no-repeat; width: 16px; height: 16px;}
+.dijitDisabled .iconMpp { background-image: url(images/mppDisabled.png); background-repeat: no-repeat; width: 16px; height: 16px;}
+	
+.iconColumnSelector { background-image: url(images/iconColumnSelector16.png); background-repeat: no-repeat; width: 16px; height: 16px;}
+.dijitDisabled .iconColumnSelector { background-image: url(images/iconColumnSelector16Disabled.png); background-repeat: no-repeat; width: 16px; height: 16px;}
+
+.iconFlashPdf { background-image: url(images/flashPdf.png); background-repeat: no-repeat; width: 16px; height: 16px;}
+.iconFlash { background-image: url(images/flash.png); background-repeat: no-repeat; width: 16px; height: 16px;}
+
+.iconMenuBarItem16 { background-image: url(../img/logoSmall.png);  background-repeat: no-repeat; width: 16px; height: 16px; background-size: 16px 16px; }
+.iconMenuBarItem22 { background-image: url(../img/logoSmall.png);  background-repeat: no-repeat; width: 22px; height: 22px; background-size: 22px 22px; }
+.iconMenuBarItem32 { background-image: url(../img/logoSmall.png);  background-repeat: no-repeat; width: 32px; height: 32px; background-size: 32px 32px; }
+
+.iconMenuBarCustom16 { background-image: url(images/iconMenuBarCustom16.png);  background-repeat: no-repeat; width: 16px; height: 16px; background-size: 16px 16px; }
+
+.iconCollapse {
+  background-image: url(images/minus.gif);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  cursor: pointer;
+}
+.iconExpand {
+  background-image: url(images/plus.gif);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  cursor: pointer;
+}
+.iconSelectAll {
+  background-image: url(images/checkmark.gif);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  cursor: pointer;
+  background-position: -0px
+}
+.iconUnselectAll {
+  background-image: url(images/checkmark.gif);
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  cursor: pointer;
+  background-position: -16px; 
+}
+
+.iconIndentIncrease, .dijitDisabled .iconIndentIncrease,
+.iconIndentDecrease, .dijitDisabled .iconIndentDecrease {
+ background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  cursor: pointer;
+  /*background-position: -16px;*/
+} 
+.iconIndentIncrease {
+  background-image: url(images/indentIncrease.png);
+}
+.dijitDisabled .iconIndentIncrease {
+	background-image: url(images/indentIncreaseDisabled.png);
+}
+.iconIndentDecrease {
+  background-image: url(images/indentDecrease.png);
+}
+.dijitDisabled .iconIndentDecrease {
+  background-image: url(images/indentDecreaseDisabled.png);
+}
+
+.iconNewtab {
+	background-image: url(images/iconNewtab.png);
+	width:60px; height: 16px;
+}
+.iconValidateProject { background-image: url(images/iconValidateProject16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+.dijitDisabled .iconValidateProject { background-image: url(images/iconValidateProject16.png); background-repeat: no-repeat; width: 16px; height: 16px;}
+
+.iconButtonBack32 { background-image: url(images/iconButtonBack.png);  background-repeat: no-repeat; width: 32px; height: 32px;}
+.iconButtonDownload16 { background-image: url(images/smallButtonDownload.png);  background-repeat: no-repeat; width: 16px; height: 16px;}
+.iconButtonEdit16 { background-image: url(images/smallButtonEdit.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+.iconButtonRemove16 { background-image: url(images/smallButtonRemove.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+.iconButtonAdd16 { background-image: url(images/smallButtonAdd.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+.iconButtonLink16 { background-image: url(images/smallButtonLink.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+.iconButtonView16 { background-image: url(images/display.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+.iconButtonSwitchUser16 { background-image: url(images/smallButtonSwitch.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconButtonPassed16 { background-image: url(images/iconPassed16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+.iconButtonFailed16 { background-image: url(images/iconFailed16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+.iconButtonBlocked16 { background-image: url(images/iconBlocked16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+/* =============================================================================== */
+/* ICONS                                                                           */
+/* =============================================================================== */
+
+.iconAccessProfile32 { background-image: url(images/iconAccessProfile32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconAccessProfile22 { background-image: url(images/iconAccessProfile22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconAccessProfile16 { background-image: url(images/iconAccessProfile16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconAccessRight32 { background-image: url(images/iconAccessRight32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconAccessRight22 { background-image: url(images/iconAccessRight22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconAccessRight16 { background-image: url(images/iconAccessRight16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconAccessRightNoProject32 { background-image: url(images/iconAccessRightNoProject32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconAccessRightNoProject22 { background-image: url(images/iconAccessRightNoProject22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconAccessRightNoProject16 { background-image: url(images/iconAccessRightNoProject16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconAction32 { background-image: url(images/iconAction32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconAction22 { background-image: url(images/iconAction22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconAction16 { background-image: url(images/iconAction16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconActionType32 { background-image: url(images/iconActionType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconActionType22 { background-image: url(images/iconActionType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconActionType16 { background-image: url(images/iconActionType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconActiveFilter32 { background-image: url(images/iconActiveFilter32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconActiveFilter22 { background-image: url(images/iconActiveFilter22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconActiveFilter16 { background-image: url(images/iconActiveFilter16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+.iconActiveFilter { background-image: url(images/iconActiveFilter.png);  background-repeat: no-repeat; width: 24px; height: 24px;}
+
+.iconActivity32 { background-image: url(images/iconActivity32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconActivity22 { background-image: url(images/iconActivity22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconActivity16 { background-image: url(images/iconActivity16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconActivityPrice32 { background-image: url(images/iconActivityPrice32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconActivityPrice22 { background-image: url(images/iconActivityPrice22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconActivityPrice16 { background-image: url(images/iconActivityPrice16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconActivityType32 { background-image: url(images/iconActivityType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconActivityType22 { background-image: url(images/iconActivityType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconActivityType16 { background-image: url(images/iconActivityType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconAdmin32 { background-image: url(images/iconAdmin32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconAdmin22 { background-image: url(images/iconAdmin22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconAdmin16 { background-image: url(images/iconAdmin16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconAffectation32 { background-image: url(images/iconAffectation32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconAffectation22 { background-image: url(images/iconAffectation22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconAffectation16 { background-image: url(images/iconAffectation16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconAlert32 { background-image: url(images/iconAlert32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconAlert22 { background-image: url(images/iconAlert22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconAlert16 { background-image: url(images/iconAlert16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconAudit32 { background-image: url(images/iconAudit32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconAudit22 { background-image: url(images/iconAudit22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconAudit16 { background-image: url(images/iconAudit16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconAutomation32 { background-image: url(images/iconAutomation32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconAutomation22 { background-image: url(images/iconAutomation22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconAutomation16 { background-image: url(images/iconAutomation16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconCalendar32 { background-image: url(images/iconCalendar32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconCalendar22 { background-image: url(images/iconCalendar22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconCalendar16 { background-image: url(images/iconCalendar16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconCalendarDefinition32 { background-image: url(images/iconCalendarDefinition32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconCalendarDefinition22 { background-image: url(images/iconCalendarDefinition22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconCalendarDefinition16 { background-image: url(images/iconCalendarDefinition16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconChecklistDefinition32 { background-image: url(images/iconChecklistDefinition32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconChecklistDefinition22 { background-image: url(images/iconChecklistDefinition22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconChecklistDefinition16 { background-image: url(images/iconChecklistDefinition16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconClient32 { background-image: url(images/iconClient32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconClient22 { background-image: url(images/iconClient22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconClient16 { background-image: url(images/iconClient16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconClientType32 { background-image: url(images/iconClientType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconClientType22 { background-image: url(images/iconClientType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconClientType16 { background-image: url(images/iconClientType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconComponent32 { background-image: url(images/iconComponent32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconComponent22 { background-image: url(images/iconComponent22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconComponent16 { background-image: url(images/iconComponent16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconComponentType32 { background-image: url(images/iconComponentType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconComponentType22 { background-image: url(images/iconComponentType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconComponentType16 { background-image: url(images/iconComponentType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconComponentVersion32 { background-image: url(images/iconComponentVersion32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconComponentVersion22 { background-image: url(images/iconComponentVersion22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconComponentVersion16 { background-image: url(images/iconComponentVersion16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconBill32 { background-image: url(images/iconBill32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconBill22 { background-image: url(images/iconBill22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconBill16 { background-image: url(images/iconBill16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconBillType32 { background-image: url(images/iconBillType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconBillType22 { background-image: url(images/iconBillType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconBillType16 { background-image: url(images/iconBillType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconCallForTender32 { background-image: url(images/iconCallForTender32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconCallForTender22 { background-image: url(images/iconCallForTender22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconCallForTender16 { background-image: url(images/iconCallForTender16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconCallForTenderType32 { background-image: url(images/iconCallForTenderType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconCallForTenderType22 { background-image: url(images/iconCallForTenderType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconCallForTenderType16 { background-image: url(images/iconCallForTenderType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconCommand32 { background-image: url(images/iconCommand32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconCommand22 { background-image: url(images/iconCommand22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconCommand16 { background-image: url(images/iconCommand16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconCommandType32 { background-image: url(images/iconCommandType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconCommandType22 { background-image: url(images/iconCommandType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconCommandType16 { background-image: url(images/iconCommandType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconComment32 { background-image: url(images/iconComment32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconComment22 { background-image: url(images/iconComment22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconComment16 { background-image: url(images/iconComment16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconComponent32 { background-image: url(images/iconComponent32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconComponent22 { background-image: url(images/iconComponent22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconComponent16 { background-image: url(images/iconComponent16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconFinancial32 { background-image: url(images/iconFinancial32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconFinancial22 { background-image: url(images/iconFinancial22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconFinancial16 { background-image: url(images/iconFinancial16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconComponent32 { background-image: url(images/iconComponentVersionType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconComponent22 { background-image: url(images/iconComponentVersionType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconComponent16 { background-image: url(images/iconComponentVersionType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconContact32 { background-image: url(images/iconContact32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconContact22 { background-image: url(images/iconContact22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconContact16 { background-image: url(images/iconContact16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconContext32 { background-image: url(images/iconContext32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconContext22 { background-image: url(images/iconContext22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconContext16 { background-image: url(images/iconContext16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconContextType32 { background-image: url(images/iconContextType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconContextType22 { background-image: url(images/iconContextType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconContextType16 { background-image: url(images/iconContextType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconCriticality32 { background-image: url(images/iconCriticality32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconCriticality22 { background-image: url(images/iconCriticality22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconCriticality16 { background-image: url(images/iconCriticality16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconDashboardTicket32 { background-image: url(images/iconDashboardTicket32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconDashboardTicket22 { background-image: url(images/iconDashboardTicket22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconDashboardTicket16 { background-image: url(images/iconDashboardTicket16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconDecision32 { background-image: url(images/iconDecision32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconDecision22 { background-image: url(images/iconDecision22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconDecision16 { background-image: url(images/iconDecision16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconDecisionType32 { background-image: url(images/iconDecisionType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconDecisionType22 { background-image: url(images/iconDecisionType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconDecisionType16 { background-image: url(images/iconDecisionType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconDeliveryMode32 { background-image: url(images/iconDeliveryMode32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconDeliveryMode22 { background-image: url(images/iconDeliveryMode22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconDeliveryMode16 { background-image: url(images/iconDeliveryMode16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconDiary32 { background-image: url(images/iconDiary32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconDiary22 { background-image: url(images/iconDiary22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconDiary16 { background-image: url(images/iconDiary16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconDisplay { background-image: url(images/display.png); background-repeat: no-repeat; width: 16px; height: 16px;}
+.iconDirectAccess { background-image: url(images/display10.png);  background-repeat: no-repeat; width: 10px; height: 10px;}
+
+.iconDocument32 { background-image: url(images/iconDocument32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconDocument22 { background-image: url(images/iconDocument22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconDocument16 { background-image: url(images/iconDocument16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconDocumentDirectory32 { background-image: url(images/iconDocumentDirectory32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconDocumentDirectory22 { background-image: url(images/iconDocumentDirectory22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconDocumentDirectory16 { background-image: url(images/iconDocumentDirectory16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconDocumentType32 { background-image: url(images/iconDocumentType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconDocumentType22 { background-image: url(images/iconDocumentType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconDocumentType16 { background-image: url(images/iconDocumentType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconEnvironmentalParameter32 { background-image: url(images/iconEnvironmentalParameter32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconEnvironmentalParameter22 { background-image: url(images/iconEnvironmentalParameter22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconEnvironmentalParameter16 { background-image: url(images/iconEnvironmentalParameter16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconExpenses32 { background-image: url(images/iconExpenses32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconExpenses22 { background-image: url(images/iconExpenses22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconExpenses16 { background-image: url(images/iconExpenses16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconExpenseDetailType32 { background-image: url(images/iconExpenseDetailType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconExpenseDetailType22 { background-image: url(images/iconExpenseDetailType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconExpenseDetailType16 { background-image: url(images/iconExpenseDetailType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconEfficiency32 { background-image: url(images/iconEfficiency32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconEfficiency22 { background-image: url(images/iconEfficiency22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconEfficiency16 { background-image: url(images/iconEfficiency16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconFeasibility32 { background-image: url(images/iconFeasibility32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconFeasibility22 { background-image: url(images/iconFeasibility22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconFeasibility16 { background-image: url(images/iconFeasibility16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconFilter32 { background-image: url(images/iconFilter32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconFilter22 { background-image: url(images/iconFilter22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconFilter16 { background-image: url(images/iconFilter16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+.iconFilter { background-image: url(images/iconFilter.png);  background-repeat: no-repeat; width: 24px; height: 24px;}
+
+.iconFinancial32 { background-image: url(images/iconFinancial32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconFinancial22 { background-image: url(images/iconFinancial22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconFinancial16 { background-image: url(images/iconFinancial16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconFollowup32 { background-image: url(images/iconFollowup32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconFollowup22 { background-image: url(images/iconFollowup22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconFollowup16 { background-image: url(images/iconFollowup16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconGallery32 { background-image: url(images/iconGallery32.png); background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconGallery22 { background-image: url(images/iconGallery22.png); background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconGallery16 { background-image: url(images/iconGallery16.png); background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconGlobalParameter32 { background-image: url(images/iconGlobalParameter32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconGlobalParameter22 { background-image: url(images/iconGlobalParameter22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconGlobalParameter16 { background-image: url(images/iconGlobalParameter16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconHabilitation32 { background-image: url(images/iconHabilitation32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconHabilitation22 { background-image: url(images/iconHabilitation22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconHabilitation16 { background-image: url(images/iconHabilitation16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconHabilitationOther32 { background-image: url(images/iconHabilitationOther32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconHabilitationOther22 { background-image: url(images/iconHabilitationOther22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconHabilitationOther16 { background-image: url(images/iconHabilitationOther16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconHabilitationReport32 { background-image: url(images/iconHabilitationReport32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconHabilitationReport22 { background-image: url(images/iconHabilitationReport22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconHabilitationReport16 { background-image: url(images/iconHabilitationReport16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconHabilitationParameter32 { background-image: url(images/iconHabilitationParameter32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconHabilitationParameter22 { background-image: url(images/iconHabilitationParameter22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconHabilitationParameter16 { background-image: url(images/iconHabilitationParameter16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconHealth32 { background-image: url(images/iconHealth32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconHealth22 { background-image: url(images/iconHealth22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconHealth16 { background-image: url(images/iconHealth16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconIncomings32 { background-image: url(images/iconIncomings32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconIncomings22 { background-image: url(images/iconIncomings22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconIncomings16 { background-image: url(images/iconIncomings16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconIndividualExpense32 { background-image: url(images/iconIndividualExpense32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconIndividualExpense22 { background-image: url(images/iconIndividualExpense22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconIndividualExpense16 { background-image: url(images/iconIndividualExpense16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconImportData32 { background-image: url(images/iconImportData32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconImportData22 { background-image: url(images/iconImportData22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconImportData16 { background-image: url(images/iconImportData16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconImputation32 { background-image: url(images/iconImputation32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconImputation22 { background-image: url(images/iconImputation22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconImputation16 { background-image: url(images/iconImputation16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconIndicatorDefinition32 { background-image: url(images/iconIndicatorDefinition32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconIndicatorDefinition22 { background-image: url(images/iconIndicatorDefinition22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconIndicatorDefinition16 { background-image: url(images/iconIndicatorDefinition16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconIndividualExpenseType32 { background-image: url(images/iconIndividualExpenseType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconIndividualExpenseType22 { background-image: url(images/iconIndividualExpenseType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconIndividualExpenseType16 { background-image: url(images/iconIndividualExpenseType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconInvoice32 { background-image: url(images/iconInvoice32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconInvoice22 { background-image: url(images/iconInvoice22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconInvoice16 { background-image: url(images/iconInvoice16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconInvoiceType32 { background-image: url(images/iconInvoiceType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconInvoiceType22 { background-image: url(images/iconInvoiceType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconInvoiceType16 { background-image: url(images/iconInvoiceType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconIssue32 { background-image: url(images/iconIssue32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconIssue22 { background-image: url(images/iconIssue22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconIssue16 { background-image: url(images/iconIssue16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconIssueType32 { background-image: url(images/iconIssueType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconIssueType22 { background-image: url(images/iconIssueType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconIssueType16 { background-image: url(images/iconIssueType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconLikelihood32 { background-image: url(images/iconLikelihood32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconLikelihood22 { background-image: url(images/iconLikelihood22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconLikelihood16 { background-image: url(images/iconLikelihood16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconListOfValues32 { background-image: url(images/iconListOfValues32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconListOfValues22 { background-image: url(images/iconListOfValues22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconListOfValues16 { background-image: url(images/iconListOfValues16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconMail32 { background-image: url(images/iconMail32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconMail22 { background-image: url(images/iconMail22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconMail16 { background-image: url(images/iconMail16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconMeasureUnit32 { background-image: url(images/iconMeasureUnit32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconMeasureUnit22 { background-image: url(images/iconMeasureUnit22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconMeasureUnit16 { background-image: url(images/iconMeasureUnit16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconMeeting32 { background-image: url(images/iconMeeting32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconMeeting22 { background-image: url(images/iconMeeting22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconMeeting16 { background-image: url(images/iconMeeting16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconMeetingType32 { background-image: url(images/iconMeetingType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconMeetingType22 { background-image: url(images/iconMeetingType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconMeetingType16 { background-image: url(images/iconMeetingType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconMessage32 { background-image: url(images/iconMessage32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconMessage22 { background-image: url(images/iconMessage22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconMessage16 { background-image: url(images/iconMessage16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconMessageType32 { background-image: url(images/iconMessageType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconMessageType22 { background-image: url(images/iconMessageType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconMessageType16 { background-image: url(images/iconMessageType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconMilestone32 { background-image: url(images/iconMilestone32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconMilestone22 { background-image: url(images/iconMilestone22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconMilestone16 { background-image: url(images/iconMilestone16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconMilestoneType32 { background-image: url(images/iconMilestoneType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconMilestoneType22 { background-image: url(images/iconMilestoneType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconMilestoneType16 { background-image: url(images/iconMilestoneType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconOpportunity32 { background-image: url(images/iconOpportunity32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconOpportunity22 { background-image: url(images/iconOpportunity22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconOpportunity16 { background-image: url(images/iconOpportunity16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconOpportunityType32 { background-image: url(images/iconOpportunityType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconOpportunityType22 { background-image: url(images/iconOpportunityType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconOpportunityType16 { background-image: url(images/iconOpportunityType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconOverallProgress32 { background-image: url(images/iconOverallProgress32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconOverallProgress22 { background-image: url(images/iconOverallProgress22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconOverallProgress16 { background-image: url(images/iconOverallProgress16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconOrganization32 { background-image: url(images/iconOrganization32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconOrganization22 { background-image: url(images/iconOrganization22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconOrganization16 { background-image: url(images/iconOrganization16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconOrganizationType32 { background-image: url(images/iconOrganizationType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconOrganizationType22 { background-image: url(images/iconOrganizationType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconOrganizationType16 { background-image: url(images/iconOrganizationType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconParameter32 { background-image: url(images/iconParameter32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconParameter22 { background-image: url(images/iconParameter22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconParameter16 { background-image: url(images/iconParameter16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconPayment32 { background-image: url(images/iconPayment32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconPayment22 { background-image: url(images/iconPayment22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconPayment16 { background-image: url(images/iconPayment16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconPaymentDelay32 { background-image: url(images/iconPaymentDelay32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconPaymentDelay22 { background-image: url(images/iconPaymentDelay22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconPaymentDelay16 { background-image: url(images/iconPaymentDelay16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconPaymentMode32 { background-image: url(images/iconPaymentMode32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconPaymentMode22 { background-image: url(images/iconPaymentMode22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconPaymentMode16 { background-image: url(images/iconPaymentMode16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconPaymentType32 { background-image: url(images/iconPaymentType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconPaymentType22 { background-image: url(images/iconPaymentType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconPaymentType16 { background-image: url(images/iconPaymentType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconPaymentType32 { background-image: url(images/iconPaymentType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconPaymentType22 { background-image: url(images/iconPaymentType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconPaymentType16 { background-image: url(images/iconPaymentType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconPeriodicMeeting32 { background-image: url(images/iconPeriodicMeeting32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconPeriodicMeeting22 { background-image: url(images/iconPeriodicMeeting22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconPeriodicMeeting16 { background-image: url(images/iconPeriodicMeeting16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconPlanning32 { background-image: url(images/iconPlanning32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconPlanning22 { background-image: url(images/iconPlanning22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconPlanning16 { background-image: url(images/iconPlanning16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconPlugin32 { background-image: url(images/iconPlugin32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconPlugin22 { background-image: url(images/iconPlugin22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconPlugin16 { background-image: url(images/iconPlugin16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconPluginManagement32 { background-image: url(images/iconPlugin32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconPluginManagement22 { background-image: url(images/iconPlugin22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconPluginManagement16 { background-image: url(images/iconPlugin16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconPortfolioPlanning32 { background-image: url(images/iconPortfolioPlanning32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconPortfolioPlanning22 { background-image: url(images/iconPortfolioPlanning22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconPortfolioPlanning16 { background-image: url(images/iconPortfolioPlanning16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconPredefinedNote32 { background-image: url(images/iconPredefinedNote32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconPredefinedNote22 { background-image: url(images/iconPredefinedNote22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconPredefinedNote16 { background-image: url(images/iconPredefinedNote16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconPriority32 { background-image: url(images/iconPriority32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconPriority22 { background-image: url(images/iconPriority22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconPriority16 { background-image: url(images/iconPriority16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconProduct32 { background-image: url(images/iconProduct32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconProduct22 { background-image: url(images/iconProduct22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconProduct16 { background-image: url(images/iconProduct16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconProductType32 { background-image: url(images/iconProductType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconProductType22 { background-image: url(images/iconProductType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconProductType16 { background-image: url(images/iconProductType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconProductVersion32 { background-image: url(images/iconProductVersion32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconProductVersion22 { background-image: url(images/iconProductVersion22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconProductVersion16 { background-image: url(images/iconProductVersion16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconProductVersionType32 { background-image: url(images/iconProductVersionType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconProductVersionType22 { background-image: url(images/iconProductVersionType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconProductVersionType16 { background-image: url(images/iconProductVersionType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconProfile32 { background-image: url(images/iconProfile32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconProfile22 { background-image: url(images/iconProfile22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconProfile16 { background-image: url(images/iconProfile16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconProject32 { background-image: url(images/iconProject32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconProject22 { background-image: url(images/iconProject22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconProject16 { background-image: url(images/iconProject16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+.iconConstruction32 { background-image: url(images/iconConstruction.png);  background-repeat: no-repeat; width: 32px; height: 32px; background-size: 32px 32px;}
+.iconConstruction22 { background-image: url(images/iconConstruction.png);  background-repeat: no-repeat; width: 22px; height: 22px; background-size: 22px 22px;}
+.iconConstruction16 { background-image: url(images/iconConstruction.png);  background-repeat: no-repeat; width: 16px; height: 16px; background-size: 16px 16px;}
+.iconFixed32 { background-image: url(images/iconFixed.png);  background-repeat: no-repeat; width: 32px; height: 32px; background-size: 32px 32px;}
+.iconFixed22 { background-image: url(images/iconFixed.png);  background-repeat: no-repeat; width: 22px; height: 22px; background-size: 22px 22px;}
+.iconFixed16 { background-image: url(images/iconFixed.png);  background-repeat: no-repeat; width: 16px; height: 16px; background-size: 16px 16px;}
+
+.iconProjectExpense32 { background-image: url(images/iconProjectExpense32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconProjectExpense22 { background-image: url(images/iconProjectExpense22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconProjectExpense16 { background-image: url(images/iconProjectExpense16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconProjectExpenseType32 { background-image: url(images/iconProjectExpenseType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconProjectExpenseType22 { background-image: url(images/iconProjectExpenseType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconProjectExpenseType16 { background-image: url(images/iconProjectExpenseType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconProjectLife32 { background-image: url(images/iconProjectLife32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconProjectLife22 { background-image: url(images/iconProjectLife22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconProjectLife16 { background-image: url(images/iconProjectLife16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconProjectParameter32 { background-image: url(images/iconProjectParameter32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconProjectParameter22 { background-image: url(images/iconProjectParameter22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconProjectParameter16 { background-image: url(images/iconProjectParameter16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconProjectType32 { background-image: url(images/iconProjectType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconProjectType22 { background-image: url(images/iconProjectType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconProjectType16 { background-image: url(images/iconProjectType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconProvider32 { background-image: url(images/iconProvider32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconProvider22 { background-image: url(images/iconProvider22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconProvider16 { background-image: url(images/iconProvider16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconProviderType32 { background-image: url(images/iconProviderType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconProviderType22 { background-image: url(images/iconProviderType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconProviderType16 { background-image: url(images/iconProviderType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconQuality32 { background-image: url(images/iconQuality32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconQuality22 { background-image: url(images/iconQuality22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconQuality16 { background-image: url(images/iconQuality16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconQuestion32 { background-image: url(images/iconQuestion32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconQuestion22 { background-image: url(images/iconQuestion22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconQuestion16 { background-image: url(images/iconQuestion16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconQuestionType32 { background-image: url(images/iconQuestionType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconQuestionType22 { background-image: url(images/iconQuestionType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconQuestionType16 { background-image: url(images/iconQuestionType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconQuotation32 { background-image: url(images/iconQuotation32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconQuotation22 { background-image: url(images/iconQuotation22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconQuotation16 { background-image: url(images/iconQuotation16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconQuotationType32 { background-image: url(images/iconQuotationType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconQuotationType22 { background-image: url(images/iconQuotationType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconQuotationType16 { background-image: url(images/iconQuotationType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconRecipient32 { background-image: url(images/iconRecipient32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconRecipient22 { background-image: url(images/iconRecipient22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconRecipient16 { background-image: url(images/iconRecipient16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconReports32 { background-image: url(images/iconReports32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconReports22 { background-image: url(images/iconReports22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconReports16 { background-image: url(images/iconReports16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconReportsFavorite { background-image: url(images/iconReportsFavorite.png);  background-repeat: no-repeat; width: 24px; height: 24px; }
+
+.iconRequestor32 { background-image: url(images/iconRequestor32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconRequestor22 { background-image: url(images/iconRequestor22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconRequestor16 { background-image: url(images/iconRequestor16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconRequirement32 { background-image: url(images/iconRequirement32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconRequirement22 { background-image: url(images/iconRequirement22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconRequirement16 { background-image: url(images/iconRequirement16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconRequirementTest32 { background-image: url(images/iconRequirementTest32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconRequirementTest22 { background-image: url(images/iconRequirementTest22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconRequirementTest16 { background-image: url(images/iconRequirementTest16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconRequirementType32 { background-image: url(images/iconRequirementType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconRequirementType22 { background-image: url(images/iconRequirementType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconRequirementType16 { background-image: url(images/iconRequirementType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconResource32 { background-image: url(images/iconResource32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconResource22 { background-image: url(images/iconResource22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconResource16 { background-image: url(images/iconResource16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconResolution32 { background-image: url(images/iconResolution32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconResolution22 { background-image: url(images/iconResolution22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconResolution16 { background-image: url(images/iconResolution16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconResourcePlanning32 { background-image: url(images/iconResourcePlanning32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconResourcePlanning22 { background-image: url(images/iconResourcePlanning22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconResourcePlanning16 { background-image: url(images/iconResourcePlanning16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconReview32 { background-image: url(images/iconReview32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconReview22 { background-image: url(images/iconReview22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconReview16 { background-image: url(images/iconReview16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconRisk32 { background-image: url(images/iconRisk32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconRisk22 { background-image: url(images/iconRisk22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconRisk16 { background-image: url(images/iconRisk16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconRiskLevel32 { background-image: url(images/iconRiskLevel32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconRiskLevel22 { background-image: url(images/iconRiskLevel22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconRiskLevel16 { background-image: url(images/iconRiskLevel16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconRiskManagementPlan32 { background-image: url(images/iconRiskManagementPlan32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconRiskManagementPlan22 { background-image: url(images/iconRiskManagementPlan22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconRiskManagementPlan16 { background-image: url(images/iconRiskManagementPlan16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconRiskType32 { background-image: url(images/iconRiskType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconRiskType22 { background-image: url(images/iconRiskType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconRiskType16 { background-image: url(images/iconRiskType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconRole32 { background-image: url(images/iconRole32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconRole22 { background-image: url(images/iconRole22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconRole16 { background-image: url(images/iconRole16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconSearch { background-image: url(images/iconSearch.png);  background-repeat: no-repeat; width: 16px; height: 16px;}
+.iconSelect { background-image: url(images/iconSelect.png);  background-repeat: no-repeat; width: 16px; height: 16px;}
+
+.iconSeverity32 { background-image: url(images/iconSeverity32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconSeverity22 { background-image: url(images/iconSeverity22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconSeverity16 { background-image: url(images/iconSeverity16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconStatus32 { background-image: url(images/iconStatus32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconStatus22 { background-image: url(images/iconStatus22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconStatus16 { background-image: url(images/iconStatus16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconStatusMail32 { background-image: url(images/iconStatusMail32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconStatusMail22 { background-image: url(images/iconStatusMail22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconStatusMail16 { background-image: url(images/iconStatusMail16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconTeam32 { background-image: url(images/iconTeam32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconTeam22 { background-image: url(images/iconTeam22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconTeam16 { background-image: url(images/iconTeam16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconTender32 { background-image: url(images/iconTender32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconTender22 { background-image: url(images/iconTender22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconTender16 { background-image: url(images/iconTender16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconTenderStatus32 { background-image: url(images/iconTenderStatus32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconTenderStatus22 { background-image: url(images/iconTenderStatus22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconTenderStatus16 { background-image: url(images/iconTenderStatus16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconTenderType32 { background-image: url(images/iconTenderType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconTenderType22 { background-image: url(images/iconTenderType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconTenderType16 { background-image: url(images/iconTenderType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconTerm32 { background-image: url(images/iconTerm32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconTerm22 { background-image: url(images/iconTerm22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconTerm16 { background-image: url(images/iconTerm16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconTestCase32 { background-image: url(images/iconTestCase32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconTestCase22 { background-image: url(images/iconTestCase22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconTestCase16 { background-image: url(images/iconTestCase16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconTestCaseType32 { background-image: url(images/iconTestCaseType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconTestCaseType22 { background-image: url(images/iconTestCaseType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconTestCaseType16 { background-image: url(images/iconTestCaseType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconTestSession32 { background-image: url(images/iconTestSession32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconTestSession22 { background-image: url(images/iconTestSession22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconTestSession16 { background-image: url(images/iconTestSession16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconTestSessionType32 { background-image: url(images/iconTestSessionType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconTestSessionType22 { background-image: url(images/iconTestSessionType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconTestSessionType16 { background-image: url(images/iconTestSessionType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconTicket32 { background-image: url(images/iconTicket32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconTicket22 { background-image: url(images/iconTicket22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconTicket16 { background-image: url(images/iconTicket16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconTicketSimple32 { background-image: url(images/iconTicketSimple32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconTicketSimple22 { background-image: url(images/iconTicketSimple22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconTicketSimple16 { background-image: url(images/iconTicketSimple16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconTicketDelay32 { background-image: url(images/iconTicketDelay32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconTicketDelay22 { background-image: url(images/iconTicketDelay22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconTicketDelay16 { background-image: url(images/iconTicketDelay16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconTicketType32 { background-image: url(images/iconTicketType32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconTicketType22 { background-image: url(images/iconTicketType22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconTicketType16 { background-image: url(images/iconTicketType16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconToday32 { background-image: url(images/iconToday32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconToday22 { background-image: url(images/iconToday22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconToday16 { background-image: url(images/iconToday16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconTool32 { background-image: url(images/iconTool32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconTool22 { background-image: url(images/iconTool22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconTool16 { background-image: url(images/iconTool16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconTrend32 { background-image: url(images/iconTrend32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconTrend22 { background-image: url(images/iconTrend22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconTrend16 { background-image: url(images/iconTrend16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconType32 { background-image: url(images/iconListOfTypes32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconType22 { background-image: url(images/iconListOfTypes22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconType16 { background-image: url(images/iconListOfTypes16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconUrgency32 { background-image: url(images/iconUrgency32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconUrgency22 { background-image: url(images/iconUrgency22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconUrgency16 { background-image: url(images/iconUrgency16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconUser32 { background-image: url(images/iconUser32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconUser22 { background-image: url(images/iconUser22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconUser16 { background-image: url(images/iconUser16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconLoginUser { background-image: url(images/iconLogin.png);  background-repeat: no-repeat; width: 22px; height: 22px; background-size: 22px 22px}
+
+.iconLoginPassword { background-image: url(images/iconPassword.png);  background-repeat: no-repeat; width: 22px; height: 22px; background-size: 22px 22px}
+
+
+.iconUserParameter32 { background-image: url(images/iconUserParameter32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconUserParameter22 { background-image: url(images/iconUserParameter22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconUserParameter16 { background-image: url(images/iconUserParameter16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconWork32 { background-image: url(images/iconWork32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconWork22 { background-image: url(images/iconWork22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconWork16 { background-image: url(images/iconWork16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.iconWorkflow32 { background-image: url(images/iconWorkflow32.png);  background-repeat: no-repeat; width: 32px; height: 32px; }
+.iconWorkflow22 { background-image: url(images/iconWorkflow22.png);  background-repeat: no-repeat; width: 22px; height: 22px; }
+.iconWorkflow16 { background-image: url(images/iconWorkflow16.png);  background-repeat: no-repeat; width: 16px; height: 16px; }
+
+.calendarRed32 { background-image: url(images/calendarRed32.png);  background-repeat: no-repeat; width: 32px; height: 32px; background-size: 32px 32px;}
+.calendarRed22 { background-image: url(images/calendarRed32.png);  background-repeat: no-repeat; width: 22px; height: 22px; background-size: 22px 22px;}
+.calendarRed16 { background-image: url(images/calendarRed32.png);  background-repeat: no-repeat; width: 16px; height: 16px; background-size: 16px 16px;}
+.calendarYellow32 { background-image: url(images/calendarYellow32.png);  background-repeat: no-repeat; width: 32px; height: 32px; background-size: 32px 32px;}
+.calendarYellow22 { background-image: url(images/calendarYellow32.png);  background-repeat: no-repeat; width: 22px; height: 22px; background-size: 22px 22px;}
+.calendarYellow16 { background-image: url(images/calendarYellow32.png);  background-repeat: no-repeat; width: 16px; height: 16px; background-size: 16px 16px;}
+.calendarWhite32 { background-image: url(images/calendarWhite32.png);  background-repeat: no-repeat; width: 32px; height: 32px; background-size: 32px 32px;}
+.calendarWhite22 { background-image: url(images/calendarWhite32.png);  background-repeat: no-repeat; width: 22px; height: 22px; background-size: 22px 22px;}
+.calendarWhite16 { background-image: url(images/calendarWhite32.png);  background-repeat: no-repeat; width: 16px; height: 16px; background-size: 16px 16px;}
+.calendarRedUpdate32 { background-image: url(images/calendarRedUpdate32.png);  background-repeat: no-repeat; width: 32px; height: 32px; background-size: 32px 32px;}
+.calendarRedUpdate22 { background-image: url(images/calendarRedUpdate32.png);  background-repeat: no-repeat; width: 22px; height: 22px; background-size: 22px 22px;}
+.calendarRedUpdate16 { background-image: url(images/calendarRedUpdate32.png);  background-repeat: no-repeat; width: 16px; height: 16px; background-size: 16px 16px;}
+.calendarYellowUpdate32 { background-image: url(images/calendarYellowUpdate32.png);  background-repeat: no-repeat; width: 32px; height: 32px; background-size: 32px 32px;}
+.calendarYellowUpdate22 { background-image: url(images/calendarYellowUpdate32.png);  background-repeat: no-repeat; width: 22px; height: 22px; background-size: 22px 22px;}
+.calendarYellowUpdate16 { background-image: url(images/calendarYellowUpdate32.png);  background-repeat: no-repeat; width: 16px; height: 16px; background-size: 16px 16px;}
+.calendarWhiteUpdate32 { background-image: url(images/calendarWhiteUpdate32.png);  background-repeat: no-repeat; width: 32px; height: 32px; background-size: 32px 32px;}
+.calendarWhiteUpdate22 { background-image: url(images/calendarWhiteUpdate32.png);  background-repeat: no-repeat; width: 22px; height: 22px; background-size: 22px 22px;}
+.calendarWhiteUpdate16 { background-image: url(images/calendarWhiteUpdate32.png);  background-repeat: no-repeat; width: 16px; height: 16px; background-size: 16px 16px;}

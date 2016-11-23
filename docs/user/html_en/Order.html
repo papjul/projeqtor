@@ -1,0 +1,458 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Quotation and Order &mdash; ProjeQtOr User guide 5.4 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/projeqtor.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '5.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="ProjeQtOr User guide 5.4 documentation" href="index.html" />
+    <link rel="next" title="Bills" href="Bill.html" />
+    <link rel="prev" title="Expenses" href="Expense.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Bill.html" title="Bills"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Expense.html" title="Expenses"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="contents local topic" id="quotation-and-order">
+<p class="topic-title first">Quotation and Order</p>
+<ul class="simple">
+<li><a class="reference internal" href="#quotations" id="id1">Quotations</a></li>
+<li><a class="reference internal" href="#orders" id="id2">Orders</a></li>
+</ul>
+</div>
+<div class="section" id="quotations">
+<span id="quotation"></span><span id="index-0"></span><h1><a class="toc-backref" href="#quotation-and-order">Quotations</a><a class="headerlink" href="#quotations" title="Permalink to this headline">¶</a></h1>
+<p>A quotation is a proposal estimate sent to customer to get approval of what’s to be done, and how must the customer will pay for it.</p>
+<p>On the quotation form, you can record all the information about the sent proposal, including attaching some file completely describing the proposal with details terms and conditions.</p>
+<p class="rubric">Transform quotation to order</p>
+<ul class="simple">
+<li>A quotation can be copied into an order when corresponding document is received as customer agreement.</li>
+</ul>
+<p class="rubric">Bill lines section</p>
+<ul class="simple">
+<li>This section allows to detail the quotation modality.</li>
+</ul>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="Bill.html#manual-billing"><span class="std std-ref">Bill lines</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#linkelement-section"><span class="std std-ref">Linked element</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#attachment-section"><span class="std std-ref">Attachments</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#note-section"><span class="std std-ref">Notes</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the quotation.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Short description of the quotation.</td>
+</tr>
+<tr class="row-even"><td><strong>Quotation type</strong></td>
+<td>Type of quotation.</td>
+</tr>
+<tr class="row-odd"><td><strong>Project</strong></td>
+<td>The project concerned by the quotation.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-origin"><span class="xref std std-term">Origin</span></a></td>
+<td>Element which is the origin of the quotation.</td>
+</tr>
+<tr class="row-odd"><td>Customer</td>
+<td>Customer concerned by the quotation.</td>
+</tr>
+<tr class="row-even"><td>Contact</td>
+<td>Contact in customer organization to whom you sent the quotation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-description"><span class="xref std std-term">Request</span></a></td>
+<td>Request description.</td>
+</tr>
+<tr class="row-even"><td>Additional info.</td>
+<td>Any additional information about the quotation.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<div class="topic">
+<p class="topic-title first">Field: Customer</p>
+<ul class="simple">
+<li>Automatically updated from project field.</li>
+</ul>
+</div>
+<p class="rubric">Section: Treatment</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Status</strong></td>
+<td>Actual <a class="reference internal" href="Glossary.html#term-status"><span class="xref std std-term">status</span></a> of the quotation.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Concept.html#term-responsible"><span class="xref std std-term">Responsible</span></a></td>
+<td>Resource who is responsible for the quotation.</td>
+</tr>
+<tr class="row-even"><td>Sent date</td>
+<td>Date when quotation is sent to customer contact.</td>
+</tr>
+<tr class="row-odd"><td>Send mode</td>
+<td>Delivery mode.</td>
+</tr>
+<tr class="row-even"><td>Offer validity</td>
+<td>Limit date of the validity of the proposal.</td>
+</tr>
+<tr class="row-odd"><td>Likelihood</td>
+<td>The probability that the proposal will be accepted.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-handled"><span class="xref std std-term">Handled</span></a></td>
+<td>Box checked indicates that the quotation is taken in charge.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-done"><span class="xref std std-term">Done</span></a></td>
+<td>Box checked indicates that the quotation is processed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates that the quotation is archived.</td>
+</tr>
+<tr class="row-odd"><td>Cancelled</td>
+<td>Box checked indicates that the quotation is cancelled.</td>
+</tr>
+<tr class="row-even"><td>Planned end date</td>
+<td>Target end date of the activity object of the quotation.</td>
+</tr>
+<tr class="row-odd"><td>Activity type</td>
+<td>Type of the activity object of the quotation.</td>
+</tr>
+<tr class="row-even"><td>Payment deadline</td>
+<td>The payment deadline is stated on the quotation.</td>
+</tr>
+<tr class="row-odd"><td>Amount</td>
+<td>Total amount of the quotation.</td>
+</tr>
+<tr class="row-even"><td>Estimated work</td>
+<td>Work days corresponding to the quotation.</td>
+</tr>
+<tr class="row-odd"><td>Comments</td>
+<td>Comment about the treatment of the quotation.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<div class="topic">
+<p class="topic-title first">Field: Payment deadline</p>
+<ul class="simple">
+<li>If the payment deadline is not set, the value defined for the selected customer is used.</li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">Fields: Amount</p>
+<p>Columns:</p>
+<ul class="simple">
+<li><strong>Ex VAT</strong>: Amount without taxes.<ul>
+<li>The amount is automatically updated with the sum of bill lines.</li>
+</ul>
+</li>
+<li><strong>Tax</strong>: Applicable tax.<ul>
+<li>If the applicable tax isn’t set, the tax defined for the selected customer is used.</li>
+</ul>
+</li>
+<li><strong>Full</strong>: Amount with taxes.</li>
+</ul>
+</div>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p>Activity type</p>
+<ul class="last simple">
+<li>The activity should be created only after approval.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="orders">
+<span id="order"></span><span id="index-1"></span><h1><a class="toc-backref" href="#quotation-and-order">Orders</a><a class="headerlink" href="#orders" title="Permalink to this headline">¶</a></h1>
+<p>An order (also called command) is the trigger to start work.</p>
+<p>On the order form, you can record all the information of the received order.</p>
+<p class="rubric">Scheduled work and budgeted cost of project</p>
+<ul class="simple">
+<li>The scheduled work (field: &#8220;validated work&#8221;) of the project will be initialized with the sum of total work from all orders.</li>
+<li>The budgeted cost (field: &#8220;validated cost&#8221;) of the project will be initialized with the sum of the total amount before taxes for all orders.</li>
+<li>See: <a class="reference internal" href="CommonSections.html#progress-section-resource"><span class="std std-ref">Resources (Work &amp; Cost)</span></a></li>
+</ul>
+<p class="rubric">Bill lines section</p>
+<ul class="simple">
+<li>This section allows to detail the order modality.</li>
+</ul>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="Bill.html#manual-billing"><span class="std std-ref">Bill lines</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#linkelement-section"><span class="std std-ref">Linked element</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#attachment-section"><span class="std std-ref">Attachments</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#note-section"><span class="std std-ref">Notes</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the order.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Short description of the order.</td>
+</tr>
+<tr class="row-even"><td><strong>Order type</strong></td>
+<td>Type of order.</td>
+</tr>
+<tr class="row-odd"><td>Project</td>
+<td>The project concerned by the order.</td>
+</tr>
+<tr class="row-even"><td>Customer</td>
+<td>Customer concerned by the order.</td>
+</tr>
+<tr class="row-odd"><td>Contact</td>
+<td>Contact in customer organization to whom you sent the order.</td>
+</tr>
+<tr class="row-even"><td><strong>External reference</strong></td>
+<td><a class="reference internal" href="Glossary.html#term-external-reference"><span class="xref std std-term">External reference</span></a> of the order (as received).</td>
+</tr>
+<tr class="row-odd"><td>Date of receipt</td>
+<td>Receipt date.</td>
+</tr>
+<tr class="row-even"><td>Receive mode</td>
+<td>Delivery mode.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-origin"><span class="xref std std-term">Origin</span></a></td>
+<td>Element which is the origin of the order.</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Complete description of the order.</td>
+</tr>
+<tr class="row-odd"><td>Additional info.</td>
+<td>Any additional information about the order.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<div class="topic">
+<p class="topic-title first">Field: Customer</p>
+<ul class="simple">
+<li>Automatically updated from project field.</li>
+</ul>
+</div>
+<p class="rubric">Section: Treatment</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Status</strong></td>
+<td>Actual <a class="reference internal" href="Glossary.html#term-status"><span class="xref std std-term">status</span></a> of the order.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Concept.html#term-responsible"><span class="xref std std-term">Responsible</span></a></td>
+<td>Resource who is responsible for the order.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-handled"><span class="xref std std-term">Handled</span></a></td>
+<td>Box checked indicates that the order is taken in charge.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-done"><span class="xref std std-term">Done</span></a></td>
+<td>Box checked indicates that the order is processed.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates that the order is archived.</td>
+</tr>
+<tr class="row-odd"><td>Cancelled</td>
+<td>Box checked indicates that the order is cancelled.</td>
+</tr>
+<tr class="row-even"><td>Activity type</td>
+<td>Type of the activity object of the order.</td>
+</tr>
+<tr class="row-odd"><td>Linked activity</td>
+<td>Activity representing the execution of the order.</td>
+</tr>
+<tr class="row-even"><td>Initial</td>
+<td>Initial values.</td>
+</tr>
+<tr class="row-odd"><td>Amendment</td>
+<td>Additional values.</td>
+</tr>
+<tr class="row-even"><td>Total</td>
+<td>Sum of the initial values and amendment.</td>
+</tr>
+<tr class="row-odd"><td>Start date</td>
+<td>Initial start date of the execution of the order.</td>
+</tr>
+<tr class="row-even"><td>End date</td>
+<td>Initial and validated end date of the execution of the order.</td>
+</tr>
+<tr class="row-odd"><td>Comments</td>
+<td>Comment about the treatment of the order.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<div class="topic">
+<p class="topic-title first">Fields: Initial, Amendment and Total</p>
+<p>Columns:</p>
+<ul class="simple">
+<li><strong>Ex VAT</strong>: Amount before taxes.<ul>
+<li>The column value is automatically updated with the sum of bill line amounts.</li>
+</ul>
+</li>
+<li><strong>Tax</strong>: Applicable tax.<ul>
+<li>If the applicable tax isn’t set, the tax defined for the selected customer is used.</li>
+</ul>
+</li>
+<li><strong>Full</strong>: Amount with taxes.</li>
+<li><strong>Work</strong>: Work days corresponding to the order.<ul>
+<li>The column value is automatically updated with the sum of bill lines quantities.</li>
+<li>When the measure unit is &#8220;day&#8221;.</li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">Field: Amendment</p>
+<ul class="simple">
+<li>The columns values &#8220;Ex VAT&#8221; and &#8220;Work&#8221; are automatically updated with the sum of billing lines with selected amendment checkboxes.</li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">Fields: Start and end date</p>
+<ul class="simple">
+<li><strong>Initial</strong> : Initial dates</li>
+<li><strong>Validated</strong> : Validated dates</li>
+</ul>
+</div>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p>Activity type</p>
+<ul class="last simple">
+<li>The activity should be created only after approval.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Projeqtor_Logo_White.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Quotations</a></li>
+<li><a class="reference internal" href="#orders">Orders</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="Expense.html"
+                        title="previous chapter">Expenses</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="Bill.html"
+                        title="next chapter">Bills</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Bill.html" title="Bills"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Expense.html" title="Expenses"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, ProjeQtOr.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.4.
+    </div>
+  </body>
+</html>

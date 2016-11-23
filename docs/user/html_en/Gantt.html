@@ -1,0 +1,614 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Gantt charts &mdash; ProjeQtOr User guide 5.4 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/projeqtor.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '5.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="ProjeQtOr User guide 5.4 documentation" href="index.html" />
+    <link rel="next" title="Today (Dashboard)" href="Today.html" />
+    <link rel="prev" title="Planning elements" href="PlanningElements.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Today.html" title="Today (Dashboard)"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="PlanningElements.html" title="Planning elements"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="gantt-charts">
+<h1>Gantt charts<a class="headerlink" href="#gantt-charts" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="id1">
+<p class="topic-title first">Gantt charts</p>
+<ul class="simple">
+<li><a class="reference internal" href="#planning" id="id18">Planning</a></li>
+<li><a class="reference internal" href="#projects-portfolio" id="id19">Projects portfolio</a></li>
+<li><a class="reference internal" href="#resource-planning" id="id20">Resource Planning</a></li>
+<li><a class="reference internal" href="#export-planning-to-pdf" id="id21">Export planning to PDF</a></li>
+</ul>
+</div>
+<div class="section" id="planning">
+<span id="gantt-planning"></span><span id="index-0"></span><h2><a class="toc-backref" href="#id1">Planning</a><a class="headerlink" href="#planning" title="Permalink to this headline">¶</a></h2>
+<p>This screen allows to define project planning and follow progress.</p>
+<p>It is composed with two areas:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#task-list-area"><span class="std std-ref">Task list area</span></a> <a class="reference internal" href="_images/one.png"><img alt="One" src="_images/one.png" style="width: 18.0px; height: 18.0px;" /></a></li>
+<li><a class="reference internal" href="#gantt-chart-view"><span class="std std-ref">Gantt chart view</span></a> <a class="reference internal" href="_images/two.png"><img alt="Two" src="_images/two.png" style="width: 18.0px; height: 18.0px;" /></a></li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>This screen offers many features that will be described in the next sections.</li>
+</ul>
+</div>
+<div class="figure align-center" id="id7">
+<img alt="Gantt (Planning)" src="_images/SCR_GanttPlanning.png" />
+<p class="caption"><span class="caption-text">Gantt (Planning)</span></p>
+</div>
+<p class="rubric">3 - Activity planning calculation</p>
+<ul class="simple">
+<li>Click on  <img alt="calculate planning button" src="_images/plan.png" /> to start the activity planning calculation.  (See: <a class="reference internal" href="#project-planning"><span class="std std-ref">Project planning</span></a>)</li>
+</ul>
+<p class="rubric">4 - Buttons</p>
+<ul class="simple">
+<li>Click on <img alt="store planned dates button" src="_images/buttonStorePlannedDates.png" /> to store planned dates. (See: <a class="reference internal" href="#project-planning"><span class="std std-ref">Project planning</span></a>)</li>
+<li>Click on <img alt="icon print button" src="_images/buttonIconPrint.png" /> to get a printable version of the Gantt chart.</li>
+<li>Click on <img alt="icon PDF button" src="_images/buttonIconPdf.png" /> to export Gantt chart in PDF format. (See: <a class="reference internal" href="#export-gantt-pdf"><span class="std std-ref">Export planning to PDF</span></a>)</li>
+<li>Click on <img alt="MS Project button" src="_images/mpp.png" /> to export planning to MS-Project xml format.</li>
+<li>Click on <img alt="Button icon column" src="_images/buttonIconColumn.png" /> to define the columns of progress data that will be displayed. (See: <a class="reference internal" href="#progress-data-view"><span class="std std-ref">Progress data view</span></a>)</li>
+<li>Click on <img alt="create new item button" src="_images/createNewItem.png" /> to create a new item. (See: <a class="reference internal" href="#project-planning"><span class="std std-ref">Project planning</span></a>)</li>
+</ul>
+<div class="section" id="task-list-area">
+<span id="id2"></span><h3>Task list area<a class="headerlink" href="#task-list-area" title="Permalink to this headline">¶</a></h3>
+<p>The task list area is composed with:</p>
+<ul class="simple">
+<li><a class="reference internal" href="#task-list"><span class="std std-ref">Task list</span></a> <a class="reference internal" href="_images/one.png"><img alt="One" src="_images/one.png" style="width: 18.0px; height: 18.0px;" /></a></li>
+<li><a class="reference internal" href="#progress-data-view"><span class="std std-ref">Progress data view</span></a> <a class="reference internal" href="_images/two.png"><img alt="Two" src="_images/two.png" style="width: 18.0px; height: 18.0px;" /></a></li>
+</ul>
+<div class="figure align-center" id="id8">
+<img alt="Task list &amp; progress data view" src="_images/ZONE_GanttTaskListProgressData.png" />
+<p class="caption"><span class="caption-text">Task list &amp; progress data view</span></p>
+</div>
+<p class="rubric">3 - Area splitter</p>
+<p>The splitter is used to show or hide the progress data view.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>The progress data view is hidden by default.</li>
+<li>Move the splitter on your right to display them.</li>
+</ul>
+</div>
+<div class="section" id="task-list">
+<span id="id3"></span><h4>Task list<a class="headerlink" href="#task-list" title="Permalink to this headline">¶</a></h4>
+<p>The task list displayed planning elements in hierarchical form.</p>
+<p>Tasks are regrouped by project and activity.</p>
+<p class="rubric">Projects displayed</p>
+<ul class="simple">
+<li>Projects displayed depends on selection done with the project selector.</li>
+<li>See: <a class="reference internal" href="Gui.html#top-bar"><span class="std std-ref">Top bar</span></a></li>
+</ul>
+<div class="figure align-center" id="id9">
+<img alt="Task list zone" src="_images/ZONE_GanttTaskList.png" />
+<p class="caption"><span class="caption-text">Task list zone</span></p>
+</div>
+<p class="rubric">1 - Hierarchical level</p>
+<ul class="simple">
+<li>Click on <img alt="minus button" src="_images/minusButton.png" /> or <img alt="plus button" src="_images/plusButton.png" /> to adjust the hierarchical level displayed.</li>
+</ul>
+<p class="rubric">2 - Icon of element</p>
+<ul class="simple">
+<li>An icon is displayed on the left of the corresponding element.</li>
+</ul>
+<p class="rubric">3 - Group row</p>
+<ul class="simple">
+<li>Click on <img alt="minus button" src="_images/minusButton.png" /> or <img alt="plus button" src="_images/plusButton.png" /> on the group row to expand or shrink the group.</li>
+</ul>
+<p class="rubric">4 - Show WBS</p>
+<ul class="simple">
+<li>Click on &#8220;Show WBS&#8221; to display the WBS number before the names.</li>
+</ul>
+<p class="rubric">5 - Item name</p>
+<ul class="simple">
+<li>Click on a row will display the detail of the item in the detail window.</li>
+</ul>
+<p class="rubric">6 - Checkbox «Show closed items»</p>
+<ul class="simple">
+<li>Flag on «Show closed items» allows to list also closed items.</li>
+</ul>
+</div>
+<div class="section" id="progress-data-view">
+<span id="id4"></span><h4>Progress data view<a class="headerlink" href="#progress-data-view" title="Permalink to this headline">¶</a></h4>
+<p>The progress data view allows to show progress on project elements.</p>
+<p>For each planning element, the progress data are displayed at them right.</p>
+<div class="figure align-center" id="id10">
+<img alt="Progress data view" src="_images/ZONE_GanttProgressData.png" />
+<p class="caption"><span class="caption-text">Progress data view</span></p>
+</div>
+<p class="rubric">1 - Group row</p>
+<ul class="simple">
+<li>The group row has a gray background.</li>
+<li>Used to display consolidated progress data for tasks.</li>
+</ul>
+<p class="rubric">2 - Task row</p>
+<ul class="simple">
+<li>The task row has a white background.</li>
+<li>Used to display task progress data.</li>
+</ul>
+<p class="rubric">3 -  Define the columns of progress data that will be displayed</p>
+<ul class="simple">
+<li>Click on <img alt="Button icon column" src="_images/buttonIconColumn.png" /> to define the columns displayed.</li>
+<li>Click on <strong>OK</strong> button to apply changes.</li>
+</ul>
+<blockquote>
+<div><div class="compound">
+<p class="compound-first"><strong>Column selection</strong></p>
+<ul class="compound-last simple">
+<li>Use checkboxes to select or unselect columns to display.</li>
+</ul>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Columns order</strong></p>
+<ul class="compound-last simple">
+<li>Use the <img alt="Button icon drag" src="_images/iconDrag.png" /> to reorder columns with drag &amp; drop feature.</li>
+</ul>
+</div>
+</div></blockquote>
+<div class="figure align-center" id="id11">
+<img alt="Popup list - Select columns" src="_images/TIP_GanttSelectColunmsToDisplay.png" />
+<p class="caption"><span class="caption-text">Popup list - Select columns</span></p>
+</div>
+</div>
+</div>
+<div class="section" id="gantt-chart-view">
+<span id="id5"></span><h3>Gantt chart view<a class="headerlink" href="#gantt-chart-view" title="Permalink to this headline">¶</a></h3>
+<p>The Gantt chart view is a graphic representation of progress data.</p>
+<p>For each planning element, a Gantt bar is displayed at them right.</p>
+<div class="figure align-center" id="id12">
+<img alt="Gantt chart view" src="_images/ZONE_GanttChartView.png" />
+<p class="caption"><span class="caption-text">Gantt chart view</span></p>
+</div>
+<p class="rubric">1 - Scale</p>
+<ul class="simple">
+<li>Scale available: daily, weekly, monthly or quarter</li>
+<li>The Gantt chart view will be adjusted according to scale selected.</li>
+</ul>
+<p class="rubric">2 - Start and end dates</p>
+<ul class="simple">
+<li>Change the starting or ending date to limit the display of Gantt chart view.</li>
+</ul>
+<p class="rubric">3 - Saving dates</p>
+<ul class="simple">
+<li>Save previous dates to retrieve them on every connection.</li>
+</ul>
+<p class="rubric">4- Gantt bars</p>
+<ul class="simple">
+<li>Overdue tasks appear in red, others in green.</li>
+</ul>
+<blockquote>
+<div><div class="compound">
+<p class="compound-first"><strong>Red bar</strong></p>
+<dl class="compound-last describe">
+<dt>
+<code class="descname">Condition</code></dt>
+<dd><p>Planned end date or (Real end date if completed task)  &gt; Validated end date</p>
+</dd></dl>
+
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Purple bar</strong></p>
+<ul class="compound-last simple">
+<li>The planning calculator tries to plan, the remaining work on the task assigned to a resource within the project affection period.</li>
+<li>If remaining work on the task can&#8217;t be planned, a purple bar appears in the Gantt view.</li>
+</ul>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Consolidation bar</strong></p>
+<blockquote class="compound-middle">
+<div><img alt="consolidation bar" src="_images/ganttConsolidationBar.png" />
+<ul class="simple">
+<li>Displayed at group row level.</li>
+<li>Graphic display of consolidated dates for planning elements group.</li>
+<li>Start with the smallest start date and end with the biggest end date, either with planned or real dates.</li>
+</ul>
+</div></blockquote>
+<div class="compound-last compound">
+<p class="compound-first"><strong>Real work progress</strong></p>
+<img alt="green bar" class="compound-middle" src="_images/ganttGreenBar.png" />
+<ul class="compound-last simple">
+<li>The line that cross a Gantt bar displays the percentage of actual progress.</li>
+<li>The length of the line represents the percentage of completion, based on the percentage of actual progress against the length of Gantt bar.</li>
+</ul>
+</div>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>Move the cursor over the bar to display item name and planned dates.</li>
+</ul>
+</div>
+</div></blockquote>
+<p class="rubric">5 - Dependency links</p>
+<ul class="simple">
+<li>Dependencies between planning elements are displayed with an arrow.</li>
+</ul>
+<p class="rubric">6 - Milestone</p>
+<ul>
+<li><p class="first">Milestones appear as diamonds, filled if completed, empty if not.</p>
+</li>
+<li><p class="first">Color of  diamond depends on milestone progress.</p>
+<div class="compound">
+<p class="compound-first"><strong>Ongoing milestone and in times</strong></p>
+<img alt="ongoing milestone and in times" class="compound-last" src="_images/ganttGreenMilestone.png" />
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Completed milestone and in times</strong></p>
+<img alt="completed milestone and in times" class="compound-last" src="_images/ganttFilledGreenMilestone.png" />
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Ongoing milestone and delayed</strong></p>
+<img alt="ongoing milestone and delayed" class="compound-middle" src="_images/ganttRedMilestone.png" />
+<dl class="compound-last describe">
+<dt>
+<code class="descname">Condition</code></dt>
+<dd><p>Planned end date &gt; Validate end date</p>
+</dd></dl>
+
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Completed milestone and delayed</strong></p>
+<img alt="completed milestone and delayed" class="compound-middle" src="_images/ganttFilledRedMilestone.png" />
+<dl class="compound-last describe">
+<dt>
+<code class="descname">Condition</code></dt>
+<dd><p>Real end date &gt; Validated end date</p>
+</dd></dl>
+
+</div>
+</li>
+</ul>
+<p class="rubric">7 - Show resources</p>
+<ul class="simple">
+<li>Click on “Show resources” to display resources assigned to tasks.</li>
+</ul>
+<div class="topic">
+<p class="topic-title first">Global parameter “Show resource in Gantt”</p>
+<ul class="simple">
+<li>This parameter defines the option availability and whether the resource name or initial is displayed.</li>
+</ul>
+</div>
+<p class="rubric">8 - Current date</p>
+<ul class="simple">
+<li>Yellow column indicates the current day, week, month or quarter, according to scale selected.</li>
+</ul>
+</div>
+<div class="section" id="project-planning">
+<span id="index-1"></span><span id="id6"></span><h3>Project planning<a class="headerlink" href="#project-planning" title="Permalink to this headline">¶</a></h3>
+<p>Project planning and activity planning calculation can be done in the Gantt.</p>
+<div class="figure align-center" id="id13">
+<img alt="Project planning" src="_images/SCR_GanttPlanningProject.png" />
+<p class="caption"><span class="caption-text">Project planning</span></p>
+</div>
+<p class="rubric">1 - Add a new planning element</p>
+<ul class="simple">
+<li>Allows to create a new planning element.</li>
+<li>The created element is added in the Gantt and detail window is opened.</li>
+<li>The detail window allows to complete entry.</li>
+</ul>
+<div class="figure align-center" id="id14">
+<img alt="Popup menu - Create a new item" src="_images/TIP_CreateNewItem.png" />
+<p class="caption"><span class="caption-text">Popup menu - Create a new item</span></p>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Planning elements management</p>
+<ul class="last simple">
+<li>Planning elements can be managed with their own dedicated screen.</li>
+<li>Test session and Meeting elements can be added to the planning with their own dedicated screen.</li>
+</ul>
+</div>
+<p class="rubric">2 - Reorder planning elements</p>
+<ul class="simple">
+<li>The selector <img alt="Button icon drag" src="_images/iconDrag.png" /> allows to reorder the planning elements.</li>
+</ul>
+<p class="rubric">3 - Indenting element</p>
+<ul class="simple">
+<li>Click on an element, the detail window will be displayed.</li>
+<li>Two new buttons are displayed in the header, they allow to increase or decrease indent of an element.</li>
+</ul>
+<blockquote>
+<div><div class="compound">
+<p class="compound-first"><strong>Increase indent</strong></p>
+<ul class="compound-last simple">
+<li>The element will become the child of the previous element.</li>
+</ul>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Decrease indent</strong></p>
+<ul class="compound-last simple">
+<li>The element will be moved at the same level than the previous element.</li>
+</ul>
+</div>
+</div></blockquote>
+<p class="rubric">4 - Dependency links</p>
+<ul class="simple">
+<li>To create a dependency link, clicked and hold on a graphic element, the mouse cursor changes to <img alt="DND link" src="_images/dndLink.png" />.</li>
+<li>Move mouse cursor on graphic element that will be linked and release the button.</li>
+</ul>
+<blockquote>
+<div><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Dependency links management</p>
+<ul class="last simple">
+<li>Dependency links can be managed in element screen.</li>
+<li>See: <a class="reference internal" href="CommonSections.html#predsuces-element-section"><span class="std std-ref">Predecessor and Sucessor element sections</span></a>.</li>
+</ul>
+</div>
+</div></blockquote>
+<p class="rubric">5 - Activity planning calculation</p>
+<ul class="simple">
+<li>Click on <img alt="calculate planning button" src="_images/plan.png" /> to start the activity planning calculation.</li>
+</ul>
+<blockquote>
+<div><div class="compound">
+<p class="compound-first"><strong>Automatic run plan</strong></p>
+<ul class="compound-last simple">
+<li>Check the box to activate automatic calculation on each change.</li>
+</ul>
+</div>
+</div></blockquote>
+<p class="rubric">6 - Store planned dates</p>
+<ul class="simple">
+<li>Allows to store planned dates into requested and validated dates.</li>
+<li>In other words, this feature allows to set baseline dates and preliminary dates from calculated planning.</li>
+</ul>
+<blockquote>
+<div><div class="compound">
+<p class="compound-first"><strong>Action available</strong></p>
+<ul class="compound-last simple">
+<li><strong>Always:</strong> Always overwrite existing values.</li>
+<li><strong>If empty:</strong> Store only if the value is empty.</li>
+<li><strong>Never:</strong> Values are not stored.</li>
+</ul>
+</div>
+</div></blockquote>
+<div class="figure align-center">
+<img alt="Dialog box - Store planned dates" src="_images/BOX_StorePlannedDates.png" />
+</div>
+</div>
+</div>
+<div class="section" id="projects-portfolio">
+<span id="index-2"></span><h2><a class="toc-backref" href="#id1">Projects portfolio</a><a class="headerlink" href="#projects-portfolio" title="Permalink to this headline">¶</a></h2>
+<p>This screen displays Gantt chart from projects portfolio point of view.</p>
+<p>It displays projects synthesis and project&#8217;s dependencies, without project activities.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>This section describes specific behavior for this screen.</li>
+<li>All others behaviors are similar to <a class="reference internal" href="#gantt-planning"><span class="std std-ref">Planning</span></a> screen.</li>
+</ul>
+</div>
+<div class="figure align-center" id="id15">
+<img alt="Gantt (Projects portfolio)" src="_images/SCR_GanttProjectsPortfolio.png" />
+<p class="caption"><span class="caption-text">Gantt (Projects portfolio)</span></p>
+</div>
+<p class="rubric">1 - Show milestones</p>
+<ul class="simple">
+<li>It is possible to define whether milestones are displayed or not.</li>
+<li>If they are displayed, then It is possible to define the type of milestone to be displayed or displayed all.</li>
+</ul>
+</div>
+<div class="section" id="resource-planning">
+<span id="index-3"></span><h2><a class="toc-backref" href="#id1">Resource Planning</a><a class="headerlink" href="#resource-planning" title="Permalink to this headline">¶</a></h2>
+<p>This screen displays Gantt chart from the resources point of view.</p>
+<p>Assigned tasks are grouped under resource level.</p>
+<p class="rubric">Gantt bars</p>
+<ul class="simple">
+<li>For activities, the Gantt bar is split in two:<ul>
+<li>Real work in grey.</li>
+<li>Reassessed work in green.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<div><div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<ul class="last simple">
+<li>This makes appear some planning gap between started work and reassessed work.</li>
+</ul>
+</div>
+</div></blockquote>
+<p class="rubric">Dependencies behavior</p>
+<ul class="simple">
+<li>Links between activities are displayed only in the resource group.</li>
+<li>Links existing between tasks on different resources are not displayed.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>This section describes specific behavior for this screen.</li>
+<li>All others behaviors are similar to <a class="reference internal" href="#gantt-planning"><span class="std std-ref">Planning</span></a> screen.</li>
+</ul>
+</div>
+<div class="figure align-center" id="id16">
+<img alt="Gantt (Resource planning)" src="_images/SCR_GanttResourcePlanning.png" />
+<p class="caption"><span class="caption-text">Gantt (Resource planning)</span></p>
+</div>
+<p class="rubric">1 - Show project level</p>
+<ul class="simple">
+<li>Tasks can be grouped by project.</li>
+<li>Click on “Show project level” to display project level.</li>
+</ul>
+<p class="rubric">2 - Show left work</p>
+<ul class="simple">
+<li>Left work can be displayed at right from Gantt bar.</li>
+<li>Click on “Show left work” to display left work for each item.</li>
+</ul>
+</div>
+<div class="section" id="export-planning-to-pdf">
+<span id="export-gantt-pdf"></span><h2><a class="toc-backref" href="#id1">Export planning to PDF</a><a class="headerlink" href="#export-planning-to-pdf" title="Permalink to this headline">¶</a></h2>
+<p>Allows to export planning to PDF format.</p>
+<p>Export contains all details and links between tasks.</p>
+<div class="figure align-center">
+<img alt="Dialog box - Export planning to PDF" src="_images/BOX_ExportPlanningPDF.png" />
+</div>
+<table border="1" class="docutils" id="id17">
+<caption><span class="caption-text">Fields - Export planning to PDF dialog box</span><a class="headerlink" href="#id17" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Orientation</td>
+<td>Page orientation.</td>
+</tr>
+<tr class="row-odd"><td>Zoom</td>
+<td>Allows to fit planning on page.</td>
+</tr>
+<tr class="row-even"><td>Repeat headers</td>
+<td>Planning can be  span multiple pages.</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Technical points</p>
+<ul class="last simple">
+<li>This new feature will execute export on client side, in your browser.</li>
+<li>Thus the server will not be <em>heavy loaded</em> like <em>standard</em> PDF export does.</li>
+<li>It is highly faster than <em>standard</em> PDF export.</li>
+<li>Therefore, this feature is hightly dependant to browser compatibility.</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Browser compatibility</p>
+<ul class="last simple">
+<li>This new feature is technically complex and it is not compatible with all browsers.</li>
+<li>Enabled only with Chrome browser as of now.</li>
+<li>Else, the old export feature will be used.</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Forced feature activation (deactivation)</p>
+<ul class="last simple">
+<li>To enable this feature for all browsers, add the parameter <strong>$pdfPlanningBeta=&#8217;true&#8217;;</strong> in parameters.php file.</li>
+<li>To disable if for all brosers (including Chrome), add the parameter <strong>$pdfPlanningBeta=&#8217;false&#8217;;</strong></li>
+<li>Default (when <strong>$pdfPlanningBeta</strong> parameter is not set) is <em>enabled with Chrome, disabled with other browsers</em></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Projeqtor_Logo_White.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Gantt charts</a><ul>
+<li><a class="reference internal" href="#planning">Planning</a><ul>
+<li><a class="reference internal" href="#task-list-area">Task list area</a><ul>
+<li><a class="reference internal" href="#task-list">Task list</a></li>
+<li><a class="reference internal" href="#progress-data-view">Progress data view</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#gantt-chart-view">Gantt chart view</a></li>
+<li><a class="reference internal" href="#project-planning">Project planning</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#projects-portfolio">Projects portfolio</a></li>
+<li><a class="reference internal" href="#resource-planning">Resource Planning</a></li>
+<li><a class="reference internal" href="#export-planning-to-pdf">Export planning to PDF</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="PlanningElements.html"
+                        title="previous chapter">Planning elements</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="Today.html"
+                        title="next chapter">Today (Dashboard)</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Today.html" title="Today (Dashboard)"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="PlanningElements.html" title="Planning elements"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, ProjeQtOr.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.4.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,185 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Document directories management &mdash; ProjeQtOr User guide 5.4 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/projeqtor.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '5.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="ProjeQtOr User guide 5.4 documentation" href="index.html" />
+    <link rel="next" title="Emails sent" href="Tools.html" />
+    <link rel="prev" title="Contexts" href="Context.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Tools.html" title="Emails sent"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Context.html" title="Contexts"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="document-directories">
+<span id="document-directory"></span><span id="index-0"></span><h1>Document directories<a class="headerlink" href="#document-directories" title="Permalink to this headline">¶</a></h1>
+<p>Document directories management allows to define a structure for document storage.</p>
+<ul class="simple">
+<li>The files of document will be stored in the folder defined by the parameters  «Document root» and «Location».</li>
+<li>«Document root» is defined in <a class="reference internal" href="Administration.html#document-section"><span class="std std-ref">Global parameters</span></a> screen.</li>
+</ul>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the directory.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the directory.</td>
+</tr>
+<tr class="row-even"><td>Parent directory</td>
+<td>Name of the parent directory to define hierarchic structure.</td>
+</tr>
+<tr class="row-odd"><td>Location</td>
+<td>Folder where files will be stored.</td>
+</tr>
+<tr class="row-even"><td>Project</td>
+<td>Directory is dedicated to this project.</td>
+</tr>
+<tr class="row-odd"><td>Product</td>
+<td>Directory is dedicated to this product.</td>
+</tr>
+<tr class="row-even"><td>Default type</td>
+<td>Type of document the directory is dedicated to.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate that directory is archived.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<div class="topic">
+<p class="topic-title first">Field: Parent directory</p>
+<ul class="simple">
+<li>The current directory is then a sub-directory of parent.</li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">Field: Location</p>
+<ul class="simple">
+<li>Location is automatically defined as «Parent directory» / «Name».</li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">Field: Project</p>
+<ul class="simple">
+<li>This project will be the default to new stored documents in this directory.</li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">Field: Product</p>
+<ul class="simple">
+<li>This product will be the default to new stored documents in this directory.</li>
+<li>If the project is specified, the list of values contains the products linked the selected project.</li>
+<li>If the project is not specified, the list of values contains all products defined.</li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">Field: Default type</p>
+<ul class="simple">
+<li>This document  type  will be the default to new stored documents in this directory.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Projeqtor_Logo_White.png" alt="Logo"/>
+            </a></p>
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="Context.html"
+                        title="previous chapter">Contexts</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="Tools.html"
+                        title="next chapter">Emails sent</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Tools.html" title="Emails sent"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Context.html" title="Contexts"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, ProjeQtOr.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.4.
+    </div>
+  </body>
+</html>

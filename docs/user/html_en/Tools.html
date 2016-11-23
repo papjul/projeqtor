@@ -1,0 +1,383 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Tools &mdash; ProjeQtOr User guide 5.4 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/projeqtor.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '5.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="ProjeQtOr User guide 5.4 documentation" href="index.html" />
+    <link rel="next" title="Workflows" href="ControlAutomation.html" />
+    <link rel="prev" title="Document directories" href="DocumentDirectory.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ControlAutomation.html" title="Workflows"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="DocumentDirectory.html" title="Document directories"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="emails-sent">
+<span id="index-0"></span><span id="id1"></span><h1>Emails sent<a class="headerlink" href="#emails-sent" title="Permalink to this headline">¶</a></h1>
+<p>Users can have a look at the list of the automatic emails sent.</p>
+<p>All the information about the email, including the status showing whether the email was correctly sent or not.</p>
+</div>
+<div class="section" id="alerts">
+<span id="index-1"></span><span id="id2"></span><h1>Alerts<a class="headerlink" href="#alerts" title="Permalink to this headline">¶</a></h1>
+<p>Users can have a look at the alerts sent.</p>
+<p>By default, administrators can see all the alerts sent, and other users only see their own alerts.</p>
+<div class="figure align-center" id="id5">
+<img alt="Alert screen" src="_images/SCR_Alert.png" />
+<p class="caption"><span class="caption-text">Alert screen</span></p>
+</div>
+<div class="topic">
+<p class="topic-title first">Button: Mark as read</p>
+<ul class="simple">
+<li>The button is available if  the user alert is not tagged “read” yet.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="messages">
+<span id="message"></span><span id="index-2"></span><h1>Messages<a class="headerlink" href="#messages" title="Permalink to this headline">¶</a></h1>
+<div class="sidebar">
+<p class="first sidebar-title">Concepts</p>
+<ul class="last simple">
+<li><a class="reference internal" href="Concept.html#profiles-definition"><span class="std std-ref">Profiles definition</span></a></li>
+</ul>
+</div>
+<p>You can define some message that will be displayed on the <a class="reference internal" href="Today.html#messages-section"><span class="std std-ref">Today</span></a> screen of users.</p>
+<p>Optionally, the message can be shown on login screen.</p>
+<p>You can limit the display by profile, project and user.</p>
+<p>The message will be displayed in a color depending on the message type.</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils" id="id6">
+<caption><span class="caption-text">Message description section fields</span><a class="headerlink" href="#id6" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the message.</td>
+</tr>
+<tr class="row-odd"><td><strong>Title</strong></td>
+<td>Header of the message.</td>
+</tr>
+<tr class="row-even"><td><strong>Message type</strong></td>
+<td>Type of message.</td>
+</tr>
+<tr class="row-odd"><td>Profile</td>
+<td>The message is limited to users with this profile.</td>
+</tr>
+<tr class="row-even"><td>Project</td>
+<td>The message is limited to resources affected to the project.</td>
+</tr>
+<tr class="row-odd"><td>User</td>
+<td>The message is limited to this user.</td>
+</tr>
+<tr class="row-even"><td>Show on login screen</td>
+<td>Show this message on login screen.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate that the message is archived.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<p class="rubric">Section: Message</p>
+<table border="1" class="docutils" id="id7">
+<caption><span class="caption-text">Message message section fields</span><a class="headerlink" href="#id7" title="Permalink to this table">¶</a></caption>
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-description"><span class="xref std std-term">Message</span></a></td>
+<td>Complete text of the message.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="import-data">
+<span id="index-3"></span><span id="id3"></span><h1>Import data<a class="headerlink" href="#import-data" title="Permalink to this headline">¶</a></h1>
+<p>Imports data from CSV or XLSX files.</p>
+<p class="rubric">How to do</p>
+<ol class="arabic simple">
+<li>Select the element type from the list.</li>
+<li>Select file format (CSV or XLSX).</li>
+<li>Select the file.</li>
+<li>Click on <strong>Import data</strong> button to start importing.</li>
+</ol>
+<p class="rubric">Report of the import</p>
+<ul class="simple">
+<li>Data that is not imported because not recognized as a field appear in grey text in the result table.</li>
+<li>Data that are voluntarily not imported (because must be calculated) appear in blue text in the result table.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Import users</p>
+<ul class="simple">
+<li>The password field must be cut and pasted from the database because it is encrypted.</li>
+<li>If you enter some readable password, the users will not be able to connect.</li>
+</ul>
+<div class="last admonition attention">
+<p class="first admonition-title">Attention</p>
+<ul class="last simple">
+<li>If you want to create new users <strong>don&#8217;t put any id</strong> because if id already exists, it will be overridden by the new (with possibility to erase admin user…).</li>
+<li>Always keep in mind that your import may have some impact on administrator user.</li>
+<li>So be sure to keep an operational admin access.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="file-format">
+<span id="id4"></span><h2>File format<a class="headerlink" href="#file-format" title="Permalink to this headline">¶</a></h2>
+<p>The content of the imported file must fit the element type description.</p>
+<p>To know the data that may be imported, click on the <img alt="Button icon help" src="_images/iconHelp.png" /> button.</p>
+<p class="rubric">Names of columns</p>
+<ul class="simple">
+<li>The first line of the file must contain the name of the fields.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>Names of columns can contain spaces (to have better readability).</li>
+<li>The spaces will be removed to get the name of the column.</li>
+</ul>
+</div>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<ul class="last simple">
+<li>Look into the model class. The names are the same.</li>
+</ul>
+</div>
+<p class="rubric">Date format</p>
+<ul class="simple">
+<li>Dates are expected in format “YYYY-MM-DD”.</li>
+</ul>
+</div>
+<div class="section" id="data-import-process">
+<h2>Data import process<a class="headerlink" href="#data-import-process" title="Permalink to this headline">¶</a></h2>
+<p>Operations are performed, depending on whether the element type, the column or the column value.</p>
+<p class="rubric">Column Id</p>
+<p>You may or may not add an &#8220;id&#8221; column in the file.</p>
+<blockquote>
+<div><div class="compound">
+<p class="compound-first"><strong>Column &#8220;id&#8221; exists and &#8220;id&#8221; is set in a line</strong></p>
+<ul class="compound-last simple">
+<li>The import will try to update the corresponding element, and will fail if it does not exist.</li>
+</ul>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Column &#8220;id&#8221; does not exist or if &#8220;id&#8221; is not set in a line</strong></p>
+<ul class="compound-last simple">
+<li>The import will create a new element from the data.</li>
+</ul>
+</div>
+</div></blockquote>
+<p class="rubric">Linked tables</p>
+<p>For columns corresponding to linked tables (&#8220;idXxxx&#8221;), you can indicate as the column name  either &#8220;idXxxx“ or “Xxxx&#8221; (without &#8220;id&#8221;) or the caption of the column (as displayed on screens).</p>
+<blockquote>
+<div><div class="compound">
+<p class="compound-first"><strong>Numeric value</strong></p>
+<ul class="compound-last simple">
+<li>If the value of the column is numeric, it is considered as the code of the item.</li>
+</ul>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Non numeric value</strong></p>
+<ul class="compound-last simple">
+<li>If the value of the column contains non numeric value, it is considered as the name of the item, and the code will be searched for the name.</li>
+</ul>
+</div>
+</div></blockquote>
+<p class="rubric"><strong>Columns with no data</strong></p>
+<ul class="simple">
+<li>In any case, columns with no data will not be updated.</li>
+<li>Then you can update only one field on an element.</li>
+</ul>
+<p class="rubric"><strong>Clear data</strong></p>
+<ul class="simple">
+<li>To clear a data, enter the value &#8220;NULL&#8221; (not case sensitive).</li>
+</ul>
+<p class="rubric">Planning elements</p>
+<ul class="simple">
+<li>Insertion into &#8220;Planning&#8221; elements (activity, project), automatically inserts an element in the table “PlanningElement”.</li>
+<li>The data of this table can be inserted into the import file.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="automatic-import">
+<span id="index-4"></span><h1>Automatic import<a class="headerlink" href="#automatic-import" title="Permalink to this headline">¶</a></h1>
+<p>Imports can be automated.</p>
+<p>Files placed on a defined directory will automatically be imported.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>Automatic import parameters must be set in <a class="reference internal" href="Administration.html#automatic-import"><span class="std std-ref">Global parameters</span></a> screen.</li>
+<li>Background task must be started by <a class="reference internal" href="Administration.html#admin-console"><span class="std std-ref">Administration console</span></a> screen.</li>
+</ul>
+</div>
+<hr class="docutils" />
+<p>The files must respect some basic rules.</p>
+<p class="rubric">File name format</p>
+<ul class="simple">
+<li>File name format is : &#8220;Class&#8221;_&#8221;Timestamp&#8221;.&#8221;ext&#8221;</li>
+<li>Example of import file name: Ticket_20131231_235959.csv</li>
+</ul>
+<blockquote>
+<div><div class="compound">
+<p class="compound-first"><strong>Class</strong></p>
+<ul class="compound-last simple">
+<li>The type of item to be imported (Ticket, Activity, Question, …).</li>
+</ul>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Timestamp</strong></p>
+<ul class="compound-last simple">
+<li>Timestamp defined to be able to store several files in the directory.</li>
+<li>Format is free.</li>
+<li>The recommended format is “YYYYMMDD_HHMMSS”.</li>
+</ul>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Ext</strong></p>
+<ul class="compound-last simple">
+<li>File extension, representing its format.</li>
+<li>Valid extensions are CSV and XLSX.</li>
+</ul>
+</div>
+</div></blockquote>
+<p class="rubric">File format</p>
+<ul>
+<li><p class="first">The files must follow the ProjeQtOr <a class="reference internal" href="#file-format"><span class="std std-ref">File format</span></a>.</p>
+</li>
+<li><p class="first">Files must be full and consistent.</p>
+<blockquote>
+<div><div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<ul class="last simple">
+<li>The files should not be directly created in the import folder.</li>
+<li>They must be created in a temporary folder and moved afterwards.</li>
+</ul>
+</div>
+</div></blockquote>
+</li>
+</ul>
+<hr class="docutils" />
+<p class="rubric">Import process</p>
+<ul class="simple">
+<li>Correctly imported files are moved to a “done” sub folder of the import folder.</li>
+<li>If an error occurs during import of a file, the full file is moved to “error” sub-folder of the import folder, even if there is only one error over many other items correctly integrated.</li>
+<li>You can get the result as a log file and/or email summary.</li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Projeqtor_Logo_White.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Emails sent</a></li>
+<li><a class="reference internal" href="#alerts">Alerts</a></li>
+<li><a class="reference internal" href="#messages">Messages</a></li>
+<li><a class="reference internal" href="#import-data">Import data</a><ul>
+<li><a class="reference internal" href="#file-format">File format</a></li>
+<li><a class="reference internal" href="#data-import-process">Data import process</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#automatic-import">Automatic import</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="DocumentDirectory.html"
+                        title="previous chapter">Document directories</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="ControlAutomation.html"
+                        title="next chapter">Workflows</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ControlAutomation.html" title="Workflows"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="DocumentDirectory.html" title="Document directories"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, ProjeQtOr.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.4.
+    </div>
+  </body>
+</html>

@@ -1,0 +1,887 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Lists of values &mdash; ProjeQtOr User guide 5.4 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/projeqtor.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '5.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="ProjeQtOr User guide 5.4 documentation" href="index.html" />
+    <link rel="next" title="Types restrictions" href="ListsOfTypes.html" />
+    <link rel="prev" title="Profiles" href="AccessRights.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ListsOfTypes.html" title="Types restrictions"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="AccessRights.html" title="Profiles"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="functions">
+<span id="function"></span><span id="index-0"></span><h1>Functions<a class="headerlink" href="#functions" title="Permalink to this headline">¶</a></h1>
+<p>The function defines the generic competency of a resource.</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for this value.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of this value.</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate this value is archived.</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Complete description of this value.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="status">
+<span id="index-1"></span><span id="id1"></span><h1>Status<a class="headerlink" href="#status" title="Permalink to this headline">¶</a></h1>
+<p>The status is an important element of items lifecycle.</p>
+<p>It defines the progress of the treatment of the element.</p>
+<p>Some automations are implemented, depending on status definition, to set on items.</p>
+<dl class="glossary docutils">
+<dt id="term-handled-status">Handled status</dt>
+<dd><ul class="first last simple">
+<li>This status specifies that the treatment of item is taken over.</li>
+<li>A <a class="reference internal" href="Concept.html#term-responsible"><span class="xref std std-term">responsible</span></a> can be determined.</li>
+<li>It is possible to require the appointment of a responsible when the status change to &#8220;handled&#8221;.</li>
+</ul>
+</dd>
+<dt id="term-done-status">Done status</dt>
+<dd><ul class="first last simple">
+<li>This status specifies that the treatment of item is done.</li>
+<li>A <a class="reference internal" href="Glossary.html#term-result"><span class="xref std std-term">result</span></a> can be specify.</li>
+<li>It is possible to require a result when the status change to &#8220;done&#8221;.</li>
+</ul>
+</dd>
+<dt id="term-closed-status">Closed status</dt>
+<dd><ul class="first last simple">
+<li>This status specifies that the item is closed.</li>
+<li>This item is archived, and it disappeared in the list.</li>
+<li>Item can reappear when &#8220;show closed item&#8221; is checked.</li>
+</ul>
+</dd>
+<dt id="term-cancelled-status">Cancelled status</dt>
+<dd><ul class="first last simple">
+<li>This status specifies that the item is cancelled.</li>
+</ul>
+</dd>
+</dl>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for this value.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of this value.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#term-handled-status"><span class="xref std std-term">Handled status</span></a></td>
+<td>Defines whether ‘handled’ flag is automatically set for this status.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#term-done-status"><span class="xref std std-term">Done status</span></a></td>
+<td>Defines whether ‘done’ flag is automatically set for this status.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="#term-closed-status"><span class="xref std std-term">Closed status</span></a></td>
+<td>Defines whether ‘closed’ flag is automatically set for this status.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="#term-cancelled-status"><span class="xref std std-term">Cancelled status</span></a></td>
+<td>Defines whether ‘cancelled’ flag is automatically set for this status.</td>
+</tr>
+<tr class="row-even"><td>Color</td>
+<td>Color to display the status in element lists.</td>
+</tr>
+<tr class="row-odd"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate this value is archived.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="resolutions">
+<span id="resolution"></span><span id="index-2"></span><h1>Resolutions<a class="headerlink" href="#resolutions" title="Permalink to this headline">¶</a></h1>
+<p>Allows to define different kinds of resolution for tickets.</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for this value.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of this value.</td>
+</tr>
+<tr class="row-even"><td>Solved</td>
+<td>Box checked indicates the ticket will be automatically marked as “solved” when this resolution is selected.</td>
+</tr>
+<tr class="row-odd"><td>Color</td>
+<td>Color to display the resolution in element lists.</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate this value is archived.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="quality-levels">
+<span id="quality-level"></span><span id="index-3"></span><h1>Quality levels<a class="headerlink" href="#quality-levels" title="Permalink to this headline">¶</a></h1>
+<p>The quality is a manual indicator for the conformity of a project to quality processes.</p>
+<p>It defines in a visual way the global conformity of the project.</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for this value.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of this value.</td>
+</tr>
+<tr class="row-even"><td>Color</td>
+<td>Color to display the quality level in element lists and on today screen.</td>
+</tr>
+<tr class="row-odd"><td>Icon</td>
+<td>Icon that can be displayed for this quality level.</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate this value is archived.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<div class="topic">
+<p class="topic-title first">Field: Icon</p>
+<ul class="simple">
+<li>If no icon is defined, color is used.</li>
+<li>You can define your own icons list (see: administration guide).</li>
+</ul>
+</div>
+</div>
+<div class="section" id="health-status">
+<span id="index-4"></span><span id="id2"></span><h1>Health status<a class="headerlink" href="#health-status" title="Permalink to this headline">¶</a></h1>
+<p>The health status is a manual indicator for the health of a project.</p>
+<p>It defines in a visual way the global health of the project.</p>
+<p>It is displayed on Today screen, for each project, as a Red / Amber / Green traffic light.</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for this value.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of this value.</td>
+</tr>
+<tr class="row-even"><td>Color</td>
+<td>Color to display the health status in element lists and on today screen.</td>
+</tr>
+<tr class="row-odd"><td>Icon</td>
+<td>Icon that can be displayed for this health status.</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate this value is archived.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<div class="topic">
+<p class="topic-title first">Field: Icon</p>
+<ul class="simple">
+<li>If no icon is defined, color is used.</li>
+<li>You can define your own icons list (see: administration guide).</li>
+</ul>
+</div>
+</div>
+<div class="section" id="overall-progress">
+<span id="index-5"></span><span id="id3"></span><h1>Overall progress<a class="headerlink" href="#overall-progress" title="Permalink to this headline">¶</a></h1>
+<p>The overall progress is a manual indicator for global progress of a project.</p>
+<p>It defines in a visual way the global progress of the project, independently from work progress.</p>
+<p>It is displayed on Today screen, for each project.</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for this value.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of this value.</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate this value is archived.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="trends">
+<span id="trend"></span><span id="index-6"></span><h1>Trends<a class="headerlink" href="#trends" title="Permalink to this headline">¶</a></h1>
+<p>The trend is a manual indicator for the global trend of project health.</p>
+<p>It defines in a visual way the health trend of the project.</p>
+<p>It is displayed on Today screen, for each project.</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for this value.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of this value.</td>
+</tr>
+<tr class="row-even"><td>Color</td>
+<td>Color to display the trend in element lists and on today screen.</td>
+</tr>
+<tr class="row-odd"><td>Icon</td>
+<td>Icon that can be displayed for this trend.</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate this value is archived.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<div class="topic">
+<p class="topic-title first">Field: Icon</p>
+<ul class="simple">
+<li>If no icon is defined, color is used.</li>
+<li>You can define your own icons list (see: administration guide).</li>
+</ul>
+</div>
+</div>
+<div class="section" id="likelihoods">
+<span id="likelihood"></span><span id="index-7"></span><h1>Likelihoods<a class="headerlink" href="#likelihoods" title="Permalink to this headline">¶</a></h1>
+<p>The likelihood is the probability of a risk or an opportunity to occur.</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for this value.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of this value.</td>
+</tr>
+<tr class="row-even"><td>Value</td>
+<td>Value of likelihood.</td>
+</tr>
+<tr class="row-odd"><td>% value</td>
+<td>Value in percent.</td>
+</tr>
+<tr class="row-even"><td>Color</td>
+<td>Color to display the likelihood in element lists</td>
+</tr>
+<tr class="row-odd"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate this value is archived.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<div class="topic">
+<p class="topic-title first">Field: % value</p>
+<ul class="simple">
+<li>This field is used to calculate a reserve amount according to the likelihood of risk or opportunity.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="criticalities">
+<span id="criticality"></span><span id="index-8"></span><h1>Criticalities<a class="headerlink" href="#criticalities" title="Permalink to this headline">¶</a></h1>
+<p>The criticality is the importance of an element to its context.</p>
+<div class="topic">
+<p class="topic-title first">Risk and Opportunity</p>
+<ul class="simple">
+<li>The criticality designs the level of impact the risk or opportunity may have to the project.</li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">Ticket</p>
+<ul class="simple">
+<li>The criticality is the estimated impact that the subject of the ticket may have for the product.</li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for this value.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of this value.</td>
+</tr>
+<tr class="row-even"><td>Value</td>
+<td>Value of criticality.</td>
+</tr>
+<tr class="row-odd"><td>Color</td>
+<td>Color to display the criticality in element lists.</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate this value is archived.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="severities">
+<span id="severity"></span><span id="index-9"></span><h1>Severities<a class="headerlink" href="#severities" title="Permalink to this headline">¶</a></h1>
+<p>The severity designs the level of negative or positive impact the risk or opportunity may have for the product.</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for this value.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of this value.</td>
+</tr>
+<tr class="row-even"><td>Value</td>
+<td>Value of severity.</td>
+</tr>
+<tr class="row-odd"><td>Color</td>
+<td>Color to display the severity in element lists.</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate this value is archived.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="urgencies">
+<span id="urgency"></span><span id="index-10"></span><h1>Urgencies<a class="headerlink" href="#urgencies" title="Permalink to this headline">¶</a></h1>
+<p>The ticket urgency is an element given by the requestor to indicate the quickness of treatment needed for the ticket.</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for this value.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of this value.</td>
+</tr>
+<tr class="row-even"><td>Value</td>
+<td>Value of urgency.</td>
+</tr>
+<tr class="row-odd"><td>Color</td>
+<td>Color to display the urgency in element lists.</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate this value is archived.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="priorities">
+<span id="priority"></span><span id="index-11"></span><h1>Priorities<a class="headerlink" href="#priorities" title="Permalink to this headline">¶</a></h1>
+<p>The ticket priority defines the order to treat different tickets.</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for this value.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of this value.</td>
+</tr>
+<tr class="row-even"><td>Value</td>
+<td>Value of priority.</td>
+</tr>
+<tr class="row-odd"><td>Color</td>
+<td>Color to display the priority in element lists.</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate this value is archived.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="risk-levels">
+<span id="risk-level"></span><span id="index-12"></span><h1>Risk levels<a class="headerlink" href="#risk-levels" title="Permalink to this headline">¶</a></h1>
+<p>The risk level measures the technical risk of implementation of a requirement.</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for this value.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of this value.</td>
+</tr>
+<tr class="row-even"><td>Color</td>
+<td>Color to display the risk level in element lists.</td>
+</tr>
+<tr class="row-odd"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate this value is archived.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="feasibilities">
+<span id="feasibility"></span><span id="index-13"></span><h1>Feasibilities<a class="headerlink" href="#feasibilities" title="Permalink to this headline">¶</a></h1>
+<p>The feasibility defines the first analysis of implementation of a requirement.</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for this status.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of this status.</td>
+</tr>
+<tr class="row-even"><td>Color</td>
+<td>Color to display the feasibility in element lists.</td>
+</tr>
+<tr class="row-odd"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate this status is archived.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="efficiencies">
+<span id="efficiency"></span><span id="index-14"></span><h1>Efficiencies<a class="headerlink" href="#efficiencies" title="Permalink to this headline">¶</a></h1>
+<p>The efficiency measures the result of an action.</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for this value.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of this value.</td>
+</tr>
+<tr class="row-even"><td>Color</td>
+<td>Color to display the efficiency in element lists.</td>
+</tr>
+<tr class="row-odd"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate this value is archived.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="payment-deadlines">
+<span id="payment-deadline"></span><span id="index-15"></span><h1>Payment deadlines<a class="headerlink" href="#payment-deadlines" title="Permalink to this headline">¶</a></h1>
+<p>The payment deadline is stated on the bill.</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for this value.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of this value.</td>
+</tr>
+<tr class="row-even"><td>Number of days</td>
+<td>Delay in payment (in days).</td>
+</tr>
+<tr class="row-odd"><td>End of month</td>
+<td>Flag to indicate that delay for payment is set at the end of month.</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate this value is archived.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="payment-methods">
+<span id="payment-method"></span><span id="index-16"></span><h1>Payment methods<a class="headerlink" href="#payment-methods" title="Permalink to this headline">¶</a></h1>
+<p>The mode of payment.</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for this value.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of this value.</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate this value is archived.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="delivery-modes">
+<span id="delivery-mode"></span><span id="index-17"></span><h1>Delivery modes<a class="headerlink" href="#delivery-modes" title="Permalink to this headline">¶</a></h1>
+<p>The mode of delivery.</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for this value.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of this value.</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate this value is archived.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="measure-units">
+<span id="measure-unit"></span><span id="index-18"></span><h1>Measure units<a class="headerlink" href="#measure-units" title="Permalink to this headline">¶</a></h1>
+<p>The measure units.</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for this value.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of this value.</td>
+</tr>
+<tr class="row-even"><td>Plural of name</td>
+<td>Plural form of name.</td>
+</tr>
+<tr class="row-odd"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate this value is archived.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Projeqtor_Logo_White.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Functions</a></li>
+<li><a class="reference internal" href="#status">Status</a></li>
+<li><a class="reference internal" href="#resolutions">Resolutions</a></li>
+<li><a class="reference internal" href="#quality-levels">Quality levels</a></li>
+<li><a class="reference internal" href="#health-status">Health status</a></li>
+<li><a class="reference internal" href="#overall-progress">Overall progress</a></li>
+<li><a class="reference internal" href="#trends">Trends</a></li>
+<li><a class="reference internal" href="#likelihoods">Likelihoods</a></li>
+<li><a class="reference internal" href="#criticalities">Criticalities</a></li>
+<li><a class="reference internal" href="#severities">Severities</a></li>
+<li><a class="reference internal" href="#urgencies">Urgencies</a></li>
+<li><a class="reference internal" href="#priorities">Priorities</a></li>
+<li><a class="reference internal" href="#risk-levels">Risk levels</a></li>
+<li><a class="reference internal" href="#feasibilities">Feasibilities</a></li>
+<li><a class="reference internal" href="#efficiencies">Efficiencies</a></li>
+<li><a class="reference internal" href="#payment-deadlines">Payment deadlines</a></li>
+<li><a class="reference internal" href="#payment-methods">Payment methods</a></li>
+<li><a class="reference internal" href="#delivery-modes">Delivery modes</a></li>
+<li><a class="reference internal" href="#measure-units">Measure units</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="AccessRights.html"
+                        title="previous chapter">Profiles</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="ListsOfTypes.html"
+                        title="next chapter">Types restrictions</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ListsOfTypes.html" title="Types restrictions"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="AccessRights.html" title="Profiles"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, ProjeQtOr.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.4.
+    </div>
+  </body>
+</html>

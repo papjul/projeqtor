@@ -1,0 +1,18 @@
+@CHARSET "ISO-8859-1";
+.toc-backref {
+	color: #ffffff !important;
+}
+div.topic, div.admonition.note, div.note {
+    border: 1px solid #ccc;
+    padding: 7px 7px 0 7px;
+    margin: 10px 0 10px 0em;
+    font-size:90%;
+}
+p.topic-title {
+	font-size:100%;
+}
+table.docutils {
+    border: 0;
+    border-collapse: collapse;
+    margin-left: 2em;
+}

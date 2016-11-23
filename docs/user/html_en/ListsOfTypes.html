@@ -1,0 +1,1529 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Lists of types &mdash; ProjeQtOr User guide 5.4 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/projeqtor.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '5.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="ProjeQtOr User guide 5.4 documentation" href="index.html" />
+    <link rel="next" title="Plug-ins management" href="Plugin.html" />
+    <link rel="prev" title="Functions" href="ListsOfValues.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Plugin.html" title="Plug-ins management"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ListsOfValues.html" title="Functions"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="types-restrictions">
+<span id="type-restriction-section"></span><h1>Types restrictions<a class="headerlink" href="#types-restrictions" title="Permalink to this headline">¶</a></h1>
+<p>Allows to limit values displayed in the list of values for each element type.</p>
+<p>Restrictions can be defined for a project, a project type or a profile.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Types restrictions section on Project screen.</p>
+<ul class="last simple">
+<li>To display types restrictions section, the global parameter &#8220;allow type restriction on project&#8221; must be set to &#8220;Yes&#8221;.</li>
+<li>Possibility to define more restrictions to a project against restrictions defined at the project type level.</li>
+</ul>
+</div>
+<p class="rubric">Type restriction management</p>
+<ol class="arabic simple">
+<li>Click on &#8220;Restrict types&#8221; button to display the dialog box.</li>
+<li>For each element type, select values that will be in the list of values.</li>
+</ol>
+<div class="figure align-center">
+<img alt="Dialog box - Restrict types for the project" src="_images/BOX_RestrictTypeForProject.png" />
+</div>
+<p class="rubric">Displays element type names where a restriction is applied</p>
+<div class="figure align-center">
+<img alt="Section - Restrict types" src="_images/ZONE_TypeRestrictionSection.png" />
+</div>
+</div>
+<div class="section" id="projects-types">
+<span id="project-type"></span><span id="index-0"></span><h1>Projects types<a class="headerlink" href="#projects-types" title="Permalink to this headline">¶</a></h1>
+<p>Project type is a way to define common behavior on group of projects.</p>
+<dl class="glossary docutils">
+<dt id="term-code-of-the-project-type">Code of the project type</dt>
+<dd><ul class="first simple">
+<li>Some important behavior will depend on code of the project type.</li>
+</ul>
+<p><strong>OPE</strong> : Operational project</p>
+<blockquote>
+<div><ul class="simple">
+<li>Most common project to follow activity.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">All new types are created with <strong>OPE</strong> code.</p>
+</div>
+</div></blockquote>
+<p><strong>ADM</strong> : Administrative project</p>
+<blockquote>
+<div><ul class="simple">
+<li>Type of project to follow non productive work : holidays, sickness, training, …</li>
+<li>Every resource will be able to enter some real work on such projects, without having to be affected to the project, nor assigned to project activities.</li>
+<li>Assignments to all project task will be automatically created for users to enter real work.</li>
+</ul>
+</div></blockquote>
+<p><strong>TMP</strong> : Template project</p>
+<blockquote class="last">
+<div><ul class="simple">
+<li>These projects will not be used to follow some work.</li>
+<li>They are just designed to define templates, to be copied as operational projects.</li>
+<li>Any project leader can copy such projects, without having to be affected to them.</li>
+</ul>
+</div></blockquote>
+</dd>
+</dl>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+<li><a class="reference internal" href="#type-restriction-section"><span class="std std-ref">Types restrictions</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td>Code</td>
+<td><a class="reference internal" href="#term-code-of-the-project-type"><span class="xref std std-term">Code of the project type</span></a>.</td>
+</tr>
+<tr class="row-odd"><td><strong>Workflow</strong></td>
+<td>Defined the workflow ruling status change for items of this type (see: <a class="reference internal" href="ControlAutomation.html#workflow"><span class="std std-ref">Workflows</span></a>).</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td>Billing type</td>
+<td>Will define billing behavior (see: <a class="reference internal" href="Bill.html#term-billing-types"><span class="xref std std-term">Billing types</span></a>).</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-odd"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="tickets-types">
+<span id="ticket-type"></span><span id="index-1"></span><h1>Tickets types<a class="headerlink" href="#tickets-types" title="Permalink to this headline">¶</a></h1>
+<p>Ticket type is a way to define common behavior on group of tickets.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td>Code</td>
+<td>Code of the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Workflow</strong></td>
+<td>Defined the workflow ruling status change for items of this type (see: <a class="reference internal" href="ControlAutomation.html#workflow"><span class="std std-ref">Workflows</span></a>).</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="activities-types">
+<span id="activity-type"></span><span id="index-2"></span><h1>Activities types<a class="headerlink" href="#activities-types" title="Permalink to this headline">¶</a></h1>
+<p>Activity type is a way to define common behavior on group of activities.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td>Code</td>
+<td>Code of the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Workflow</strong></td>
+<td>Defined the workflow ruling status change for items of this type (see: <a class="reference internal" href="ControlAutomation.html#workflow"><span class="std std-ref">Workflows</span></a>).</td>
+</tr>
+<tr class="row-even"><td><strong>Default planning mode</strong></td>
+<td>Default planning mode for type.</td>
+</tr>
+<tr class="row-odd"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-odd"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="milestones-types">
+<span id="milestone-type"></span><span id="index-3"></span><h1>Milestones types<a class="headerlink" href="#milestones-types" title="Permalink to this headline">¶</a></h1>
+<p>Milestone type is a way to define common behavior on group of milestones.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td>Code</td>
+<td>Code of the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Workflow</strong></td>
+<td>Defined the workflow ruling status change for items of this type (see: <a class="reference internal" href="ControlAutomation.html#workflow"><span class="std std-ref">Workflows</span></a>).</td>
+</tr>
+<tr class="row-even"><td><strong>Default planning mode</strong></td>
+<td>Default planning mode for type.</td>
+</tr>
+<tr class="row-odd"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-odd"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="quotations-types">
+<span id="quotation-type"></span><span id="index-4"></span><h1>Quotations types<a class="headerlink" href="#quotations-types" title="Permalink to this headline">¶</a></h1>
+<p>Quotation type is a way to define the way the concerned activity should be billed.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td>Code</td>
+<td>Code of the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Workflow</strong></td>
+<td>Defined the workflow ruling status change for items of this type (see: <a class="reference internal" href="ControlAutomation.html#workflow"><span class="std std-ref">Workflows</span></a>).</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="orders-types">
+<span id="order-type"></span><span id="index-5"></span><h1>Orders types<a class="headerlink" href="#orders-types" title="Permalink to this headline">¶</a></h1>
+<p>Order type is a way to define the way the activity references by the order will be billed.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td>Code</td>
+<td>Code of the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Workflow</strong></td>
+<td>Defined the workflow ruling status change for items of this type (see: <a class="reference internal" href="ControlAutomation.html#workflow"><span class="std std-ref">Workflows</span></a>).</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="individual-expenses-types">
+<span id="individual-expense-type"></span><span id="index-6"></span><h1>Individual expenses types<a class="headerlink" href="#individual-expenses-types" title="Permalink to this headline">¶</a></h1>
+<p>Individual expense type is a way to define common behavior on group of individual expense.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td><strong>Workflow</strong></td>
+<td>Defined the workflow ruling status change for items of this type (see: <a class="reference internal" href="ControlAutomation.html#workflow"><span class="std std-ref">Workflows</span></a>).</td>
+</tr>
+<tr class="row-odd"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-odd"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="project-expenses-types">
+<span id="project-expense-type"></span><span id="index-7"></span><h1>Project expenses types<a class="headerlink" href="#project-expenses-types" title="Permalink to this headline">¶</a></h1>
+<p>Project expense type is a way to define common behavior on group of project expense.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td><strong>Workflow</strong></td>
+<td>Defined the workflow ruling status change for items of this type (see: <a class="reference internal" href="ControlAutomation.html#workflow"><span class="std std-ref">Workflows</span></a>).</td>
+</tr>
+<tr class="row-odd"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-odd"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="expenses-details-types">
+<span id="expense-detail-type"></span><span id="index-8"></span><h1>Expenses details types<a class="headerlink" href="#expenses-details-types" title="Permalink to this headline">¶</a></h1>
+<p>Expense detail type is a way to define common behavior and calculation mode on group of expense details.</p>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td>Value / unit</td>
+<td>Define calculation mode for the detail type.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-odd"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<div class="topic">
+<p class="topic-title first">Field: Value / unit</p>
+<ul class="simple">
+<li>If unit is set and not value, this line will be imputable.</li>
+<li>If both unit and value are set, the line will be read only.</li>
+<li>Result cost will be the multiplication between each of the three non empty line values.</li>
+</ul>
+</div>
+<p class="rubric">Section: Scope</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Individual expense</td>
+<td>Details type of individual expense.</td>
+</tr>
+<tr class="row-odd"><td>Project expense</td>
+<td>Details type of project expense.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="bills-types">
+<span id="bill-type"></span><span id="index-9"></span><h1>Bills types<a class="headerlink" href="#bills-types" title="Permalink to this headline">¶</a></h1>
+<p>Bill type is a way to define common behavior on group of bills.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td>Code</td>
+<td>Code of the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Workflow</strong></td>
+<td>Defined the workflow ruling status change for items of this type (see: <a class="reference internal" href="ControlAutomation.html#workflow"><span class="std std-ref">Workflows</span></a>).</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="payments-types">
+<span id="payment-type"></span><span id="index-10"></span><h1>Payments types<a class="headerlink" href="#payments-types" title="Permalink to this headline">¶</a></h1>
+<p>Payment type is a way to define common behavior on group of payments.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td><strong>Workflow</strong></td>
+<td>Defined the workflow ruling status change for items of this type (see: <a class="reference internal" href="ControlAutomation.html#workflow"><span class="std std-ref">Workflows</span></a>).</td>
+</tr>
+<tr class="row-odd"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-odd"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="risks-types">
+<span id="risk-type"></span><span id="index-11"></span><h1>Risks types<a class="headerlink" href="#risks-types" title="Permalink to this headline">¶</a></h1>
+<p>Risk type is a way to define common behavior on group of risks.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td>Code</td>
+<td>Code of the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Workflow</strong></td>
+<td>Defined the workflow ruling status change for items of this type (see: <a class="reference internal" href="ControlAutomation.html#workflow"><span class="std std-ref">Workflows</span></a>).</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="opportunities-types">
+<span id="opportunity-type"></span><span id="index-12"></span><h1>Opportunities types<a class="headerlink" href="#opportunities-types" title="Permalink to this headline">¶</a></h1>
+<p>Opportunity type is a way to define common behavior on group of opportunities.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td>Code</td>
+<td>Code of the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Workflow</strong></td>
+<td>Defined the workflow ruling status change for items of this type (see: <a class="reference internal" href="ControlAutomation.html#workflow"><span class="std std-ref">Workflows</span></a>).</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="actions-types">
+<span id="action-type"></span><span id="index-13"></span><h1>Actions types<a class="headerlink" href="#actions-types" title="Permalink to this headline">¶</a></h1>
+<p>Action type is a way to define common behavior on group of actions.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td>Code</td>
+<td>Code of the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Workflow</strong></td>
+<td>Defined the workflow ruling status change for items of this type (see: <a class="reference internal" href="ControlAutomation.html#workflow"><span class="std std-ref">Workflows</span></a>).</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="issues-types">
+<span id="issue-type"></span><span id="index-14"></span><h1>Issues types<a class="headerlink" href="#issues-types" title="Permalink to this headline">¶</a></h1>
+<p>Issue type is a way to define common behavior on group of issues.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td>Code</td>
+<td>Code of the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Workflow</strong></td>
+<td>Defined the workflow ruling status change for items of this type (see: <a class="reference internal" href="ControlAutomation.html#workflow"><span class="std std-ref">Workflows</span></a>).</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="meetings-types">
+<span id="meeting-type"></span><span id="index-15"></span><h1>Meetings types<a class="headerlink" href="#meetings-types" title="Permalink to this headline">¶</a></h1>
+<p>Meeting type is a way to define common behavior on group of meetings.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>Meeting type is also used for periodic meetings definition.</li>
+</ul>
+</div>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td>Code</td>
+<td>Code of the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Workflow</strong></td>
+<td>Defined the workflow ruling status change for items of this type (see: <a class="reference internal" href="ControlAutomation.html#workflow"><span class="std std-ref">Workflows</span></a>).</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="decisions-types">
+<span id="decision-type"></span><span id="index-16"></span><h1>Decisions types<a class="headerlink" href="#decisions-types" title="Permalink to this headline">¶</a></h1>
+<p>Decision type is a way to define common behavior on group of decisions.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td>Code</td>
+<td>Code of the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Workflow</strong></td>
+<td>Defined the workflow ruling status change for items of this type (see: <a class="reference internal" href="ControlAutomation.html#workflow"><span class="std std-ref">Workflows</span></a>).</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="questions-types">
+<span id="question-type"></span><span id="index-17"></span><h1>Questions types<a class="headerlink" href="#questions-types" title="Permalink to this headline">¶</a></h1>
+<p>Question type is a way to define common behavior on group of questions.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td>Code</td>
+<td>Code of the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Workflow</strong></td>
+<td>Defined the workflow ruling status change for items of this type (see: <a class="reference internal" href="ControlAutomation.html#workflow"><span class="std std-ref">Workflows</span></a>).</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="messages-types">
+<span id="message-type"></span><span id="index-18"></span><h1>Messages types<a class="headerlink" href="#messages-types" title="Permalink to this headline">¶</a></h1>
+<p>Message type is a way to define common behavior on group of messages (appearing on today screen).</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td>Color</td>
+<td>Display color for messages of this type.</td>
+</tr>
+<tr class="row-odd"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-odd"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="documents-types">
+<span id="document-type"></span><span id="index-19"></span><h1>Documents types<a class="headerlink" href="#documents-types" title="Permalink to this headline">¶</a></h1>
+<p>Document type is a way to define common behavior on group of documents.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td>Code</td>
+<td>Code of the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Workflow</strong></td>
+<td>Defined the workflow ruling status change for items of this type (see: <a class="reference internal" href="ControlAutomation.html#workflow"><span class="std std-ref">Workflows</span></a>).</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="contexts-types">
+<span id="context-type"></span><span id="index-20"></span><h1>Contexts types<a class="headerlink" href="#contexts-types" title="Permalink to this headline">¶</a></h1>
+<p>Context types are used to define the environmental context to describe ticket or test case.</p>
+<p>Only three context types exist, corresponding to the three selectable fields. (Environment, OS and Browser)</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>Only the name of the context types can be changed.</li>
+<li>No new context type can be added.</li>
+<li>No context type can be deleted.</li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="requirements-types">
+<span id="requirement-type"></span><span id="index-21"></span><h1>Requirements types<a class="headerlink" href="#requirements-types" title="Permalink to this headline">¶</a></h1>
+<p>Requirement type is a way to define common behavior on group of requirements.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td>Code</td>
+<td>Code of the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Workflow</strong></td>
+<td>Defined the workflow ruling status change for items of this type (see: <a class="reference internal" href="ControlAutomation.html#workflow"><span class="std std-ref">Workflows</span></a>).</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="test-cases-types">
+<span id="test-case-type"></span><span id="index-22"></span><h1>Test cases types<a class="headerlink" href="#test-cases-types" title="Permalink to this headline">¶</a></h1>
+<p>Test case type is a way to define common behavior on group of test cases.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td>Code</td>
+<td>Code of the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Workflow</strong></td>
+<td>Defined the workflow ruling status change for items of this type (see: <a class="reference internal" href="ControlAutomation.html#workflow"><span class="std std-ref">Workflows</span></a>).</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="test-sessions-types">
+<span id="test-session-type"></span><span id="index-23"></span><h1>Test sessions types<a class="headerlink" href="#test-sessions-types" title="Permalink to this headline">¶</a></h1>
+<p>Test session type is a way to define common behavior on group of test sessions.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td>Code</td>
+<td>Code of the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Workflow</strong></td>
+<td>Defined the workflow ruling status change for items of this type (see: <a class="reference internal" href="ControlAutomation.html#workflow"><span class="std std-ref">Workflows</span></a>).</td>
+</tr>
+<tr class="row-even"><td><strong>Default planning mode</strong></td>
+<td>Default planning mode for type.</td>
+</tr>
+<tr class="row-odd"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-odd"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="customers-types">
+<span id="customer-type"></span><span id="index-24"></span><h1>Customers types<a class="headerlink" href="#customers-types" title="Permalink to this headline">¶</a></h1>
+<p>Customer type is a way to define different kinds of customers  (prospects or clients).</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="providers-types">
+<span id="provider-type"></span><span id="index-25"></span><h1>Providers types<a class="headerlink" href="#providers-types" title="Permalink to this headline">¶</a></h1>
+<p>Provider type is a way to define different kinds of providers.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="products-types">
+<span id="product-type"></span><span id="index-26"></span><h1>Products types<a class="headerlink" href="#products-types" title="Permalink to this headline">¶</a></h1>
+<p>Product type is a way to define common behavior to group of product.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td>Code</td>
+<td>Code of the type.</td>
+</tr>
+<tr class="row-odd"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-odd"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="components-types">
+<span id="component-type"></span><span id="index-27"></span><h1>Components types<a class="headerlink" href="#components-types" title="Permalink to this headline">¶</a></h1>
+<p>Component type is a way to define common behavior to group of component.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#behavior-section"><span class="std std-ref">Behavior</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the type.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the type.</td>
+</tr>
+<tr class="row-even"><td>Code</td>
+<td>Code of the type.</td>
+</tr>
+<tr class="row-odd"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the type is archived.</td>
+</tr>
+<tr class="row-odd"><td>Description</td>
+<td>Description of the type.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="behavior-section">
+<span id="id1"></span><h1>Behavior section<a class="headerlink" href="#behavior-section" title="Permalink to this headline">¶</a></h1>
+<p>This section is common to several element types.</p>
+<p>Allows to determine some GUI behavior, according to element types.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>Depending on the element type the following fields can be displayed.</li>
+</ul>
+</div>
+<p class="rubric">Description or Comments</p>
+<ul class="simple">
+<li>Box checked indicates the field “<a class="reference internal" href="Glossary.html#term-description"><span class="xref std std-term">Description</span></a>” is mandatory.</li>
+</ul>
+<p class="rubric">Responsible</p>
+<ul class="simple">
+<li>Box checked indicates the field &#8220;<a class="reference internal" href="Concept.html#term-responsible"><span class="xref std std-term">Responsible</span></a>&#8221; is mandatory when the status to treatment of the item is &#8220;handled&#8221;.</li>
+</ul>
+<p class="rubric">Result</p>
+<ul class="simple">
+<li>Box checked indicates the field &#8220;<a class="reference internal" href="Glossary.html#term-result"><span class="xref std std-term">Result</span></a>&#8221; is mandatory when the status to treatment of the item is &#8220;done&#8221;.</li>
+</ul>
+<p class="rubric">Flag status</p>
+<ul class="simple">
+<li>Fields: Lock handled, Lock done, Lock closed and Lock cancelled</li>
+<li>Those fields allow to determine whether the checkbox fields concerned are locked or not.</li>
+<li>When a flag status is locked, move to this status through status change.</li>
+</ul>
+<div class="section" id="id2">
+<h2>Ticket type<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+<p class="rubric">Resolution</p>
+<ul class="simple">
+<li>Box checked indicates the field &#8220;Resolution&#8221; is mandatory when the status to treatment of an item is &#8220;done&#8221;.</li>
+</ul>
+<p class="rubric">Lock solved</p>
+<ul class="simple">
+<li>Box checked indicates the field “Solved” is read only.</li>
+<li>The value of field must come from the field &#8220;Solved&#8221; defined in the selected resolution.</li>
+</ul>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Projeqtor_Logo_White.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Types restrictions</a></li>
+<li><a class="reference internal" href="#projects-types">Projects types</a></li>
+<li><a class="reference internal" href="#tickets-types">Tickets types</a></li>
+<li><a class="reference internal" href="#activities-types">Activities types</a></li>
+<li><a class="reference internal" href="#milestones-types">Milestones types</a></li>
+<li><a class="reference internal" href="#quotations-types">Quotations types</a></li>
+<li><a class="reference internal" href="#orders-types">Orders types</a></li>
+<li><a class="reference internal" href="#individual-expenses-types">Individual expenses types</a></li>
+<li><a class="reference internal" href="#project-expenses-types">Project expenses types</a></li>
+<li><a class="reference internal" href="#expenses-details-types">Expenses details types</a></li>
+<li><a class="reference internal" href="#bills-types">Bills types</a></li>
+<li><a class="reference internal" href="#payments-types">Payments types</a></li>
+<li><a class="reference internal" href="#risks-types">Risks types</a></li>
+<li><a class="reference internal" href="#opportunities-types">Opportunities types</a></li>
+<li><a class="reference internal" href="#actions-types">Actions types</a></li>
+<li><a class="reference internal" href="#issues-types">Issues types</a></li>
+<li><a class="reference internal" href="#meetings-types">Meetings types</a></li>
+<li><a class="reference internal" href="#decisions-types">Decisions types</a></li>
+<li><a class="reference internal" href="#questions-types">Questions types</a></li>
+<li><a class="reference internal" href="#messages-types">Messages types</a></li>
+<li><a class="reference internal" href="#documents-types">Documents types</a></li>
+<li><a class="reference internal" href="#contexts-types">Contexts types</a></li>
+<li><a class="reference internal" href="#requirements-types">Requirements types</a></li>
+<li><a class="reference internal" href="#test-cases-types">Test cases types</a></li>
+<li><a class="reference internal" href="#test-sessions-types">Test sessions types</a></li>
+<li><a class="reference internal" href="#customers-types">Customers types</a></li>
+<li><a class="reference internal" href="#providers-types">Providers types</a></li>
+<li><a class="reference internal" href="#products-types">Products types</a></li>
+<li><a class="reference internal" href="#components-types">Components types</a></li>
+<li><a class="reference internal" href="#behavior-section">Behavior section</a><ul>
+<li><a class="reference internal" href="#id2">Ticket type</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="ListsOfValues.html"
+                        title="previous chapter">Functions</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="Plugin.html"
+                        title="next chapter">Plug-ins management</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Plugin.html" title="Plug-ins management"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ListsOfValues.html" title="Functions"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, ProjeQtOr.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.4.
+    </div>
+  </body>
+</html>

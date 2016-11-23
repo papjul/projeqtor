@@ -1,0 +1,556 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Planning elements &mdash; ProjeQtOr User guide 5.4 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/projeqtor.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '5.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="ProjeQtOr User guide 5.4 documentation" href="index.html" />
+    <link rel="next" title="Gantt charts" href="Gantt.html" />
+    <link rel="prev" title="User parameters" href="UserParameter.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Gantt.html" title="Gantt charts"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="UserParameter.html" title="User parameters"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="planning-elements">
+<h1>Planning elements<a class="headerlink" href="#planning-elements" title="Permalink to this headline">¶</a></h1>
+<div class="contents local topic" id="id1">
+<p class="topic-title first">Planning elements</p>
+<ul class="simple">
+<li><a class="reference internal" href="#projects" id="id2">Projects</a></li>
+<li><a class="reference internal" href="#activities" id="id3">Activities</a></li>
+<li><a class="reference internal" href="#milestones" id="id4">Milestones</a></li>
+</ul>
+</div>
+<p>The planning elements <a class="reference internal" href="RequirementsTest.html#test-session"><span class="std std-ref">Test sessions</span></a> and <a class="reference internal" href="ReviewLogs.html#meeting"><span class="std std-ref">Meetings</span></a> are described in their topics.</p>
+<div class="section" id="projects">
+<span id="project"></span><span id="index-0"></span><h2><a class="toc-backref" href="#id1">Projects</a><a class="headerlink" href="#projects" title="Permalink to this headline">¶</a></h2>
+<p>The project is the primary entity of ProjeQtOr.</p>
+<p>It is also the top-level of visibility, depending on profiles.</p>
+<p class="rubric">Sub-projects</p>
+<ul class="simple">
+<li>You can also define sub-projects on a project.</li>
+<li>Then, the project may not be real projects, but just organizational breakdown corresponding to the organization.</li>
+</ul>
+<p class="rubric">Fix planning</p>
+<ul class="simple">
+<li>When box “fix planning” is checked, the project scheduling won’t be remade.</li>
+<li>This will avoid change on planned values.</li>
+</ul>
+<p class="rubric">Under construction</p>
+<ul class="simple">
+<li>When a project is under construction, no automatic email is sent for the elements of the project.</li>
+<li>A project can be under construction as long as it isn’t stated (set to <em>handled</em> status).</li>
+</ul>
+<p class="rubric">Manual indicators</p>
+<ul class="simple">
+<li>Fields: Health status, Quality level, Trend and Overall progress are manual indicators.</li>
+<li>They allow define visual way the general health, conformity, trend and progress of the project.</li>
+<li>Some manual indicators are displayed on the Today screen.</li>
+</ul>
+<p class="rubric">Special fields</p>
+<ul class="simple">
+<li>The value of the fields the Project name, Sponsor, Project code and Contract code can be used as the substitute value of special fields.</li>
+<li>See: <a class="reference internal" href="Administration.html#administration-special-field-label"><span class="std std-ref">Special fields</span></a></li>
+</ul>
+<p class="rubric">Monitoring indicator</p>
+<ul class="simple">
+<li>The indicators can be defined on the progress data.</li>
+<li>See: <a class="reference internal" href="CommonSections.html#progress-section-monitor-indicator"><span class="std std-ref">Monitoring indicator</span></a></li>
+</ul>
+<span class="target" id="project-reserve"></span><p class="rubric" id="index-1">Project reserve</p>
+<ul class="simple">
+<li>Project reserve is an amount reserved based on identifying risks and opportunities.</li>
+<li>Calculated from contingency reserve of risks minus potential gain of opportunities.</li>
+<li>ProjeQtOr uses a technique as &#8220;Expected monetary value (EMV)&#8221; to convert risks and opportunities into an amount.</li>
+<li>The amount of project reserve will be added to remaining amount.</li>
+<li>See: <a class="reference internal" href="RiskIssueManagement.html#risk"><span class="std std-ref">Risks</span></a> and <a class="reference internal" href="RiskIssueManagement.html#opportunity"><span class="std std-ref">Opportunities</span></a></li>
+</ul>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="CommonSections.html#progress-section-activity"><span class="std std-ref">Progress</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#affectations-section"><span class="std std-ref">Affectations</span></a></li>
+<li><a class="reference internal" href="ProductVersion.html#link-version-project-section"><span class="std std-ref">Versions linked to this project</span></a></li>
+<li><a class="reference internal" href="ListsOfTypes.html#type-restriction-section"><span class="std std-ref">Types restrictions</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#predsuces-element-section"><span class="std std-ref">Predecessor and Sucessor element</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#linkelement-section"><span class="std std-ref">Linked element</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#attachment-section"><span class="std std-ref">Attachments</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#note-section"><span class="std std-ref">Notes</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the project.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Short name of the project.</td>
+</tr>
+<tr class="row-even"><td><strong>Type</strong></td>
+<td>Type of project.</td>
+</tr>
+<tr class="row-odd"><td>Customer</td>
+<td>The customer of the project.</td>
+</tr>
+<tr class="row-even"><td>Bill contact</td>
+<td>Billing contact.</td>
+</tr>
+<tr class="row-odd"><td>Project code</td>
+<td>Code of the project.</td>
+</tr>
+<tr class="row-even"><td>Contract code</td>
+<td>Code of the contract of the project.</td>
+</tr>
+<tr class="row-odd"><td>Customer code</td>
+<td>Code of the customer of the project.</td>
+</tr>
+<tr class="row-even"><td>Is sub-project of</td>
+<td>Name of the top project if this project is a sub-project.</td>
+</tr>
+<tr class="row-odd"><td>Sponsor</td>
+<td>Name of the sponsor of the project.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Concept.html#term-project-manager"><span class="xref std std-term">Manager</span></a></td>
+<td>Name of the resource who manages the project.</td>
+</tr>
+<tr class="row-odd"><td>Color</td>
+<td>Color of the project, to be displayed in some reports.</td>
+</tr>
+<tr class="row-even"><td><strong>Status</strong></td>
+<td>Actual <a class="reference internal" href="Glossary.html#term-status"><span class="xref std std-term">status</span></a> of the project.</td>
+</tr>
+<tr class="row-odd"><td>Health status</td>
+<td>Global health status of the project.</td>
+</tr>
+<tr class="row-even"><td>Quality level</td>
+<td>Estimation of quality level of project (result of audits).</td>
+</tr>
+<tr class="row-odd"><td>Trend</td>
+<td>Trend of global project health.</td>
+</tr>
+<tr class="row-even"><td>Overall progress</td>
+<td>Overall progress to be selected in a defined list.</td>
+</tr>
+<tr class="row-odd"><td>Fix planning</td>
+<td>Box checked indicates the planning of the project is frozen, and its sub-projects.</td>
+</tr>
+<tr class="row-even"><td>Under construction</td>
+<td>Box checked indicates the project is under construction.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-done"><span class="xref std std-term">Done</span></a></td>
+<td>Box checked indicates the project is finished.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the project is archived.</td>
+</tr>
+<tr class="row-odd"><td>Cancelled</td>
+<td>Box checked indicates the project is cancelled.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-description"><span class="xref std std-term">Description</span></a></td>
+<td>Complete description of the project.</td>
+</tr>
+<tr class="row-odd"><td>Objectives</td>
+<td>Objectives of the project.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<div class="topic">
+<p class="topic-title first">Field: Customer</p>
+<ul class="simple">
+<li>The value of the field is used in the Quotations, Orders and Bills concerned with the project.</li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">Field: Bill contact</p>
+<ul class="simple">
+<li>The value of the field is used in Bills concerned with the project.</li>
+</ul>
+</div>
+<p class="rubric">Section: Sub projects</p>
+<ul class="simple">
+<li>List of sub-projects under for the project.</li>
+</ul>
+</div>
+<div class="section" id="activities">
+<span id="activity"></span><span id="index-2"></span><h2><a class="toc-backref" href="#id1">Activities</a><a class="headerlink" href="#activities" title="Permalink to this headline">¶</a></h2>
+<p>An activity is a kind of task that must be planned, or that regroups other activities.</p>
+<p>An activity can be:</p>
+<ul class="simple">
+<li>Planned tasks.</li>
+<li>Change requests.</li>
+<li>Phases.</li>
+<li>Deliveries.</li>
+<li>Versions or releases.</li>
+</ul>
+<p class="rubric">Assigned resources</p>
+<ul class="simple">
+<li>Resources are assigned to activities.</li>
+<li>During an assignation, some work is initially planned on this activity for the resource.</li>
+</ul>
+<p class="rubric">Real work allocation</p>
+<ul class="simple">
+<li>For a resource, assigned activities are tasks in which he can entry the real work.</li>
+</ul>
+<p class="rubric">Activities regroupment</p>
+<ul class="simple">
+<li>Activities can have parents to regroup activities.</li>
+<li>So a WBS (work breakdown structure number) is calculated for the activities.</li>
+<li>Activities can be sorted inside their parent activity, on the Gantt planning view, using drag and drop.</li>
+<li>Parent activity must belong to the same project.</li>
+</ul>
+<p class="rubric"><strong>Work on tickets</strong></p>
+<ul class="simple">
+<li>Tickets can be linked to an activity (task).</li>
+<li>Work on tickets will be included in the activity.</li>
+<li>More detail, see: <a class="reference internal" href="Ticket.html#ticket"><span class="std std-ref">Tickets</span></a> screen.</li>
+</ul>
+<blockquote>
+<div><div class="compound">
+<p class="compound-first"><strong>Assignment of resources to task</strong></p>
+<ul class="compound-last simple">
+<li>Resources who will work on the ticket doesn&#8217;t need to be assigned to linked activity before.</li>
+<li>The assignment will be automatically created once that resource has entered the working time (real work) in the ticket.</li>
+<li>The assigned task and the sum of working time entries by resource in tickets will be available in its timesheet.</li>
+</ul>
+</div>
+</div></blockquote>
+<p class="rubric">Monitoring indicator</p>
+<ul class="simple">
+<li>The indicators can be defined on the progress data.</li>
+<li>See: <a class="reference internal" href="CommonSections.html#progress-section-monitor-indicator"><span class="std std-ref">Monitoring indicator</span></a></li>
+</ul>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="CommonSections.html#assignment-section"><span class="std std-ref">Assignment</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#progress-section-activity"><span class="std std-ref">Progress</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#predsuces-element-section"><span class="std std-ref">Predecessor and Sucessor element</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#linkelement-section"><span class="std std-ref">Linked element</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#attachment-section"><span class="std std-ref">Attachments</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#note-section"><span class="std std-ref">Notes</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the activity.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Short description of the activity.</td>
+</tr>
+<tr class="row-even"><td><strong>Activity type</strong></td>
+<td>Type of activity.</td>
+</tr>
+<tr class="row-odd"><td><strong>Project</strong></td>
+<td>The project concerned by the activity.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-external-reference"><span class="xref std std-term">External reference</span></a></td>
+<td>External reference of the activity.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Concept.html#term-requestor"><span class="xref std std-term">Requestor</span></a></td>
+<td>Contact at the origin of the activity.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-origin"><span class="xref std std-term">Origin</span></a></td>
+<td>Element which is the origin of the activity.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-description"><span class="xref std std-term">Description</span></a></td>
+<td>Complete description of the activity.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<p class="rubric">Section: Treatment</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Parent activity</td>
+<td>Parent activity for grouping purpose.</td>
+</tr>
+<tr class="row-odd"><td><strong>Status</strong></td>
+<td>Actual <a class="reference internal" href="Glossary.html#term-status"><span class="xref std std-term">status</span></a> of the activity.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Concept.html#term-responsible"><span class="xref std std-term">Responsible</span></a></td>
+<td>Resource who is responsible for the activity.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-handled"><span class="xref std std-term">Handled</span></a></td>
+<td>Box checked indicates the activity is taken over.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-done"><span class="xref std std-term">Done</span></a></td>
+<td>Box checked indicates the activity has been treated.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the activity is archived.</td>
+</tr>
+<tr class="row-even"><td>Cancelled</td>
+<td>Box checked indicates the activity is cancelled.</td>
+</tr>
+<tr class="row-odd"><td>Target version</td>
+<td>The target version of the product affected in delivery of the activity.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-result"><span class="xref std std-term">Result</span></a></td>
+<td>Complete description of the treatment done on the activity.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<div class="topic">
+<p class="topic-title first">Field: Target version</p>
+<ul class="simple">
+<li>Contains the list of product versions linked to the project.</li>
+<li>More detail, see: <a class="reference internal" href="Concept.html#product-concept"><span class="std std-ref">Product concept</span></a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="milestones">
+<span id="milestone"></span><span id="index-3"></span><h2><a class="toc-backref" href="#id1">Milestones</a><a class="headerlink" href="#milestones" title="Permalink to this headline">¶</a></h2>
+<p>A milestone is a flag in the planning, to point out key dates.</p>
+<p>Milestones are commonly used to check delivery dates.</p>
+<p>They can also be used to highlight the transition from one phase to the next.</p>
+<p>ProjeQtOr offers two types of milestone:</p>
+<blockquote>
+<div><div class="compound">
+<p class="compound-first"><strong>Floating milestone</strong></p>
+<ul class="compound-last simple">
+<li>This milestone will automatically move to take into account dependencies.</li>
+</ul>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Fixed milestone</strong></p>
+<ul class="compound-last simple">
+<li>This milestone is fixed in the planning, not taking into account predecessor dependencies.</li>
+<li>This kind of milestone is interesting, for instance to set-up start date for some tasks.</li>
+<li>Fixed date is set by validated date.</li>
+</ul>
+</div>
+</div></blockquote>
+<p class="rubric">Monitoring indicator</p>
+<ul class="simple">
+<li>The indicators can be defined on the progress data.</li>
+<li>See: <a class="reference internal" href="CommonSections.html#progress-section-monitor-indicator"><span class="std std-ref">Monitoring indicator</span></a></li>
+</ul>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="CommonSections.html#progress-section-milestone"><span class="std std-ref">Progress</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#predsuces-element-section"><span class="std std-ref">Predecessor and Sucessor element</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#linkelement-section"><span class="std std-ref">Linked element</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#attachment-section"><span class="std std-ref">Attachments</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#note-section"><span class="std std-ref">Notes</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the milestone.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Short description of the milestone.</td>
+</tr>
+<tr class="row-even"><td><strong>Milestone type</strong></td>
+<td>Type of milestone.</td>
+</tr>
+<tr class="row-odd"><td><strong>Project</strong></td>
+<td>The project concerned by the milestone.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-origin"><span class="xref std std-term">Origin</span></a></td>
+<td>Element which is the origin of the milestone.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-description"><span class="xref std std-term">Description</span></a></td>
+<td>Long description of the milestone.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<p class="rubric">Section: Treatment</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Parent activity</td>
+<td>Parent activity for grouping purpose.</td>
+</tr>
+<tr class="row-odd"><td><strong>Status</strong></td>
+<td>Actual <a class="reference internal" href="Glossary.html#term-status"><span class="xref std std-term">status</span></a> of the milestone.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Concept.html#term-responsible"><span class="xref std std-term">Responsible</span></a></td>
+<td>Resource who is responsible for the milestone.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-handled"><span class="xref std std-term">Handled</span></a></td>
+<td>Box checked indicates the milestone is taken over.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-done"><span class="xref std std-term">Done</span></a></td>
+<td>Box checked indicates the milestone has been treated.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Box checked indicates the milestone is archived.</td>
+</tr>
+<tr class="row-even"><td>Cancelled</td>
+<td>Box checked indicates the milestone is cancelled.</td>
+</tr>
+<tr class="row-odd"><td>Target version</td>
+<td>The target version of the product affected in delivery of the milestone.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-result"><span class="xref std std-term">Result</span></a></td>
+<td>Complete description of the treatment done on the milestone.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<div class="topic">
+<p class="topic-title first">Field: Target version</p>
+<ul class="simple">
+<li>Contains the list of product versions linked to the project.</li>
+<li>More detail, see: <a class="reference internal" href="Concept.html#product-concept"><span class="std std-ref">Product concept</span></a></li>
+</ul>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Projeqtor_Logo_White.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Planning elements</a><ul>
+<li><a class="reference internal" href="#projects">Projects</a></li>
+<li><a class="reference internal" href="#activities">Activities</a></li>
+<li><a class="reference internal" href="#milestones">Milestones</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="UserParameter.html"
+                        title="previous chapter">User parameters</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="Gantt.html"
+                        title="next chapter">Gantt charts</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Gantt.html" title="Gantt charts"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="UserParameter.html" title="User parameters"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, ProjeQtOr.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.4.
+    </div>
+  </body>
+</html>

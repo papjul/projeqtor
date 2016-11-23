@@ -1,0 +1,435 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Access rights &mdash; ProjeQtOr User guide 5.4 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/projeqtor.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '5.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="ProjeQtOr User guide 5.4 documentation" href="index.html" />
+    <link rel="next" title="Functions" href="ListsOfValues.html" />
+    <link rel="prev" title="Workflows" href="ControlAutomation.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ListsOfValues.html" title="Functions"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="ControlAutomation.html" title="Workflows"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <span class="target" id="index-0"></span><div class="section" id="profiles">
+<span id="profile"></span><span id="index-1"></span><h1>Profiles<a class="headerlink" href="#profiles" title="Permalink to this headline">¶</a></h1>
+<div class="sidebar">
+<p class="first sidebar-title">Concepts</p>
+<ul class="last simple">
+<li><a class="reference internal" href="Concept.html#profiles-definition"><span class="std std-ref">Profiles definition</span></a></li>
+</ul>
+</div>
+<p>The profile is a group of authorization and access rights to the data.</p>
+<p>Each user is linked to a profile to define the data he can see and possibly manage.</p>
+<p class="rubric">Display format</p>
+<ul class="simple">
+<li>In the next screens, the name of profiles is displayed in columns.</li>
+<li>Access rights and options are displayed in rows.</li>
+<li>This display format allows to manage easily authorizations for each profile.</li>
+</ul>
+<hr class="docutils" />
+<p class="rubric">Value of Field &#8220;Name&#8221;</p>
+<ul class="simple">
+<li>The value of field &#8220;Name&#8221; is not the name displayed, but it is a code in the translation table.</li>
+<li>The name displayed at right of the field is the translated name.</li>
+<li>See: <a class="reference internal" href="#translatable-name"><span class="std std-ref">Translatable name</span></a>.</li>
+</ul>
+<div class="topic">
+<p class="topic-title first">New profile</p>
+<ul class="simple">
+<li>The value of field &#8220;Name&#8221; must be a significant name and must not contain spaces or special characters.</li>
+<li>Ideally, the value of the field should start with &#8220;profile&#8221; (to be easily identified in the translation table).</li>
+</ul>
+</div>
+<hr class="docutils" />
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="ListsOfTypes.html#type-restriction-section"><span class="std std-ref">Types restrictions</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the profile.</td>
+</tr>
+<tr class="row-odd"><td>Name</td>
+<td>Name of the profile.</td>
+</tr>
+<tr class="row-even"><td>Profile code</td>
+<td>A code that may be internally used when generating emails and alerts.</td>
+</tr>
+<tr class="row-odd"><td>Sort order</td>
+<td>Number to define order of display in lists.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate that profile is archived.</td>
+</tr>
+<tr class="row-odd"><td>Description</td>
+<td>Complete description of the profile.</td>
+</tr>
+</tbody>
+</table>
+<div class="topic">
+<p class="topic-title first">Field: Profile code</p>
+<ul class="simple">
+<li>ADM:  will designate administrator.</li>
+<li>PL: will designate project leader.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="access-modes">
+<span id="access-mode"></span><span id="index-2"></span><h1>Access modes<a class="headerlink" href="#access-modes" title="Permalink to this headline">¶</a></h1>
+<p>The access mode defines a combination of rights to read, created, update or delete items.</p>
+<p>Each access is defined as scope of visible and updatable elements, that can be :</p>
+<ul class="simple">
+<li><strong>No element:</strong> No element is visible and updatable.</li>
+<li><strong>Own elements:</strong> Only the elements created by the user.</li>
+<li><strong>Elements he is responsible for:</strong> Only the elements the user is responsible for.</li>
+<li><strong>Elements of own project:</strong> Only the elements of the projects the user/resource is affected to.</li>
+<li><strong>All elements on all projects:</strong> All elements, whatever the project.</li>
+</ul>
+<hr class="docutils" />
+<p class="rubric">Value of Field &#8220;Name&#8221;</p>
+<ul class="simple">
+<li>The value of field &#8220;Name&#8221;  is not the name displayed, but it is a code in the translation table.</li>
+<li>The name displayed at right of the field is the translated name.</li>
+<li>See: <a class="reference internal" href="#translatable-name"><span class="std std-ref">Translatable name</span></a>.</li>
+</ul>
+<div class="topic">
+<p class="topic-title first">New access mode</p>
+<ul class="simple">
+<li>The value of field &#8220;Name&#8221; must be a significant name and must not contain spaces or special characters.</li>
+<li>Ideally, the value of the field should start with &#8220;accessProfile&#8221; (to be easily identified in the translation table).</li>
+</ul>
+</div>
+<hr class="docutils" />
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the access mode.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Name of the access mode.</td>
+</tr>
+<tr class="row-even"><td><strong>Read rights</strong></td>
+<td>Scope of visible items</td>
+</tr>
+<tr class="row-odd"><td><strong>Create rights</strong></td>
+<td>Scope of possibility to create items.</td>
+</tr>
+<tr class="row-even"><td><strong>Update rights</strong></td>
+<td>Scope of updatable items.</td>
+</tr>
+<tr class="row-odd"><td><strong>Delete rights</strong></td>
+<td>Scope of deletable items.</td>
+</tr>
+<tr class="row-even"><td>Sort order</td>
+<td>Number to define order of display in lists</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate that access mode is archived.</td>
+</tr>
+<tr class="row-even"><td>Description</td>
+<td>Complete description of the access mode.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+<div class="section" id="access-to-forms">
+<span id="index-3"></span><span id="id1"></span><h1>Access to forms<a class="headerlink" href="#access-to-forms" title="Permalink to this headline">¶</a></h1>
+<p>This screen allows to define screen access for each profile.</p>
+<p>Users belonging to a profile can see the corresponding screen in the menu.</p>
+<p class="rubric">How to do</p>
+<ul class="simple">
+<li>Screens are grouped as seen in the menu.</li>
+<li>Click on checkbox to permit or revoke access to the screen for a profile.</li>
+</ul>
+<div class="figure align-center" id="id4">
+<img alt="Access to forms screen" src="_images/SCR_AccessToForms.png" />
+<p class="caption"><span class="caption-text">Access to forms screen</span></p>
+</div>
+</div>
+<div class="section" id="access-to-reports">
+<span id="index-4"></span><span id="id2"></span><h1>Access to reports<a class="headerlink" href="#access-to-reports" title="Permalink to this headline">¶</a></h1>
+<p>This screen allows to define report access for each profile.</p>
+<p>Users belonging to a profile can see the corresponding report in the report list.</p>
+<p class="rubric">How to do</p>
+<ul class="simple">
+<li>Reports are grouped by report categories.</li>
+<li>Click on checkbox to permit or revoke access to the report  for a profile.</li>
+</ul>
+<div class="figure align-center" id="id5">
+<img alt="Access to reports screen" src="_images/SCR_AccessToReports.png" />
+<p class="caption"><span class="caption-text">Access to reports screen</span></p>
+</div>
+</div>
+<div class="section" id="access-to-data-project-dependant">
+<span id="access-mode-to-data-project-dependant"></span><span id="index-5"></span><h1>Access to data (project dependant)<a class="headerlink" href="#access-to-data-project-dependant" title="Permalink to this headline">¶</a></h1>
+<p>This screen allows to set element access mode for each profile.</p>
+<p>Allows to define scope of visibility and updating of data in elements for users and resources.</p>
+<p>This screen is only for the elements reliant on a project.</p>
+<p class="rubric">How to do</p>
+<ul class="simple">
+<li>For each element, selected the access mode granted to a profile.</li>
+</ul>
+<div class="figure align-center" id="id6">
+<img alt="Access to data (Project dependant) screen" src="_images/SCR_AccessToDataProjectDependant.png" />
+<p class="caption"><span class="caption-text">Access to data (Project dependant) screen</span></p>
+</div>
+</div>
+<div class="section" id="access-to-data-not-project-dependant">
+<span id="access-mode-to-data-not-project-dependant"></span><span id="index-6"></span><h1>Access to data (not project dependant)<a class="headerlink" href="#access-to-data-not-project-dependant" title="Permalink to this headline">¶</a></h1>
+<p>This screen allows to set for each profile, elements access rights.</p>
+<p>Allows to grant access rights (read only or write) to users, to data on specific elements.</p>
+<p>This screen is only for the elements not reliant on a project.</p>
+<p class="rubric">How to do</p>
+<ul class="simple">
+<li>For each element, select the access rights granted to a profile.</li>
+</ul>
+<div class="figure align-center" id="id7">
+<img alt="Access to data (Not project dependant) screen" src="_images/SCR_AccessToDataNotProjectDependant.png" />
+<p class="caption"><span class="caption-text">Access to data (Not project dependant) screen</span></p>
+</div>
+</div>
+<div class="section" id="specific-access">
+<span id="specific-access-mode"></span><span id="index-7"></span><h1>Specific access<a class="headerlink" href="#specific-access" title="Permalink to this headline">¶</a></h1>
+<p>This screen groups specific functionalities options.</p>
+<p>Users belonging to a profile can have access to the application specific functions.</p>
+<p>Depending on options of functionality, allows to grant access rights, to define data visibility  or to enable or disable option.</p>
+<p class="rubric">How to do</p>
+<ul class="simple">
+<li>For each option, select the access granted to a profile.</li>
+</ul>
+<div class="figure align-center" id="id8">
+<img alt="Specific access screen" src="_images/SCR_SpecificAccess.png" />
+<p class="caption"><span class="caption-text">Specific access screen</span></p>
+</div>
+<hr class="docutils" />
+<p class="rubric">Section: Real work allocation and Diary</p>
+<p>This section allows to:</p>
+<ul class="simple">
+<li>Defines who will be able to see and update “real work” for other users.</li>
+<li>Defines who can validate weekly work for resource.</li>
+<li>Defines who have access on diary for resources.</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Validate real work</p>
+<ul class="last simple">
+<li>In most cases, it is devoted to project leader.</li>
+</ul>
+</div>
+<p class="rubric">Section: Work and Cost visibility</p>
+<ul class="simple">
+<li>This section defines for each profile the scope of visibility of work and cost data.</li>
+</ul>
+<p class="rubric">Section: Assignment management</p>
+<ul class="simple">
+<li>This section defines the visibility and the possibility to edit assignments (on activities or else).</li>
+</ul>
+<p class="rubric" id="index-8">Section: Display specific buttons</p>
+<ul class="simple">
+<li>This section defines whether some button will be displayed or not.</li>
+</ul>
+<blockquote>
+<div><div class="compound">
+<p class="compound-first"><strong>Display of combo detail button</strong></p>
+<ul class="compound-last simple">
+<li>This option defines for each profile whether the button <img alt="button icon search" src="_images/buttonIconSearch.png" /> will be displayed or not, facing every combo list box.</li>
+<li>Through this button, it is possible to select an item and create a new item.</li>
+<li>This button may also be hidden depending on access rights (if the user has no read access to corresponding elements).</li>
+</ul>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Access to checklist</strong></p>
+<ul class="compound-last simple">
+<li>Defines visibility or not to the checklist (if defined).</li>
+</ul>
+</div>
+</div></blockquote>
+<p class="rubric">Section: Planning access rights</p>
+<ul class="simple">
+<li>This section defines access to planning functionality.</li>
+</ul>
+<blockquote>
+<div><div class="compound">
+<p class="compound-first"><strong>Calculate planning</strong></p>
+<ul class="compound-last simple">
+<li>This option defines for each profile the ability to calculate planning or not.</li>
+</ul>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Access to resource planning of others</strong></p>
+<ul class="compound-last simple">
+<li>This option defines for each profile the ability to see the resource planning of others.</li>
+</ul>
+</div>
+</div></blockquote>
+<p class="rubric">Section: Unlock items</p>
+<ul class="simple">
+<li>This section defines for each profile the ability to unlock any document or requirement.</li>
+<li>Otherwise, each user can only unlock the documents and requirements locked by himself.</li>
+</ul>
+<p class="rubric">Section: Reports</p>
+<ul class="simple">
+<li>This section defines for each profile the ability to change the resource parameter in reports.</li>
+</ul>
+<p class="rubric">Section: Specific update rights</p>
+<ul class="simple">
+<li>Defines for each profile the ability to force delete items.</li>
+<li>Defines for each profile the ability to update creation information.</li>
+</ul>
+</div>
+<div class="section" id="translatable-name">
+<span id="id3"></span><h1>Translatable name<a class="headerlink" href="#translatable-name" title="Permalink to this headline">¶</a></h1>
+<p>For profiles and access modes, the value of field &#8220;Name&#8221; is translatable.</p>
+<p>The field &#8220;Name&#8221; in screens <a class="reference internal" href="#profile"><span class="std std-ref">Profiles</span></a> and <a class="reference internal" href="#access-mode"><span class="std std-ref">Access modes</span></a> is not the name displayed, but it is a code in the translation table.</p>
+<p>The name displayed at right of the field is the translated name.</p>
+<p>The translated name depends on user language selected in <a class="reference internal" href="UserParameter.html#display-parameters"><span class="std std-ref">User parameters</span></a> screen.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>If translated name is displayed between [], then the value of field &#8220;Name&#8221; is not found in the translation table.</li>
+</ul>
+</div>
+<p class="rubric">Translation table files</p>
+<ul class="simple">
+<li>In ProjeQtOr, a translation table file is defined for each available language.</li>
+<li>The files are named &#8220;lang.js&#8221; and are localized in a directory named with ISO language code.<ul>
+<li>For instance: ../tool/i18n/nls/fr/lang.js.</li>
+</ul>
+</li>
+</ul>
+<p class="rubric">How to modify the translation file?</p>
+<ul class="simple">
+<li>You can edit  file &#8220;lang.js&#8221; to add translation of new value or to modify the existing value translation.</li>
+<li>Or, you can download Excel file named &#8220;lang.xls&#8221;, available on ProjeQtOr site. You can modify the translation tables of all languages and produce  files &#8220;lang.js&#8221;.</li>
+</ul>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Projeqtor_Logo_White.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Profiles</a></li>
+<li><a class="reference internal" href="#access-modes">Access modes</a></li>
+<li><a class="reference internal" href="#access-to-forms">Access to forms</a></li>
+<li><a class="reference internal" href="#access-to-reports">Access to reports</a></li>
+<li><a class="reference internal" href="#access-to-data-project-dependant">Access to data (project dependant)</a></li>
+<li><a class="reference internal" href="#access-to-data-not-project-dependant">Access to data (not project dependant)</a></li>
+<li><a class="reference internal" href="#specific-access">Specific access</a></li>
+<li><a class="reference internal" href="#translatable-name">Translatable name</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="ControlAutomation.html"
+                        title="previous chapter">Workflows</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="ListsOfValues.html"
+                        title="next chapter">Functions</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ListsOfValues.html" title="Functions"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="ControlAutomation.html" title="Workflows"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, ProjeQtOr.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.4.
+    </div>
+  </body>
+</html>

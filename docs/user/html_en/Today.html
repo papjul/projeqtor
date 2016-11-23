@@ -1,0 +1,397 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Today (Dashboard) &mdash; ProjeQtOr User guide 5.4 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/projeqtor.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '5.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="ProjeQtOr User guide 5.4 documentation" href="index.html" />
+    <link rel="next" title="Diary" href="Diary.html" />
+    <link rel="prev" title="Gantt charts" href="Gantt.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="Diary.html" title="Diary"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="Gantt.html" title="Gantt charts"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <span class="target" id="index-0"></span><div class="section" id="today-dashboard">
+<span id="index-1"></span><h1>Today (Dashboard)<a class="headerlink" href="#today-dashboard" title="Permalink to this headline">¶</a></h1>
+<p>This screen allows user to have a global view of its projects and tasks.</p>
+<div class="contents local topic" id="sections">
+<p class="topic-title first">Sections</p>
+<ul class="simple">
+<li><a class="reference internal" href="#messages" id="id3">Messages</a></li>
+<li><a class="reference internal" href="#start-guide" id="id4">Start guide</a></li>
+<li><a class="reference internal" href="#projects" id="id5">Projects</a></li>
+<li><a class="reference internal" href="#tasks" id="id6">Tasks</a></li>
+<li><a class="reference internal" href="#extending" id="id7">Extending</a></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>User parameter “First page”</p>
+<ul class="last simple">
+<li>This parameter defines the screen that will be displayed first on each connection.</li>
+<li>By default, this screen is selected.</li>
+</ul>
+</div>
+<div class="section" id="messages">
+<span id="messages-section"></span><span id="index-2"></span><h2><a class="toc-backref" href="#sections">Messages</a><a class="headerlink" href="#messages" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center">
+<img alt="Section - Messages" src="_images/SEC_TodayMessages.png" />
+</div>
+<p class="rubric">Messages</p>
+<ul class="simple">
+<li>Messages are displayed  depends on some criteria.</li>
+<li>Every message is component by title <a class="reference internal" href="_images/one.png"><img alt="One" src="_images/one.png" style="width: 18.0px; height: 18.0px;" /></a> and message <a class="reference internal" href="_images/two.png"><img alt="Two" src="_images/two.png" style="width: 18.0px; height: 18.0px;" /></a>.</li>
+<li>Messages are defined in <a class="reference internal" href="Tools.html#message"><span class="std std-ref">Messages</span></a> screen.</li>
+</ul>
+<p class="rubric">Automatic refresh</p>
+<ul class="simple">
+<li>Allows to refresh data according defined delay.</li>
+<li>Also the screen will be scrolling from top to bottom according defined delay.</li>
+<li>Click on <img alt="Button icon refresh" src="_images/buttonIconRefresh.png" /> to enable/disable automatic refresh.</li>
+</ul>
+<p class="rubric">Print</p>
+<ul class="simple">
+<li>Click on <img alt="Button icon print" src="_images/iconPrint.png" /> to print Today screen.</li>
+</ul>
+<p class="rubric">Parameters</p>
+<ul class="simple">
+<li>Click on <img alt="Button icon parameter" src="_images/iconParameter.png" /> to access screen parameters.</li>
+</ul>
+<blockquote>
+<div><div class="compound">
+<p class="compound-first"><strong>Period for task selection</strong></p>
+<ul class="compound-last">
+<li><p class="first">Allows to define the period for tasks will be displayed.</p>
+<div class="compound">
+<p class="compound-first"><strong>Field: Due date</strong></p>
+<ul class="compound-last simple">
+<li>Select only items with due date less than today plus this selected period.</li>
+</ul>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Field: Or not set</strong></p>
+<ul class="compound-last simple">
+<li>Select also items with due date not set.</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Refresh parameters</strong></p>
+<ul class="compound-last">
+<li><p class="first">Allows to define parameters for automatic refresh.</p>
+<div class="compound">
+<p class="compound-first"><strong>Field: Refresh delay</strong></p>
+<ul class="compound-last simple">
+<li>Selects the delay between two screen refresh.</li>
+</ul>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Field: Scroll delay</strong></p>
+<ul class="compound-last simple">
+<li>Selects the delay between two scrolling.</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>Items to be displayed</strong></p>
+<ul class="compound-last simple">
+<li>Allows to define sections displayed on the screen.</li>
+<li>Allows to reorder sections displayed with drag &amp; drop feature.</li>
+<li>Using the selector area button icon drag <img alt="Button icon drag" src="_images/iconDrag.png" />.</li>
+</ul>
+</div>
+</div></blockquote>
+<div class="figure align-center">
+<img alt="Dialog box - Today parameters" src="_images/BOX_TodayParameters.png" />
+</div>
+</div>
+<div class="section" id="start-guide">
+<span id="index-3"></span><h2><a class="toc-backref" href="#sections">Start guide</a><a class="headerlink" href="#start-guide" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li>Start page for new installations to assist the administrator in the first configuration steps.</li>
+<li>A progress display <a class="reference internal" href="_images/one.png"><img alt="One" src="_images/one.png" style="width: 18.0px; height: 18.0px;" /></a> allows to determine the percent of complete installation.</li>
+<li>You can hide this section on startup, just unchecked. <a class="reference internal" href="_images/two.png"><img alt="Two" src="_images/two.png" style="width: 18.0px; height: 18.0px;" /></a><ul>
+<li>This section will not be displayed anymore.</li>
+<li>To show it again, select it as the start page in <a class="reference internal" href="UserParameter.html#graphic-interface-behavior-section"><span class="std std-ref">Users parameters</span></a> screen.</li>
+</ul>
+</li>
+</ul>
+<div class="figure align-center">
+<img alt="Section - Start guide" src="_images/SEC_TodayStartGuide.png" />
+</div>
+</div>
+<div class="section" id="projects">
+<h2><a class="toc-backref" href="#sections">Projects</a><a class="headerlink" href="#projects" title="Permalink to this headline">¶</a></h2>
+<p>A quick overview of projects status.</p>
+<p>The projects list is limited to the project visibility scope of the connected user.</p>
+<div class="figure align-center">
+<img alt="Section - Projects" src="_images/SEC_TodayProjects.png" />
+</div>
+<p class="rubric">1 - Scope of the numbers counted</p>
+<ul class="simple">
+<li>Checkboxes allow to filter displayed projects:<ul>
+<li>To do: Projects to do.</li>
+<li>Not closed : Projects to do and done.</li>
+<li>All : Projects to do, done and closed.</li>
+</ul>
+</li>
+</ul>
+<p class="rubric">Projects name</p>
+<ul class="simple">
+<li>Click on the name of a project will directly move to it.</li>
+</ul>
+<p class="rubric">Manuel indicators</p>
+<ul class="simple">
+<li>Manuel indicator can be set on project.</li>
+<li>Trend and health status indicators are displayed.</li>
+</ul>
+<blockquote>
+<div><div class="compound">
+<p class="compound-first"><strong>2 - Icon: Trend</strong></p>
+<ul class="compound-last simple">
+<li>This icon allows to display the trend of the project.</li>
+</ul>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>3 - Icon: Health status</strong></p>
+<ul class="compound-last simple">
+<li>This icon allows to display the health status of the project.</li>
+</ul>
+</div>
+</div></blockquote>
+<p class="rubric">Progress</p>
+<ul class="simple">
+<li>Calculated progress and overall progress are displayed.</li>
+</ul>
+<blockquote>
+<div><div class="compound">
+<p class="compound-first"><strong>4 - Calculated progress</strong></p>
+<ul class="compound-middle simple">
+<li>Actual progress of the work of project.</li>
+</ul>
+<div class="compound-last admonition note">
+<p class="first admonition-title">Note</p>
+<p>On mouse over the bar</p>
+<ul class="last simple">
+<li>On each project shows part of “to do” (red) compared to “done and closed” (green).</li>
+</ul>
+</div>
+</div>
+<div class="compound">
+<p class="compound-first"><strong>5 - Overall progress</strong></p>
+<ul class="compound-last simple">
+<li>Additional progress manually selected for the project.</li>
+</ul>
+</div>
+</div></blockquote>
+<p class="rubric">6 - Other measure of progress</p>
+<ul class="simple">
+<li><strong>Left:</strong> Left work for the project.</li>
+<li><strong>Margin:</strong> Work margin.</li>
+<li><strong>End date:</strong> Planified end date of the project.</li>
+<li><strong>Late:</strong> Number of late days in project.</li>
+</ul>
+<p class="rubric">7 - Numbers of elements concerned to project</p>
+<ul class="simple">
+<li>Numbers of elements concerned to a project are displayed.</li>
+</ul>
+<blockquote>
+<div><div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>On mouse over the bar</p>
+<ul class="last simple">
+<li>On each element shows part of “to do” (red) compared to “done and closed” (green).</li>
+</ul>
+</div>
+</div></blockquote>
+</div>
+<div class="section" id="tasks">
+<h2><a class="toc-backref" href="#sections">Tasks</a><a class="headerlink" href="#tasks" title="Permalink to this headline">¶</a></h2>
+<p>Here are listed, as a “To do list” all the items for which the connected user is either “assigned to”, “<a class="reference internal" href="Concept.html#term-responsible"><span class="xref std std-term">responsible</span></a> of” or “<a class="reference internal" href="Concept.html#term-issuer"><span class="xref std std-term">issuer</span></a> or <a class="reference internal" href="Concept.html#term-requestor"><span class="xref std std-term">requestor</span></a> of”.</p>
+<p>Click on an item will directly move to it.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p>Parameter: Max items to display</p>
+<ul class="last simple">
+<li>Number of items listed here are limited to a value defined  in <a class="reference internal" href="Administration.html#global-display-section"><span class="std std-ref">Global parameters</span></a>.</li>
+</ul>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">id</span></a></td>
+<td>Unique Id for the item.</td>
+</tr>
+<tr class="row-odd"><td>Project</td>
+<td>The project concerned by the item.</td>
+</tr>
+<tr class="row-even"><td>Type</td>
+<td>Type of item.</td>
+</tr>
+<tr class="row-odd"><td>Name</td>
+<td>Name of the item.</td>
+</tr>
+<tr class="row-even"><td>Due date</td>
+<td>Planned end date or due date.</td>
+</tr>
+<tr class="row-odd"><td>Status</td>
+<td>Actual status of the item.</td>
+</tr>
+<tr class="row-even"><td>Issuer</td>
+<td>Flag on indicate the user is the issuer for the item.</td>
+</tr>
+<tr class="row-odd"><td>Resp.</td>
+<td>Flag on indicate the user is the responsible for the item.</td>
+</tr>
+</tbody>
+</table>
+<div class="topic">
+<p class="topic-title first">Column: Id</p>
+<ul class="simple">
+<li>Id column displayed unique Id and specific icon for the item.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="extending">
+<h2><a class="toc-backref" href="#sections">Extending</a><a class="headerlink" href="#extending" title="Permalink to this headline">¶</a></h2>
+<p>You can select any report to be displayed on the Today screen.</p>
+<p class="rubric">Add selected report</p>
+<ul class="simple">
+<li>To do this, just go to the selected report, select parameters and display result (to check it is what you wish on today screen).</li>
+<li>Click on <img alt="Button icon Today" src="_images/iconToday.png" /> to insert this report with parameter on the Today screen.</li>
+<li>Any unchanged parameter will be set as default value.</li>
+<li>These reports will be displayed on Today screen like other pre-defined parts.</li>
+</ul>
+<div class="figure align-center" id="id1">
+<img alt="Report selection" src="_images/SEC_TodayExtending.png" />
+<p class="caption"><span class="caption-text">Report selection</span></p>
+</div>
+<p class="rubric">Manage extending section</p>
+<ul class="simple">
+<li>Click on <img alt="Button icon parameter" src="_images/iconParameter.png" /> to access screen parameters.</li>
+<li>You can reorder like any other parts.</li>
+<li>Click on <img alt="Button icon delete" src="_images/buttonIconDelete.png" /> to completely remove them from the list.</li>
+</ul>
+<div class="figure align-center" id="id2">
+<img alt="Dialog box - Today parameters with extending parts" src="_images/BOX_TodayParametersWithExtending.png" />
+<p class="caption"><span class="caption-text">Dialog box - Today parameters with extending parts</span></p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Projeqtor_Logo_White.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Today (Dashboard)</a><ul>
+<li><a class="reference internal" href="#messages">Messages</a></li>
+<li><a class="reference internal" href="#start-guide">Start guide</a></li>
+<li><a class="reference internal" href="#projects">Projects</a></li>
+<li><a class="reference internal" href="#tasks">Tasks</a></li>
+<li><a class="reference internal" href="#extending">Extending</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="Gantt.html"
+                        title="previous chapter">Gantt charts</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="Diary.html"
+                        title="next chapter">Diary</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="Diary.html" title="Diary"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="Gantt.html" title="Gantt charts"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, ProjeQtOr.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.4.
+    </div>
+  </body>
+</html>

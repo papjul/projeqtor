@@ -1,0 +1,612 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Review logs &mdash; ProjeQtOr User guide 5.4 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/projeqtor.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '5.4',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="top" title="ProjeQtOr User guide 5.4 documentation" href="index.html" />
+    <link rel="next" title="Product &amp; Component" href="ProductVersion.html" />
+    <link rel="prev" title="Risks" href="RiskIssueManagement.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="ProductVersion.html" title="Product &amp; Component"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="RiskIssueManagement.html" title="Risks"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="meetings">
+<span id="meeting"></span><span id="index-0"></span><h1>Meetings<a class="headerlink" href="#meetings" title="Permalink to this headline">¶</a></h1>
+<p>Meeting items are stored to keep track of important meetings during the project lifecycle :</p>
+<ul class="simple">
+<li>Progress Meetings</li>
+<li>Steering committees</li>
+<li>Functional workshops</li>
+</ul>
+<p>In fact, you should keep track of every meeting where decisions are taken, or questions answered.</p>
+<p>This will provide an easy way to find back when, where and why a decision has been taken.</p>
+<div class="contents local topic" id="meeting-features">
+<p class="topic-title first">Meeting features</p>
+<ul class="simple">
+<li><a class="reference internal" href="#periodic-meetings" id="id2">Periodic meetings</a></li>
+<li><a class="reference internal" href="#attendees-section" id="id3">Attendees section</a></li>
+</ul>
+</div>
+<p class="rubric">Project task</p>
+<ul class="simple">
+<li>Meeting is a task.</li>
+<li>You can assign project resources (named attendees).</li>
+<li>You have progress section that allows for followed resources work and cost.</li>
+</ul>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#attendees-section"><span class="std std-ref">Attendees</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#progress-section-meeting"><span class="std std-ref">Progress</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#predsuces-element-section"><span class="std std-ref">Predecessor and Sucessor element</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#linkelement-section"><span class="std std-ref">Linked element</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#attachment-section"><span class="std std-ref">Attachments</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#note-section"><span class="std std-ref">Notes</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the meeting.</td>
+</tr>
+<tr class="row-odd"><td>Name</td>
+<td>Short description of the meeting.</td>
+</tr>
+<tr class="row-even"><td><strong>Meeting type</strong></td>
+<td>Type of meeting.</td>
+</tr>
+<tr class="row-odd"><td><strong>Project</strong></td>
+<td>The project concerned by the meeting.</td>
+</tr>
+<tr class="row-even"><td><strong>Meeting date</strong></td>
+<td>Date of the meeting (initially expected date), including start and end time.</td>
+</tr>
+<tr class="row-odd"><td>Location</td>
+<td>Place (room or else) when meeting will stand.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-description"><span class="xref std std-term">Description</span></a></td>
+<td>Description of the meeting.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<div class="topic">
+<p class="topic-title first">Field: Name</p>
+<ul class="simple">
+<li>If not set, will automatically be set to meeting type completed with meeting date.</li>
+</ul>
+</div>
+<div class="admonition hint">
+<p class="first admonition-title">Hint</p>
+<p class="last">Description can be used to store agenda.</p>
+</div>
+<p class="rubric">Button: Email invitation</p>
+<ul class="simple">
+<li>Allows to send the email to attendees.</li>
+<li>They will receive the invitation in their calendar management tool.</li>
+</ul>
+<p class="rubric">Section: Treatment</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Parent activity</td>
+<td>Parent activity of the meeting.</td>
+</tr>
+<tr class="row-odd"><td><strong>Status</strong></td>
+<td>Actual <a class="reference internal" href="Glossary.html#term-status"><span class="xref std std-term">status</span></a> of the meeting.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Concept.html#term-responsible"><span class="xref std std-term">Responsible</span></a></td>
+<td>Resource who is responsible for the organization of the meeting.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-handled"><span class="xref std std-term">Handled</span></a></td>
+<td>Flag to indicate that meeting has been taken into account.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-done"><span class="xref std std-term">Done</span></a></td>
+<td>Flag to indicate that meeting has been held.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate that meeting is archived.</td>
+</tr>
+<tr class="row-even"><td>Cancelled</td>
+<td>Flag to indicate that meeting is cancelled.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-result"><span class="xref std std-term">Minutes</span></a></td>
+<td>Minutes of the meeting.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<div class="topic">
+<p class="topic-title first">Field: Parent activity</p>
+<ul class="simple">
+<li>In the WBS structure, under which the meeting will be displayed in the Gantt planning.</li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">Minutes</p>
+<ul class="simple">
+<li>You can enter here only a short summary of the minutes and attach the full minutes as a file.</li>
+</ul>
+</div>
+<div class="section" id="periodic-meetings">
+<span id="periodic-meeting"></span><span id="index-1"></span><h2><a class="toc-backref" href="#meeting-features">Periodic meetings</a><a class="headerlink" href="#periodic-meetings" title="Permalink to this headline">¶</a></h2>
+<p>Periodic meeting is a way to define some meetings that will occur on a regular basis.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>Most fields fit, but some information is not present for periodic meetings, such as Minutes or Status.</li>
+<li>It is because these fields won’t be set through periodic meeting definition, but must be set directly on the meetings.</li>
+</ul>
+</div>
+<p class="rubric">Periodic meeting process</p>
+<ul class="simple">
+<li>When saving periodic meeting, elementary meetings are automatically created.</li>
+<li>Changes can be done in elementary meetings. In most cases, these changes won&#8217;t be erased by periodic meeting updates.</li>
+</ul>
+<div class="topic">
+<p class="topic-title first">Update on a periodic meeting</p>
+<ul class="simple">
+<li>On each update of a periodic meeting, meetings are re-evaluated.</li>
+<li>This may lead to deletion of some meetings.</li>
+<li>This will also reposition meetings, even if their planned dates were elementary updated.</li>
+</ul>
+</div>
+<p class="rubric">Attendees assignment</p>
+<ul class="simple">
+<li>Attendees can be defined on a periodic meeting.</li>
+<li>They will be copied on the elementary meetings.</li>
+<li>The periodic meetings will not be planned, only elementary meetings will be.</li>
+<li>So left work will always be set to zero on periodic meetings.</li>
+</ul>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="#attendees-section"><span class="std std-ref">Attendees</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#progress-section-meeting"><span class="std std-ref">Progress</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#predsuces-element-section"><span class="std std-ref">Predecessor and Sucessor element</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#note-section"><span class="std std-ref">Notes</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the periodic meeting.</td>
+</tr>
+<tr class="row-odd"><td>Name</td>
+<td>Short description of the meeting.</td>
+</tr>
+<tr class="row-even"><td><strong>Meeting type</strong></td>
+<td>Type of meeting.</td>
+</tr>
+<tr class="row-odd"><td><strong>Project</strong></td>
+<td>The project concerned by the meeting.</td>
+</tr>
+<tr class="row-even"><td>Location</td>
+<td>Place (room or else) when meeting will stand.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-description"><span class="xref std std-term">Description</span></a></td>
+<td>Description of the meeting.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<p class="rubric">Section: Treatment</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Parent activity</td>
+<td>Parent activity of the meeting.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Concept.html#term-responsible"><span class="xref std std-term">Responsible</span></a></td>
+<td>Resource who is responsible for the organization of the meeting.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate that periodic meeting is archived.</td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Section: Periodicity</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Period</strong></td>
+<td>Start date and end date or number of occurrences to define the range of the periodicity.</td>
+</tr>
+<tr class="row-odd"><td>Time</td>
+<td>Start and end time for all the meetings.</td>
+</tr>
+<tr class="row-even"><td><strong>Periodicity</strong></td>
+<td>Frequency of the meeting, on proposed bases (daily, weekly monthly).</td>
+</tr>
+<tr class="row-odd"><td>Only on open days</td>
+<td>Specify that meetings will not be set on off days.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<div class="topic">
+<p class="topic-title first">Field: Periodicity</p>
+<ul class="simple">
+<li>Several periodicity is proposed:<ul>
+<li>Every day</li>
+<li>Same day every week</li>
+<li>Same day every mouth</li>
+<li>Same week every mounth</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="attendees-section">
+<span id="id1"></span><h2><a class="toc-backref" href="#meeting-features">Attendees section</a><a class="headerlink" href="#attendees-section" title="Permalink to this headline">¶</a></h2>
+<p>This section allows to define the list of attendees to the meeting.</p>
+<p class="rubric">Attendee list</p>
+<ul class="simple">
+<li>Meeting is a task you can assign project resources.</li>
+<li>A possibility to assign work to some attendees (project resources). So meeting works of these attendees are booked in the project.</li>
+<li>More detail about how assigned project resources, see: <a class="reference internal" href="CommonSections.html#assignment-section"><span class="std std-ref">Assignment section</span></a> section.</li>
+</ul>
+<p class="rubric">Other attendees</p>
+<ul class="simple">
+<li>Extra list of persons attending (or expecting to attend) the meeting, in completion to resource in the attendee list.</li>
+</ul>
+<div class="topic">
+<p class="topic-title first">Attendees entry</p>
+<ul class="simple">
+<li>You can enter attendees by email address, resource or contact name, user name or initial without caring about.</li>
+<li>Just separate attendees with commas or semicolons.</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<ul class="last simple">
+<li>Duplicate email addresses in the attendee list will automatically be removed.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="section" id="decisions">
+<span id="decision"></span><span id="index-2"></span><h1>Decisions<a class="headerlink" href="#decisions" title="Permalink to this headline">¶</a></h1>
+<p>Decisions are stored to keep track of important decisions, when, where and why the decision was taken.</p>
+<p>You can link a decision to a meeting to rapidly find the minutes where the decision is described.</p>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="CommonSections.html#linkelement-section"><span class="std std-ref">Linked element</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#attachment-section"><span class="std std-ref">Attachments</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#note-section"><span class="std std-ref">Notes</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the decision.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Short description of the decision.</td>
+</tr>
+<tr class="row-even"><td><strong>Decision type</strong></td>
+<td>Type of decision.</td>
+</tr>
+<tr class="row-odd"><td><strong>Project</strong></td>
+<td>The project concerned by the decision.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-description"><span class="xref std std-term">Description</span></a></td>
+<td>Complete description of the decision.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<p class="rubric">Section: Validation</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Status</strong></td>
+<td>Actual <a class="reference internal" href="Glossary.html#term-status"><span class="xref std std-term">status</span></a> of the decision.</td>
+</tr>
+<tr class="row-odd"><td>Decision date</td>
+<td>Date of the decision.</td>
+</tr>
+<tr class="row-even"><td>Origin</td>
+<td>Origin of the decision.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-result"><span class="xref std std-term">Accountable</span></a></td>
+<td>Resource accountable for the decision.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate that decision is archived.</td>
+</tr>
+<tr class="row-odd"><td>Cancelled</td>
+<td>Flag to indicate that decision is cancelled.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<div class="topic">
+<p class="topic-title first">Field: Origin</p>
+<ul class="simple">
+<li>It can be either the reference to a meeting where the decision was taken (so also add the reference to the meetings list), or a short description of why the decision was taken.</li>
+</ul>
+</div>
+<div class="topic">
+<p class="topic-title first">Field: Accountable</p>
+<ul class="simple">
+<li>The person who took the decision.</li>
+</ul>
+</div>
+</div>
+<div class="section" id="questions">
+<span id="question"></span><span id="index-3"></span><h1>Questions<a class="headerlink" href="#questions" title="Permalink to this headline">¶</a></h1>
+<p>Question are stored to keep track of important questions and answers.</p>
+<p>In fact, you should keep trace of every question and answer that have an impact to the project.</p>
+<p>The questions can also afford an easy way to track questions sent and follow-up non-answered ones.</p>
+<p>This will provide an easy way to find back when, who and precise description of the answer to a question.</p>
+<p>Also keep in mind that some people will (consciously or not) be able to change their mind and uphold it has always been their opinion…</p>
+<p>You can link a question to a meeting to rapidly find the minutes where the question was raised or answered.</p>
+<p class="rubric">Monitoring indicator</p>
+<ul class="simple">
+<li>Possibility to define indicators to follow the respect of dates values.</li>
+</ul>
+<blockquote>
+<div><dl class="describe">
+<dt>
+<code class="descname">Respect of initial due date</code></dt>
+<dd></dd></dl>
+
+<dl class="describe">
+<dt>
+<code class="descname">Respect of planned due date</code></dt>
+<dd></dd></dl>
+
+</div></blockquote>
+<div class="sidebar">
+<p class="first sidebar-title">Other sections</p>
+<ul class="last simple">
+<li><a class="reference internal" href="CommonSections.html#linkelement-section"><span class="std std-ref">Linked element</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#attachment-section"><span class="std std-ref">Attachments</span></a></li>
+<li><a class="reference internal" href="CommonSections.html#note-section"><span class="std std-ref">Notes</span></a></li>
+</ul>
+</div>
+<p class="rubric">Section: Description</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-id"><span class="xref std std-term">Id</span></a></td>
+<td>Unique Id for the question.</td>
+</tr>
+<tr class="row-odd"><td><strong>Name</strong></td>
+<td>Short description of the question.</td>
+</tr>
+<tr class="row-even"><td><strong>Question type</strong></td>
+<td>Type of question.</td>
+</tr>
+<tr class="row-odd"><td><strong>Project</strong></td>
+<td>The project concerned by the question.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-description"><span class="xref std std-term">Description</span></a></td>
+<td>Complete description of the question.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+<p class="rubric">Section: Answer</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="20%" />
+<col width="80%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Field</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><strong>Status</strong></td>
+<td>Actual <a class="reference internal" href="Glossary.html#term-status"><span class="xref std std-term">status</span></a> of the decision.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Concept.html#term-responsible"><span class="xref std std-term">Responsible</span></a></td>
+<td>Resource who is responsible for the follow-up of the question.</td>
+</tr>
+<tr class="row-even"><td>Initial due date</td>
+<td>Initially expected date for the answer to the question.</td>
+</tr>
+<tr class="row-odd"><td>Planned due date</td>
+<td>Updated expected date for the answer to the question.</td>
+</tr>
+<tr class="row-even"><td>Replier</td>
+<td>Name of the person who provided the answer.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-handled"><span class="xref std std-term">Handled</span></a></td>
+<td>Flag to indicate that question has been taken into account.</td>
+</tr>
+<tr class="row-even"><td><a class="reference internal" href="Glossary.html#term-done"><span class="xref std std-term">Done</span></a></td>
+<td>Flag to indicate that question has been answered.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-closed"><span class="xref std std-term">Closed</span></a></td>
+<td>Flag to indicate that question is archived.</td>
+</tr>
+<tr class="row-even"><td>Cancelled</td>
+<td>Flag to indicate that question is cancelled.</td>
+</tr>
+<tr class="row-odd"><td><a class="reference internal" href="Glossary.html#term-result"><span class="xref std std-term">Response</span></a></td>
+<td>Complete description of the answer to the question.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>* Required field</strong></p>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+            <p class="logo"><a href="index.html">
+              <img class="logo" src="_static/Projeqtor_Logo_White.png" alt="Logo"/>
+            </a></p>
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Meetings</a><ul>
+<li><a class="reference internal" href="#periodic-meetings">Periodic meetings</a></li>
+<li><a class="reference internal" href="#attendees-section">Attendees section</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#decisions">Decisions</a></li>
+<li><a class="reference internal" href="#questions">Questions</a></li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="RiskIssueManagement.html"
+                        title="previous chapter">Risks</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="ProductVersion.html"
+                        title="next chapter">Product &amp; Component</a></p>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="ProductVersion.html" title="Product &amp; Component"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="RiskIssueManagement.html" title="Risks"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">ProjeQtOr User guide 5.4 documentation</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2016, ProjeQtOr.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.4.
+    </div>
+  </body>
+</html>
