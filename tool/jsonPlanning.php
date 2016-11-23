@@ -97,6 +97,11 @@
     $baselineBottom=trim(getSessionValue('planningBaselineBottom'));
   }
   // Header
+  if (array_key_exists('outMode', $_REQUEST) && $_REQUEST['outMode'] == 'csv') {
+    $outMode = 'csv';
+  } else {
+    $outMode = 'html';
+  }
   if ( array_key_exists('report',$_REQUEST) ) {
     $headerParameters="";
     if (array_key_exists('startDate',$_REQUEST) and trim($_REQUEST['startDate'])!="") {
@@ -115,7 +120,11 @@
       Security::checkValidId(trim($_REQUEST['idProject']));
       $headerParameters.= i18n("colIdProject") . ' : ' . (SqlList::getNameFromId('Project', $_REQUEST['idProject'])) . '<br/>';
     }
-    include "../report/header.php";
+	if($outMode == 'csv') {
+      include "../report/headerFunctions.php";
+    } else {
+	  include "../report/header.php";
+	}
   }
   if (! isset($outMode)) { $outMode=""; }
 
@@ -491,6 +500,16 @@
           }
           $line["resource"]=implode(', ',$arrayResource);
         //}
+        $line['type'] = '';
+        if($line['reftype'] == 'Project') {
+            $project = new Project($line['refid']);
+            $line['color'] = $project->color;
+            $type = new Type($project->idProjectType);
+            $line['type'] = $type->name;
+            $status = new Status($project->idStatus);
+            $line['status'] = $status->name;
+            $line['statuscolor'] = $status->color;
+        }
         $resultArray[]=$line;
         if ($maxDate=='' or $maxDate<$pEnd) {$maxDate=$pEnd;}
         //if ($minDate=='' or $minDate>$pStart) {$minDate=$pStart;}
@@ -546,9 +565,11 @@
       }
       //echo "mindate:$minDate maxdate:$maxDate numDays:$numDays numUnits:$numUnits topUnits:$topUnits" ;
       // Header
-      $sortArray=Parameter::getPlanningColumnOrder();
+      //$sortArray=Parameter::getPlanningColumnOrder();
+	  $sortArray=array_merge(array('Color', 'Type', 'Status', 'StatusColor'), Parameter::getPlanningColumnOrder());
       $cptSort=0;
       foreach ($sortArray as $name) {	if (substr($name,0,6)!='Hidden') $cptSort++; }
+	  if($outMode != 'csv') {
       //echo '<table dojoType="dojo.dnd.Source" id="wishlistNode" class="container ganttTable" style="border: 1px solid #AAAAAA; margin: 0px; padding: 0px;">';
       echo '<table style="font-size:80%; border: 1px solid #AAAAAA; margin: 0px; padding: 0px;">';
       echo '<tr style="height: 20px;"><td colspan="' . (2+$cptSort) . '">&nbsp;</td>';
@@ -638,7 +659,35 @@
         }
       }
       echo '</TR>';
-
+	  } else {
+        echo chr(239) . chr(187) . chr(191); // Needed by Microsoft Excel to make it CSV
+        echo i18n('colId') . ';' . i18n('colTask') . ';';
+        foreach ($sortArray as $col) {
+          if ($col=='Color') echo i18n('colColor') . ';' ;
+          if ($col=='Type') echo i18n('colType') . ';' ;
+          if ($col=='Status') echo i18n('colIdStatus') . ';' ;
+          if ($col=='StatusColor') echo i18n('colStatusColor') . ';' ;
+          if ($col=='ValidatedWork') echo i18n('colValidated') . ';' ;
+          if ($col=='AssignedWork') echo i18n('colAssigned') . ';' ;
+          if ($col=='RealWork') echo i18n('colReal') . ';' ;
+          if ($col=='LeftWork') echo i18n('colLeft') . ';' ;
+          if ($col=='PlannedWork') echo i18n('colReassessed') . ';' ;
+          if ($col=='Duration') echo i18n('colDuration') . ';' ;
+          if ($col=='Progress') echo i18n('colPct') . ';' ;
+          if ($col=='StartDate') {
+            echo i18n('colValidatedStartDate') . ';' ;
+            echo i18n('colPlannedStartDate') . ';' ;
+          }
+          if ($col=='EndDate') {
+            echo i18n('colValidatedEndDate') . ';' ;
+            echo i18n('colPlannedEndDate') . ';' ;
+          }
+          if ($col=='Resource') echo i18n('colResource') . ';' ;
+          if ($col=='Priority') echo i18n('colPriorityShort') . ';' ;
+          if ($col=='IdPlanningMode') echo i18n('colIdPlanningMode') . ';' ;
+        }
+        echo "\n";
+      }
       // lines
       $width=round($colWidth/$colUnit) . "px;";
       $collapsedList=Collapsed::getCollaspedList();
@@ -702,6 +751,7 @@
           //echo ' display:none;';
           continue;
         }
+		if($outMode != 'csv') {
         echo '<TR style="height:18px;' ;
 
         echo '">';
@@ -830,9 +880,39 @@
           echo '</td>';
         }
         echo '</TR>';
+      } else {
+          echo $line['refid'] . ';' . html_entity_decode(strip_tags($tab), ENT_COMPAT, 'UTF-8') . html_entity_decode($pName) . ';';
+          foreach ($sortArray as $col) {
+            if ($col=='Color') echo $line["color"]  . ';';
+            if ($col=='Type') echo $line["type"]  . ';';
+            if ($col=='Status') echo $line["status"]  . ';';
+            if ($col=='StatusColor') echo $line["statuscolor"]  . ';';
+            if ($col=='ValidatedWork') echo $line["validatedwork"]  . ';';
+            if ($col=='AssignedWork') echo $line["assignedwork"]  . ';';
+            if ($col=='RealWork') echo $line["realwork"]  . ';';
+            if ($col=='LeftWork') echo $line["leftwork"]  . ';';
+            if ($col=='PlannedWork') echo $line["plannedwork"]  . ';';
+            if ($col=='Duration') echo (($rowType=='mile' or $pStart=="" or $pEnd=="")?'-':workDayDiffDates($pStart, $pEnd))  . ';';
+            if ($col=='Progress') echo $progress . ';';
+            if ($col=='StartDate') {
+              echo (($line['validatedstartdate'])?$line['validatedstartdate']:'-') . ';';
+              echo (($pStart)?$pStart:'-') . ';';
+            }
+            if ($col=='EndDate') {
+              echo (($line['validatedenddate'])?$line['validatedenddate']:'-') . ';';
+              echo (($pEnd)?$pEnd:'-') . ';';
+            }
+            if ($col=='Resource') echo $line["resource"]  . ';';
+            if ($col=='Priority') echo $line["priority"]  . ';';
+            if ($col=='IdPlanningMode') echo SqlList::getNameFromId('PlanningMode', $line["idplanningmode"])  . ';';
+          }
+          echo "\n";
+		}
       }
     }
-    echo "</table>";
+	if($outMode != 'csv') {
+	  echo "</table>";
+	}
   }
 
   function exportGantt($result) {
