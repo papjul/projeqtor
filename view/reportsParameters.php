@@ -290,6 +290,13 @@ foreach ($listParam as $param) {
               }
             }
           } 
+          if (dijit.byId('idActivity')) {
+            if (trim(this.value)) {
+              refreshList("idActivity", "idProject", this.value);
+            } else {
+              refreshList("idActivity");
+            }
+          }
           if (dijit.byId('idProduct')) {
             refreshList("idProduct","idProject", this.value);
           }
