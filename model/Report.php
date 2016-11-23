@@ -35,6 +35,7 @@ class Report extends SqlElement {
   public $name;
   public $idReportCategory;
   public $file;
+  public $hasCsv;
   public $sortOrder;
   public $idle; 
   public $orientation;

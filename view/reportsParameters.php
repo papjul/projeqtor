@@ -648,6 +648,19 @@ foreach ($listParam as $param) {
          onclick="saveReportAsFavorite();">
       </button>
       <?php }?>
+      <?php if($report->hasCsv) { ?>
+        <button title="<?php echo i18n('reportPrintCsv')?>"
+           dojoType="dijit.form.Button" type="button"
+           id="reportPrintCsv" name="reportPrintCsv"
+           iconClass="dijitButtonIcon dijitButtonIconCsv" class="detailButton whiteBackground" showLabel="false">
+           <script type="dojo/connect" event="onClick" args="evt">
+             dojo.byId('outMode').value='csv';
+             var fileName=dojo.byId('reportFile').value;
+             showPrint("../report/"+ fileName, 'report',null,'csv','<?php echo $report->orientation;?>');
+           </script>
+        </button>
+        <input type="hidden" id="objectClass" name="objectClass" value="Job" />
+		<?php }?>
         <input type="hidden" id="page" name="page" value="<?php echo ((substr($report->file,0,3)=='../')?'':'../report/') . $report->file;?>"/>
         <input type="hidden" id="print" name="print" value=true />
         <input type="hidden" id="report" name="report" value=true />
