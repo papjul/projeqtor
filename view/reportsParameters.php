@@ -583,13 +583,13 @@ foreach ($listParam as $param) {
     <tr>
     <td class="label"><label><?php echo i18n('col' . ucfirst($param->name));?>&nbsp;:&nbsp;</label></td>
     <td>
-    <select dojoType="dijit.form.FilteringSelect" class="input" 
+    <select dojoType="dijit.form.<?php echo (($param->multiple == 1) ? 'MultiSelect' : 'FilteringSelect') ?>" class="input" 
     <?php echo autoOpenFilteringSelect();?>
        style="width: 200px;"
-       id="<?php echo $param->name;?>" name="<?php echo $param->name;?>"
+       id="<?php echo $param->name;?>" name="<?php echo $param->name . (($param->multiple == 1) ? '[]' : '');?>"
      >
-       <?php htmlDrawOptionForReference($param->name, $defaultValue, null, ($class=='Baseline')?true:false); ?>
-     </select>    
+       <?php htmlDrawOptionForReference($param->name, $defaultValue, null, ($class=='Baseline' || $param->multiple)); ?>
+     </select>     
     </td>
     </tr>
 

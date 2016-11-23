@@ -37,6 +37,7 @@ class ReportParameter extends SqlElement {
   public $paramType;
   public $defaultValue;
   public $sortOrder;
+  public $multiple;
   public $idle; 
   // Define the layout that will be used for lists
   

@@ -43,9 +43,18 @@ foreach ($_REQUEST as $reqParam=>$reqValue) {
 			$refId='0';
 		}
 	} else {
-		if ($reqValue!=Sql::fmtStr($reqValue)) {
-			traceHack("improper value '$reqValue' for request parameter '$reqParam' while calling a report");
-			exit;
+		if(!is_array($reqValue)) {
+			if ($reqValue!=Sql::fmtStr($reqValue)) {
+				traceHack("improper value '$reqValue' for request parameter '$reqParam' while calling a report");
+				exit;
+			}
+		} else {
+			foreach($reqValue as $v) {
+				if ($v!=Sql::fmtStr($v)) {
+					traceHack("improper value '$v' for request parameter '$reqParam' while calling a report");
+					exit;
+				}
+			}
 		}
 	}
 }
