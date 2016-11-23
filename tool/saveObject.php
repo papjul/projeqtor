@@ -134,6 +134,18 @@ if (array_key_exists('checklistDefinitionId',$_REQUEST) and array_key_exists('ch
     $result=$globalResult;
   }
 }
+if (array_key_exists('joblistDefinitionId',$_REQUEST)) {
+  $included=true;
+  include "saveJoblist.php";
+  $included=false;
+  if ($globalStatus=='NO_CHANGE' and $status=='OK') {
+    //$status = "OK";
+    //$result => keep status of joblist save
+  } else {
+    $status=$globalStatus;
+    $result=$globalResult;
+  }
+}
 
 echo '<div class="message' . $status . '" >' . formatResult ( $result ) . '</div>';
 

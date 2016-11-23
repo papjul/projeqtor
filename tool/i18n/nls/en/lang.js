@@ -2578,5 +2578,10 @@ workValidate: "Validate real work",
 wrongMaintenanceUser: "Upgrade in progress<br/>Only admin user can connect.",
 xlsxFile: "xlsx file (Excel 2010)",
 year: "year",
+joblistAccess: "access to joblists",
+JoblistDefinition: "Joblists",
+menuJoblistDefinition: "Joblists",
+reportMacroJoblist: "macro joblist",
+sectionJoblist: "Joblist",
 currentLocaleOfFile: "en"
 }

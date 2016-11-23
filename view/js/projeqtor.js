@@ -1092,6 +1092,10 @@ function finalizeMessageDisplay(destination, validationType) {
         loadContent("objectDetail.php?refreshChecklistDefinitionLines=true",
             dojo.byId('objectClass').value + '_checklistDefinitionLine',
             'listForm');
+      } else if (validationType == 'jobDefinition') {
+        loadContent("objectDetail.php?refreshJobDefinition=true",
+            dojo.byId('objectClass').value + '_jobDefinition',
+            'listForm');
       } else if (validationType == 'testCaseRun') {
         loadContent("objectDetail.php?refresh=true", "detailFormDiv",
             'listForm');
@@ -1136,7 +1140,7 @@ function finalizeMessageDisplay(destination, validationType) {
         loadContent("objectDetail.php?refreshLinks=true",dojo.byId('objectClass').value+ '_Link','listForm');
       } else if (validationType == 'report') {
         hideWait();
-      } else if (validationType == 'checklist') {
+      } else if (validationType == 'checklist' || validationType == 'joblist') {
         hideWait();
       } else if (validationType == 'dispatchWork') {
         hideWait();
@@ -1325,6 +1329,13 @@ function finalizeMessageDisplay(destination, validationType) {
                   "objectDetail.php?refreshChecklistDefinitionLines=true", dojo
                       .byId('objectClass').value
                       + '_checklistDefinitionLine', 'listForm');
+            }
+            if (dojo.byId(dojo.byId('objectClass').value
+                + '_jobDefinition')) {
+              loadContent(
+                  "objectDetail.php?refreshJobDefinition=true", dojo
+                      .byId('objectClass').value
+                      + '_jobDefinition', 'listForm');
             }
           }
         }
@@ -2770,9 +2781,18 @@ function globalSave() {
   } else if (dijit.byId('dialogChecklist')
       && dijit.byId('dialogChecklist').open) {
     var button = dijit.byId('dialogChecklistSubmit');
+  } else if (dijit.byId('dialogJobDefinition')
+      && dijit.byId('dialogJobDefinition').open) {
+    var button = dijit.byId('dialogJobDefinitionSubmit');
+  } else if (dijit.byId('dialogJob')
+      && dijit.byId('dialogJob').open) {
+    var button = dijit.byId('dialogJobSubmit');
   } else if (dijit.byId('dialogCreationInfo')
       && dijit.byId('dialogCreationInfo').open) {
     var button = dijit.byId('dialogCreationInfoSubmit');
+  } else if (dijit.byId('dialogJobInfo')
+      && dijit.byId('dialogJobInfo').open) {
+    var button = dijit.byId('dialogJobInfoSubmit');
   } else if (dijit.byId('dialogDispatchWork')
       && dijit.byId('dialogDispatchWork').open) {
     var button = dijit.byId('dialogDispatchWorkSubmit');

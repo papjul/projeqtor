@@ -146,6 +146,8 @@ abstract class SqlElement {
                                   "Link"=>"cascade",
                                   "Note"=>"cascade"),
     "IssueType" =>          array("Issue"=>"controlStrict"),
+	"JoblistDefinition"  => array("Job"=>"control",
+								  "JobDefinition"=>"cascade"),
     "Likelihood" =>         array("Opportunity"=> "controlStrict",
                                   "Risk"=>"controlStrict"),
     "Meeting" =>            array("Assignment"=>"cascade",

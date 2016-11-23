@@ -117,6 +117,7 @@ if ($type=='habilitation') {
   		                               'assignmentEdit'=>i18n('assignmentEditRight'),
                                      'combo'=>i18n('comboDetailAccess'),
   		                               'checklist'=>i18n('checklistAccess'),
+									 'joblist'=>i18n('joblistAccess'),
                                      'planning'=>i18n('planningRight'),
   																	 'resourcePlanning'=>i18n('resourcePlanningRight'),
                                      'document'=>i18n('documentUnlockRight'),

@@ -78,6 +78,10 @@ if ($noselect) {
     drawBillLinesFromObject($obj, true);
     exit();
   }
+  if (array_key_exists('refreshJobDefinition', $_REQUEST)) {
+    drawJobDefinitionFromObject($obj, true);
+    exit();
+  }
   if (array_key_exists('refreshChecklistDefinitionLines', $_REQUEST)) {
     drawChecklistDefinitionLinesFromObject($obj, true);
     exit();
@@ -185,6 +189,7 @@ if (array_key_exists('refresh', $_REQUEST)) {
   }
   drawTableFromObject($obj);
   drawChecklistFromObject($obj);
+  drawJoblistFromObject($obj);
   exit();
 }
 ?>
@@ -257,6 +262,7 @@ if (array_key_exists('refresh', $_REQUEST)) {
     }
     drawTableFromObject($obj);
     drawChecklistFromObject($obj);
+    drawJoblistFromObject($obj);
   }
 
   if (!$print) {
@@ -291,6 +297,31 @@ if (array_key_exists('refresh', $_REQUEST)) {
      <?php  drawChecklistDefinitionLinesFromObject($obj); ?>
 </div>
 <?php }?> <?php
+  }
+  if (!$noselect and isset($obj->_JobDefinition)) {
+    ?> <br />
+  <?php if ($print) {?>
+  <table width="<?php echo $printWidth;?>px;">
+      <tr>
+        <td class="section"><?php echo i18n('sectionJoblist');?></td>
+      </tr>
+      <tr>
+        <td><?php drawJobDefinitionFromObject($obj);?></td>
+      </tr>
+    </table>
+  <?php
+    } else {
+      $titlePane=$objClass . "_jobDefinition";
+      ?>
+  <div style="width: <?php echo $displayWidth;?>" dojoType="dijit.TitlePane"
+     title="<?php echo i18n('sectionJoblist');?>"
+     open="<?php echo ( array_key_exists($titlePane, $collapsedList)?'false':'true');?>"
+     id="<?php echo $titlePane;?>"
+     onHide="saveCollapsed('<?php echo $titlePane;?>');"
+     onShow="saveExpanded('<?php echo $titlePane;?>');" >
+     <?php  drawJobDefinitionFromObject($obj); ?>
+  </div>
+  <?php }?> <?php
   }
   $displayHistory='REQ';
   $paramDisplayHistory=Parameter::getUserParameter('displayHistory');
@@ -1508,7 +1539,7 @@ scriptLog("drawTableFromObject(obj, included=$included, parentReadOnly=$parentRe
             $critVal=SqlList::getNameFromId('Mailable', $obj->idMailable, false);
           }
         }
-        if (get_class($obj) == 'ChecklistDefinition') {
+        if (get_class($obj) == 'ChecklistDefinition' || get_class($obj) == 'JoblistDefinition') { // Can be replaced by a specific table Joblistable if needed
           if ($col == 'idType') {
             $critFld='scope';
             $critVal=SqlList::getNameFromId('Checklistable', $obj->idChecklistable, false);
@@ -3950,4 +3981,101 @@ function finalizeBuffering() {
   
 }
 
+function drawJobDefinitionFromObject($obj, $refresh=false) {
+  global $cr, $print, $user, $browserLocale;
+  $canUpdate=securityGetAccessRightYesNo('menu' . get_class($obj), 'update', $obj) == "YES";
+  if ($obj->idle == 1) {
+    $canUpdate=false;
+  }
+  if (isset($obj->_JobDefinition)) {
+    $lines=$obj->_JobDefinition;
+  } else {
+    $lines=array();
+  }
+  echo '<input type="hidden" id="JoblistDefinitionIdle" value="' . $obj->idle . '" />';
+  echo '<table width="100%">';
+  echo '<tr>';
+  if (!$print) {
+    echo '<th class="noteHeader" style="width:5%">'; // changer le header
+    if ($obj->id != null and !$print and $canUpdate) {
+      echo '<img src="css/images/smallButtonAdd.png"' . ' onClick="addJobDefinition(' . $obj->id . ');"' . ' title="' . i18n('addLine') . '" class="roundedButtonSmall"/> ';
+    }
+    echo '</th>';
+  }
+  echo '<th class="noteHeader" style="width: 20%">' . i18n('colSortOrder') . '</th>';
+  echo '<th class="noteHeader" style="width:'.(($print)?'60':'55').'%">' . i18n('colName') . '</th>';
+  echo '<th class="noteHeader" style="width: 20%">' . i18n('colDaysBeforeWarning') . '</th>';
+  echo '</tr>';
+
+  usort($lines, "JobDefinition::sort");
+  foreach ( $lines as $line ) {
+    echo '<tr>';
+    if (!$print) {
+      echo '<td class="noteData" style="text-align:center;">';
+      if ($canUpdate) {
+        echo ' <img src="css/images/smallButtonEdit.png"' . ' onClick="editJobDefinition(' . $obj->id . ',' . $line->id . ');"' . ' title="' . i18n('editLine') . '" class="roundedButtonSmall"/> ';
+        echo ' <img src="css/images/smallButtonRemove.png"' . ' onClick="removeJobDefinition(' . $line->id . ');"' . ' title="' . i18n('removeLine') . '" class="roundedButtonSmall"/> ';
+      }
+      echo '</td>';
+    }
+    echo '<td class="noteData" title="' . $line->title . '">' . $line->sortOrder . '</td>';
+    echo '<td class="noteData" title="' . $line->title . '">';
+    echo "<table><tr><td>".htmlDisplayCheckbox(0) . "&nbsp;</td><td valign='top'>" . htmlEncode($line->name) . "</td></tr></table>";
+    echo '</td>';
+    echo '<td class="noteData">';
+    echo $line->daysBeforeWarning . ' d';
+    echo '</td>';
+    echo '</tr>';
+  }
+  echo '<tr>';
+  if (!$print) {
+    echo '<td class="noteDataClosetable">&nbsp;</td>';
+  }
+  echo '<td class="noteDataClosetable">&nbsp;</td>';
+  echo '<td class="noteDataClosetable">&nbsp;</td>';
+  echo '<td class="noteDataClosetable">&nbsp;</td>';
+  echo '<td class="noteDataClosetable">&nbsp;</td>';
+  echo '</tr>';
+  echo '</table>';
+}
+
+function drawJoblistFromObject($obj) {
+  global $print, $noselect,$collapsedList,$displayWidth, $printWidth, $profile;
+  if (!$obj or !$obj->id) return; // Don't try and display joblist for non existant objects
+  $crit="nameChecklistable='".get_class($obj)."'";
+  $type='id'.get_class($obj).'Type';
+  if (property_exists($obj,$type) ) {
+    $crit.=' and (idType is null ';
+    if ($obj->$type) {
+      $crit.=" or idType='".$obj->$type."'";
+    }
+    $crit.=')';
+  }
+  $cd=new JoblistDefinition();
+  $cdList=$cd->getSqlElementsFromCriteria(null,false,$crit);
+  if (count($cdList)==0) return; // Don't display joblist if non definition exist for it
+  $user=getSessionUser();
+  $habil=SqlElement::getSingleSqlElementFromCriteria('HabilitationOther', array('idProfile'=>$profile,'scope'=>'joblist'));
+  $list=new ListYesNo($habil->rightAccess);
+  if (!$noselect and $obj->id and $list->code=='YES') {
+      if ($print) {
+        //echo '<table class="detail" width="'.$printWidth.'px;">';
+        //echo '<tr><td>';
+        include_once "../tool/dynamicDialogJoblist.php";
+        //echo '</td></tr>';
+        //echo '</table>';
+      } else {
+        $titlePane=get_class($obj) . "_joblist";
+        echo '<div style="width:'.$displayWidth.'" dojoType="dijit.TitlePane"';
+        echo ' title="'.i18n('sectionJoblist').'"';
+        echo ' open="'.((array_key_exists($titlePane, $collapsedList))?'false':'true').'"';
+        echo ' id="'.$titlePane.'"';
+        echo ' onHide="saveCollapsed(\''.$titlePane.'\');"';
+        echo ' onShow="saveExpanded(\''.$titlePane.'\');"';
+        echo '>';
+        include_once "../tool/dynamicDialogJoblist.php";
+        echo '</div>';
+      }
+  }
+}
 ?>
