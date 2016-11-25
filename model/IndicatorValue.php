@@ -178,7 +178,7 @@ class IndicatorValue extends SqlElement {
   	  	}
   	  	return;
   	  }
-  	  if (trim($indVal->targetDateTime)=="00:00:00") $indVal->targetDateTime==null;
+  	  if (trim($indVal->targetDateTime)=="00:00:00") $indVal->targetDateTime=null;
   	  $indVal->targetValue=null;
   	  $indVal->warningTargetValue=null;
   	  $indVal->alertTargetValue=null;
