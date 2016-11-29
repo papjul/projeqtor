@@ -167,7 +167,17 @@ class IndicatorValue extends SqlElement {
   		if ( (substr($fld,-7)=='EndDate' or substr($fld,-9)=='StartDate') and property_exists($obj, $sub) ) {
   		  $indVal->targetDateTime=$obj->$sub->$fld;
   		  $indVal->targetDateTime.=(strlen($indVal->targetDateTime)=='10')?" 00:00:00":"";
-  	  } else {
+  	    } elseif($ind->code = "YEARLY" && $indVal->targetDateTime) {
+			// Date is already set for a yearly indicator; must be overwritten only if day and month have changed
+			if(substr($indVal->targetDateTime, 5, 5) != substr($obj->$fld, 5, 5)) {
+				$indVal->targetDateTime = $obj->$fld;
+				$indVal->targetDateTime .= (strlen($indVal->targetDateTime) == 10) ? " 00:00:00" : "";
+				
+				// Also reset warning and alert sent states (otherwise can be stuck as true)
+				$indVal->warningSent = 0;
+				$indVal->alertSent = 0;
+			}
+	  } else {
   	    $indVal->targetDateTime=$obj->$fld;
   	    if ($fld=="meetingDate" and property_exists($obj,'meetingStartTime')) $indVal->targetDateTime.=" ".$obj->meetingStartTime;
   	    $indVal->targetDateTime.=(strlen($indVal->targetDateTime)=='10')?" 00:00:00":"";
@@ -253,12 +263,12 @@ class IndicatorValue extends SqlElement {
       }   	
     }
   }
-  
+
   public function checkDates($obj=null) {
     if ($this->type!='delay') {
   		return;
   	}
-  	if (!$obj and ($this->idle or ($this->done and $this->code!='DELAY'))) {
+  	if (!$obj and ($this->idle or ($this->done and $this->code!='DELAY' and $this->code != 'YEARLY'))) {
   		return;
   	} 
   	$targetControlColumnName='done';
@@ -321,6 +331,33 @@ class IndicatorValue extends SqlElement {
           $this->status=($date>$this->targetDateTime)?'KO':'OK';
         }
         break;
+
+	  // Send indicator every year
+	  case 'YEARLY': // name of field to compare on columnName
+	  	$date = date('Y-m-d H:i:s');
+
+		/*$targetControlColumnName = $this->targetDateColumnName;
+		if ($obj and trim($obj->$targetControlColumnName)) {
+			if (substr($targetControlColumnName, -8) == 'DateTime') {
+				// If targetDate is in the future, don't change it
+				if($obj->$targetControlColumnName > date('Y') . '-' . substr($obj->$targetControlColumnName, 5)) {
+					$date = $obj->$targetControlColumnName;
+				} else {
+					$date = date('Y') . '-' . substr($obj->$targetControlColumnName, 5);
+				}
+			} elseif (substr($targetControlColumnName, -4) == 'Date') {
+				// If targetDate is in the future, don't change it
+				if($obj->$targetControlColumnName > date('Y') . '-' . substr($obj->$targetControlColumnName, 5)) {
+					$date = $obj->$targetControlColumnName . " 00:00:00";
+				} else {
+					$date = date('Y') . '-' . substr($obj->$targetControlColumnName, 5) . " 00:00:00";
+				}
+			} elseif ($obj->$targetControlColumnName) {
+				return; // $targetControlColumnName is not a date, so if set don't update indicator
+			}
+			$this->status = ($date > $this->targetDateTime) ? 'KO' : 'OK';
+		}*/
+		break;
   	}
     if (trim($this->warningTargetDateTime) and $date>=$this->warningTargetDateTime and !$this->done) {
       if (! $this->warningSent ) {
@@ -347,7 +384,48 @@ class IndicatorValue extends SqlElement {
       $this->alertSent='1';
     } else {
       $this->alertSent='0';
-    }        
+    }
+
+	// If we are sending alerts yearly, we need to update dates
+	if($this->code == 'YEARLY') {
+		if(!$obj) {
+			$obj = new $this->refType($this->refId);
+		}
+
+		$def = new IndicatorDefinition($this->idIndicatorDefinition);
+
+		// Update targetDateTime each year
+		$targetDateTime = date('Y') . '-' . substr($this->targetDateTime, 5);
+
+		// If the previously calculated targetDateTime is in the past, it means next target date time is actually next year
+		if(date('Y-m-d H:i:s') > $targetDateTime) { 
+			$targetDateTime = intval(date('Y') + 1) . '-' . substr($this->targetDateTime, 5); 
+		}
+		
+		// Only update if current targetDateTime is not more far in the future
+		if($this->targetDateTime <= $targetDateTime) {
+			$this->targetDateTime = $targetDateTime;
+			
+			// Now, we can update the warningTargetDate and alertTargetDate
+			$warningTargetDateTime = $this->warningTargetDateTime;
+			$alertTargetDateTime = $this->alertTargetDateTime;
+			if (trim($this->targetDateTime)) {
+				$this->warningTargetDateTime = addDelayToDatetime($this->targetDateTime, (-1) * $def->warningValue, $def->codeWarningDelayUnit);
+				$this->alertTargetDateTime = addDelayToDatetime($this->targetDateTime, (-1) * $def->alertValue, $def->codeAlertDelayUnit);
+			}
+
+			// Reset sent statuses if it has changed (for example next year)
+			if(substr($warningTargetDateTime, 0, 10) != substr($this->warningTargetDateTime, 0, 10)) {
+				$this->warningSent = 0;
+			}
+			if(substr($alertTargetDateTime, 0, 10) != substr($this->alertTargetDateTime, 0, 10)) {
+				$this->alertSent = 0;
+			}
+		}
+		
+		// Will stop sending alerts when closed (idle)
+		$this->save();
+	}
   	if (!$obj) $this->save();
   }
   
