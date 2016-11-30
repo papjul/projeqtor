@@ -403,9 +403,9 @@ class Plugin extends SqlElement {
           while ( $line = fgets ( $file ) ) {
             $split = explode ( ":", $line );
             if (isset ( $split [1] )) {
-              $var = trim ( $split [0], ' ' );
+              $var = trim ( $split [0], " \t" ); // Remove tabs and spaces
               $valTab = explode ( ",", $split [1] );
-              $val = trim ( $valTab [0], ' ' );
+              $val = trim ( $valTab [0], " \n\r" ); // Remove spaces, carriage returns and new lines
               $val = trim ( $val, '"' );
               //$i18nMessages [$var] = $val;
               echo $arrayName.'["'.$var.'"]="'.$val.'";'."\n";
