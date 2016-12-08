@@ -77,7 +77,7 @@ $keyDownEventScript=NumberFormatter52::getKeyDownEvent();
   
   <script type="text/javascript" src="../external/html2canvas/html2canvas.js?version=<?php echo $version.'.'.$build;?>"></script>
   <?php if (isHtml5()) {?>
-  <script type="text/javascript" src="../external/pdfmake/pdfmake.js?version=<?php echo $version.'.'.$build;?>"></script>
+  <script type="text/javascript" src="../external/pdfmake/pdfmake.min.js?version=<?php echo $version.'.'.$build;?>"></script>
   <?php }?>
   <script type="text/javascript" src="../external/pdfmake/vfs_fonts.js?version=<?php echo $version.'.'.$build;?>"></script>
   <script type="text/javascript" src="../external/CryptoJS/rollups/md5.js?version=<?php echo $version.'.'.$build;?>" ></script>
