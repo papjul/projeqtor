@@ -24,8 +24,8 @@ CKEDITOR.editorConfig = function( config ) {
   config.magicline_color = '#aaaaaa';
   config.extraAllowedContent = 'span(*){*};div(*){*};p(*){*};table(*){*};tr(*){*};td(*){*};pre(*){*};blockquote(*){*};br[clear];style;';
   config.pasteFilter='span(*){*};div(*){*};p(*){*};table(*){*};tr(*){*};td(*){*};pre(*){*};blockquote(*){*};br[clear];style';
-  config.pasteFromWordRemoveStyles = false;
-  config.pasteFromWordRemoveFontStyles = false;
+  //config.pasteFromWordRemoveStyles = false; // Removed in 4.6.0
+  //config.pasteFromWordRemoveFontStyles = false; // Deprecated in 4.6.0, defaults to false
   config.scayt_sLang = getLocalLocation();
   config.scayt_autoStartup = true;
   
