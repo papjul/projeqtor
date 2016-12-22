@@ -89,7 +89,7 @@ class PlanningElement extends SqlElement {
                                   "refName"=>"hidden",
                                   "wbs"=>"display,noImport", 
                                   "wbsSortable"=>"hidden,noImport",
-                                  "progress"=>"display,noImport",
+                                  "progress"=>"noImport",
                                   "expectedProgress"=>"display,noImport",
                                   "marginWorkPct"=>"display,noImport",
                                   "marginCostPct"=>"display,noImport",
@@ -272,7 +272,7 @@ class PlanningElement extends SqlElement {
           $this->expectedProgress=100;
         } else {
           $this->realEndDate=null;
-          $this->progress=0;
+          $this->progress = intval($this->progress);
           $this->expectedProgress=0;
         }
         if (property_exists($refObj, 'handled') and property_exists($refObj, 'handledDate')) {

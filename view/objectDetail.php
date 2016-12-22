@@ -837,6 +837,26 @@ scriptLog("drawTableFromObject(obj, included=$included, parentReadOnly=$parentRe
         $attributes.=' readonly tabindex="-1"';
         $readOnly=true;
       }
+	  if($col == 'progress') {
+		// Determine if progress field is read only
+		if ($obj->leftWork != 0 || $obj->realWork != 0) { // If work has been assigned, progress is calculated
+		  $attributes .= ' readonly tabindex="-1"';
+		  $readOnly = true;
+		} else {
+		  if (isset($orig) && $orig) {
+			if (property_exists($orig, 'handled') && !$orig->handled) { // If object is not handled yet, progress is 0 %
+			  $attributes .= ' readonly tabindex="-1"';
+			  $readOnly = true;
+			} elseif ($orig->done) { // If object is done, progress is 100 %
+			  $attributes .= ' readonly tabindex="-1"';
+			  $readOnly = true;
+			}
+		  } else {
+			$attributes .= ' readonly tabindex="-1"';
+			$readOnly = true;
+		  }
+		}
+	  }
       $dataType=$obj->getDataType($col);
       $dataLength=$obj->getDataLength($col);
       if ( $obj->isAttributeSetToField($col,'calculated') and (substr($col, -4, 4) == 'Cost' or substr($col, -6, 6) == 'Amount' or $col == 'amount')) {

@@ -2286,7 +2286,7 @@ function drawGantt() {
       //
       var realWork = parseFloat(item.realwork);
       var plannedWork = parseFloat(item.plannedwork);
-      var progress = 0;
+      var progress = parseInt(item.progress);
       if (plannedWork > 0) {
         progress = Math.round(100 * realWork / plannedWork);
       } else {
