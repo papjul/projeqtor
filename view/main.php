@@ -72,6 +72,7 @@ $keyDownEventScript=NumberFormatter52::getKeyDownEvent();
   <link rel="stylesheet" type="text/css" href="css/jsgantt.css" />
   <link rel="stylesheet" type="text/css" href="css/projeqtor.css" />
   <link rel="stylesheet" type="text/css" href="css/projeqtorFlat.css" />
+  <link rel="stylesheet" type="text/css" href="../external/dojox/form/resources/CheckedMultiSelect.css" />
   <link rel="shortcut icon" href="img/logo.ico" type="image/x-icon" />
   <link rel="icon" href="img/logo.ico" type="image/x-icon" />
   
@@ -156,7 +157,8 @@ $keyDownEventScript=NumberFormatter52::getKeyDownEvent();
     dojo.require("dijit.TitlePane");
     dojo.require("dijit.Toolbar") 
     dojo.require("dijit.Tooltip");
-    dojo.require("dijit.Tree"); 
+    dojo.require("dijit.Tree");
+	dojo.require("dojox.form.CheckedMultiSelect");
     dojo.require("dojox.form.FileInput");
     dojo.require("dojox.form.Uploader");
     dojo.require("dojox.form.uploader.FileList");

@@ -39,7 +39,14 @@
         return;
       }
       if (substr($field,0,2)=='id') {
-        Security::checkValidId($_REQUEST['critValue']);
+		if(isset($_REQUEST['critArray'])) {
+		  $_REQUEST['critValue'] = explode(',', $_REQUEST['critValue']);
+		  foreach($_REQUEST['critValue'] as $v) {
+			Security::checkValidId($v);
+		  }
+	    } else {
+          Security::checkValidId($_REQUEST['critValue']);
+		}
       } 
     } else if (isset($_REQUEST['critValue'])) {
       errorLog("incorrect query jonList : critValue is set but critField is not set");

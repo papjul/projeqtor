@@ -3346,3 +3346,11 @@ p {
   width:470px;
 }
 
+/* Fix for multi select checkboxed on report parameters */
+.dojoxMultiSelectItem {
+	width: 200px;
+}
+
+.dojoxCheckedMultiSelect .dojoxCheckedMultiSelectWrapper {
+	height: inherit!important;
+}

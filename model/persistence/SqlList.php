@@ -233,7 +233,12 @@ class SqlList {
       } else {
         if ($val==null or $val=='') {
           $query .= ' and ' . $obj->getDatabaseTableName() . '.' . $obj->getDatabaseColumnName($col) . " is null";
-        } else {
+        } elseif(is_array($val)) {
+            foreach($val as $k => $v) {
+                $val[$k] = Sql::str($v);
+            }
+            $query .= ' and ' . $obj->getDatabaseTableName() . '.' . $obj->getDatabaseColumnName($col) . ' IN (' . implode(',', $val) . ')';
+    	} else {
           if ($col=='idProject' and ($val=='*' or ! $val)) {$val=0;}
           $query .= ' and ' . $obj->getDatabaseTableName() . '.' . $obj->getDatabaseColumnName($col) . '=' . Sql::str($val);
         }
