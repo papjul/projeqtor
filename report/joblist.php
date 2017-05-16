@@ -66,22 +66,22 @@ $where = getAccesRestrictionClause('Activity', null);
 if ($paramActivity != '') {
     $where .= " and idActivity = " . $paramActivity;
 } elseif ($paramProject != '') {
-    $where .= " and idProject in " . getVisibleProjectsList(true,$paramProject);
-    //$where .= " and idActivity IS NOT NULL";
+    $where .= " and idProject = " . $paramProject;
+    $where .= " and idActivity IS NOT NULL";
 }
 $lstAct = new Activity();
 $lstActivity =$lstAct->getSqlElementsFromCriteria(null, false, $where, null);
 if (checkNoData($lstActivity))     exit;
 // Joblist definition
-//$where = getAccesRestrictionClause('JoblistDefinition', false);
-$where .= "nameChecklistable = 'Activity' ";
-//$where .= "and idType = " . $lstActivity[0]->idActivityType;
+$where = getAccesRestrictionClause('JoblistDefinition', false);
+$where .= "and nameChecklistable = 'Activity' ";
+$where .= "and idType = " . $lstActivity[0]->idActivityType;
 $joblistDef = new JoblistDefinition();
 $joblist = $joblistDef->getSqlElementsFromCriteria(null, false, $where, null);
 
 // Job definition
 $where = getAccesRestrictionClause('JobDefinition', false);
-//$where .= "and idJoblistDefinition = " . $joblist[0]->id;
+$where .= "and idJoblistDefinition = " . $joblist[0]->id;
 $orderBy = " idJoblistDefinition ASC, sortOrder ASC";
 $newjobDef = new JobDefinition();
 $jobDefinitions = $newjobDef->getSqlElementsFromCriteria(null, false, $where, $orderBy);
@@ -106,7 +106,7 @@ foreach ($jobDefinitions as $jobDef) {
 // Get list of checkboxes of activities
 $where = getAccesRestrictionClause('Job', false);
 $where .= " and refType = 'Activity' ";
-//$where .= " and idJoblistDefinition = " . $joblist[0]->id;
+$where .= " and idJoblistDefinition = " . $joblist[0]->id;
 $newJob = new Job();
 $lstJobs = $newJob ->getSqlElementsFromCriteria(null, false, $where, null);
 $result = array(); // Preparation of result lines
@@ -229,8 +229,8 @@ foreach ($lstActivity as $activity) {
         }
     }
     if ($outMode == 'csv') {
-        //echo mb_strtoupper(str_replace("\n", " / ", htmlTransformRichtextToPlaintext($activity->description, 'UTF-8')));
-        echo formatAnyTextToPlainText($activity->description);
+        echo mb_strtoupper(str_replace("\n", " / ", htmlTransformRichtextToPlaintext($activity->description, 'UTF-8')));
+        //echo mb_strtoupper(str_replace("\n", " / ", formatAnyTextToPlainText($activity->description)));
         echo "\n";
     } else {
         echo '<td class="reportTableLineHeader">' . mb_strtoupper($activity->description, 'UTF-8') . '</td>';
