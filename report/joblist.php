@@ -63,6 +63,7 @@ if ($outMode == 'csv') {
 }
 // All activities
 $where = getAccesRestrictionClause('Activity', null);
+$where .= " and idProject in " . getVisibleProjectsList(true);
 if ($paramActivity != '') {
     $where .= " and idActivity = " . $paramActivity;
 } elseif ($paramProject != '') {
