@@ -1,7 +1,7 @@
 <?php
 /*** COPYRIGHT NOTICE *********************************************************
  *
- * Copyright 2009-2016 ProjeQtOr - Pascal BERNARD - support@projeqtor.org
+ * Copyright 2009-2017 ProjeQtOr - Pascal BERNARD - support@projeqtor.org
  * Contributors : Julien PAPASIAN
  * 
  * This file is part of ProjeQtOr.
@@ -23,7 +23,6 @@
  * about contributors at http://www.projeqtor.org 
  *     
  *** DO NOT REMOVE THIS NOTICE ************************************************/
-
 include_once '../tool/projeqtor.php';
 $print = false;
 if (array_key_exists('print', $_REQUEST)) {
@@ -38,7 +37,6 @@ if (array_key_exists('idActivity', $_REQUEST)) {
 if (array_key_exists('idProject', $_REQUEST)) {
     $paramProject = trim($_REQUEST['idProject']);
 }
-
 // Header
 $headerParameters = "";
 if ($paramProject != '') {
@@ -48,74 +46,73 @@ if ($paramActivity != "") {
     $headerParameters.= i18n("colIdActivity") . ' : ' . htmlEncode(SqlList::getNameFromId('Activity', $paramActivity)) . '<br/>';
 }
 if ($paramActivity == '' && $paramProject == '') {
-    exit('Project or activity parameter is missing');
+    echo '<div style="background: #FFDDDD;font-size:150%;color:#808080;text-align:center;padding:20px">';
+    echo i18n('messageNoData',array(i18n('Project').' / '.i18n('Activity'))); 
+    echo '</div>';
+    exit;
 }
-
 if (array_key_exists('outMode', $_REQUEST) && $_REQUEST['outMode'] == 'csv') {
     $outMode = 'csv';
 } else {
     $outMode = 'html';
 }
-
 if ($outMode == 'csv') {
     include_once "headerFunctions.php";
 } else {
     include "header.php";
 }
-
 // All activities
-$where = getAccesRestrictionClause('Activity', false);
+$where = getAccesRestrictionClause('Activity', null);
 if ($paramActivity != '') {
     $where .= " and idActivity = " . $paramActivity;
 } elseif ($paramProject != '') {
-    $where .= " and idProject = " . $paramProject;
-    $where .= " and idActivity IS NOT NULL";
+    $where .= " and idProject in " . getVisibleProjectsList(true,$paramProject);
+    //$where .= " and idActivity IS NOT NULL";
 }
-
-$lstActivity = (new Activity())->getSqlElementsFromCriteria(null, false, $where, null);
-
-if (checkNoData($lstActivity))
-    exit;
-
+$lstAct = new Activity();
+$lstActivity =$lstAct->getSqlElementsFromCriteria(null, false, $where, null);
+if (checkNoData($lstActivity))     exit;
 // Joblist definition
-$where = getAccesRestrictionClause('JoblistDefinition', false);
-$where .= "and nameChecklistable = 'Activity' ";
-$where .= "and idType = " . $lstActivity[0]->idActivityType;
-$joblist = (new JoblistDefinition())->getSqlElementsFromCriteria(null, false, $where, null);
-
-if (checkNoData($joblist))
-    exit;
+//$where = getAccesRestrictionClause('JoblistDefinition', false);
+$where .= "nameChecklistable = 'Activity' ";
+//$where .= "and idType = " . $lstActivity[0]->idActivityType;
+$joblistDef = new JoblistDefinition();
+$joblist = $joblistDef->getSqlElementsFromCriteria(null, false, $where, null);
 
 // Job definition
 $where = getAccesRestrictionClause('JobDefinition', false);
-$where .= "and idJoblistDefinition = " . $joblist[0]->id;
-$orderBy = " sortOrder ASC";
-$jobDefinitions = (new JobDefinition())->getSqlElementsFromCriteria(null, false, $where, $orderBy);
-
-if (checkNoData($jobDefinitions))
-    exit;
+//$where .= "and idJoblistDefinition = " . $joblist[0]->id;
+$orderBy = " idJoblistDefinition ASC, sortOrder ASC";
+$newjobDef = new JobDefinition();
+$jobDefinitions = $newjobDef->getSqlElementsFromCriteria(null, false, $where, $orderBy);
 
 $aDefLines = array();
+$aDefLinesCount =array();
 foreach ($jobDefinitions as $jobDef) {
     if (!array_key_exists($jobDef->id, $aDefLines)) {
         $aDefLines[$jobDef->id] = array('name' => $jobDef->name,
             'title' => $jobDef->title,
             'daysBeforeWarning' => $jobDef->daysBeforeWarning,
-            'nbcheck' => 0);
+            'nbcheck' => 0,
+        		'jobListId' => $jobDef->idJoblistDefinition
+        );
+    }
+    if (!array_key_exists($jobDef->idJoblistDefinition, $aDefLinesCount)) {
+    	$aDefLinesCount[$jobDef->idJoblistDefinition]=1;
+    } else {
+    	$aDefLinesCount[$jobDef->idJoblistDefinition]+=1;
     }
 }
-
 // Get list of checkboxes of activities
 $where = getAccesRestrictionClause('Job', false);
 $where .= " and refType = 'Activity' ";
-$where .= " and idJoblistDefinition = " . $joblist[0]->id;
-$lstJobs = (new Job())->getSqlElementsFromCriteria(null, false, $where, null);
-
+//$where .= " and idJoblistDefinition = " . $joblist[0]->id;
+$newJob = new Job();
+$lstJobs = $newJob ->getSqlElementsFromCriteria(null, false, $where, null);
 $result = array(); // Preparation of result lines
 foreach ($lstJobs as $oJob) {
     $result[$oJob->refId][$oJob->idJobDefinition] = $oJob;
 }
-
 // title
 if ($outMode == 'csv') {
     echo chr(239) . chr(187) . chr(191); // Microsoft Excel requirement
@@ -123,27 +120,22 @@ if ($outMode == 'csv') {
     foreach ($aDefLines as $aLine) {
         echo htmlencode($aLine['name']) . ';';
     }
-    echo i18n('colTotal') . ';';
-    echo i18n('colGeneralComment');
+    echo i18n('sum') . ';';
+    echo i18n('colComment');
     echo "\n";
 } else {
     echo '<table align="center" style="width: 95%">';
     echo '<tr>';
-    echo '<td class="reportTableHeader">' . i18n('colIdActivity') . '</td>';
+    echo '<td class="reportTableHeader">' . i18n('Activity') . '</td>';
     foreach ($aDefLines as $aLine) {
         echo '<th class="reportTableHeader" style="width: 60px" title="' . htmlencode($aLine['title']) . '"><span>' . htmlencode($aLine['name']) . '</span></th>';
     }
-    echo '<td class="reportTableHeader">' . i18n('colTotal') . '</td>';
-    echo '<td class="reportTableHeader">' . i18n('colGeneralComment') . '</td>';
+    echo '<td class="reportTableHeader">' . i18n('sum') . '</td>';
+    echo '<td class="reportTableHeader">' . i18n('colComment') . '</td>';
     echo '</tr>';
 }
 
-function compareWbs($a, $b) {
-    return version_compare($a->ActivityPlanningElement->wbs, $b->ActivityPlanningElement->wbs);
-}
-
 usort($lstActivity, 'compareWbs');
-
 $status = array('done' => '#a5eda5',
     'warning' => '#edb584',
     'alert' => '#eda5a5',
@@ -166,6 +158,7 @@ foreach ($lstActivity as $activity) {
                 if (isset($result[$activity->id][$sKey])) {
                     if ($result[$activity->id][$sKey]->value) {
                         echo 'X';
+                        
                         ++$iCount;
                         ++$aDefLines[$sKey]['nbcheck'];
                     } elseif (!is_null($result[$activity->id][$sKey]->creationDate)) {
@@ -209,7 +202,6 @@ foreach ($lstActivity as $activity) {
                         $title .= "————————\n" . $result[$activity->id][$sKey]->comment;
                     }
                 }
-
                 echo '<td class="reportTableData" style="background-color: ' . $color . '" title="' . $title . '">' . ((isset($result[$activity->id][$sKey]) && !is_null($result[$activity->id][$sKey]->comment) && !empty($result[$activity->id][$sKey]->comment)) ? '<big>*</big>' : '&nbsp;') . '</td>';
             }
         }
@@ -237,27 +229,37 @@ foreach ($lstActivity as $activity) {
         }
     }
     if ($outMode == 'csv') {
-        echo mb_strtoupper(str_replace("\n", " / ", htmlTransformRichtextToPlaintext($activity->description, 'UTF-8')));
+        //echo mb_strtoupper(str_replace("\n", " / ", htmlTransformRichtextToPlaintext($activity->description, 'UTF-8')));
+        echo formatAnyTextToPlainText($activity->description);
         echo "\n";
     } else {
         echo '<td class="reportTableLineHeader">' . mb_strtoupper($activity->description, 'UTF-8') . '</td>';
         echo '</tr>';
     }
 }
-
 if ($outMode == 'csv') {
-    echo i18n('colTotal') . ';';
+    echo i18n('sum') . ';';
     foreach ($aDefLines as $aLine) {
         echo round((($aLine['nbcheck'] / count($lstActivity)) * 100), 2) . ';';
     }
     echo round((($totalChecked / (count($aDefLines) * count($lstActivity))) * 100), 2) . ';';
     echo $nbActivitiesDone . ' / ' . count($lstActivity) . ' done';
 } else {
-    echo '<tr><td class="reportTableHeader">' . i18n('colTotal') . '</td>';
+    echo '<tr><td class="reportTableHeader">' . i18n('sum') . '</td>';
     foreach ($aDefLines as $aLine) {
         echo '<td class="reportTableHeader">' . round((($aLine['nbcheck'] / count($lstActivity)) * 100), 2) . ' %</td>';
     }
-    echo '<td class="reportTableHeader">' . round((($totalChecked / (count($aDefLines) * count($lstActivity))) * 100), 2) . ' %</td>';
+    if (count($aDefLines) and count($lstActivity)) {
+      $tot=round((($totalChecked / (count($aDefLines) * count($lstActivity))) * 100), 2);
+    } else {
+    	$tot='';
+    }
+    echo '<td class="reportTableHeader">' . $tot . ' %</td>';
     echo '<td class="reportTableHeader">' . $nbActivitiesDone . ' / ' . count($lstActivity) . ' done</td></tr>';
     echo '</table>';
+}
+
+// FUNCTIONS
+function compareWbs($a, $b) {
+	return version_compare($a->ActivityPlanningElement->wbs, $b->ActivityPlanningElement->wbs);
 }
